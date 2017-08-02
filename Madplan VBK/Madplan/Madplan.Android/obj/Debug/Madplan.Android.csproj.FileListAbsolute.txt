@@ -52,3 +52,15 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Andr
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\obj\Debug\res\drawable-hdpi\ic_chevron_right_black_36dp.png
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\obj\Debug\res\drawable-xhdpi\ic_chevron_right_black_36dp.png
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\obj\Debug\res\drawable-xxhdpi\ic_chevron_right_black_36dp.png
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\PCLStorage.Abstractions.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\PCLStorage.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\SQLite-net.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\SQLitePCLRaw.lib.e_sqlite3.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\PCLStorage.xml
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\PCLStorage.Abstractions.xml
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\SQLite-net.pdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\SQLite-net.xml

@@ -16,3 +16,13 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.pdb
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.Extensions.NavigateNextCell.xaml.g.cs
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.Views.MorgenmadPage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\PCLStorage.Abstractions.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\PCLStorage.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\SQLite-net.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\PCLStorage.xml
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\PCLStorage.Abstractions.xml
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\SQLite-net.pdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\SQLite-net.xml
