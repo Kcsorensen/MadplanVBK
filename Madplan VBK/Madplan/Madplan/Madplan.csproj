@@ -48,12 +48,14 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\DataModel.cs" />
+    <Compile Include="Models\db\WeekSelectionsTable.cs" />
     <Compile Include="Models\Dish.cs" />
     <Compile Include="Models\DishType.cs" />
     <Compile Include="Models\ExtensionMethods.cs" />
     <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\QuantityType.cs" />
     <Compile Include="Models\WeekSelections.cs" />
+    <Compile Include="Persistance\ISQLiteDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\MandagPage.xaml.cs">
       <DependentUpon>MandagPage.xaml</DependentUpon>

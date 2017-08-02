@@ -12,7 +12,8 @@ namespace Madplan.Models
         public const string Stk = "Stk";
         public const string Ingen = "Ingen";
         public const string Skive = "Skive";
-
+        public const string tsk = "tsk";
+        public const string dl = "dl";
 
     }
 }

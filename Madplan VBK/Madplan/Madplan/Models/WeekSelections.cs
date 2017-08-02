@@ -9,17 +9,13 @@ namespace Madplan.Models
 {
     public class WeekSelections : BaseModel
     {
-        private string _mandagMorgenmad;
+        private string _mondayBreakfast;
 
-        public string MandagMorgenmad
+        public string MondayBreakfast
         {
-            get { return _mandagMorgenmad; }
-            set { SetValue(ref _mandagMorgenmad, value); }
+            get { return _mondayBreakfast; }
+            set { SetValue(ref _mondayBreakfast, value); }
         }
 
-        public WeekSelections()
-        {
-            MandagMorgenmad = "Vælg måltid";
-        }
     }
 }

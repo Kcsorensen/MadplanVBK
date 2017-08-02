@@ -22,4 +22,25 @@ public enum IngredientHelper
     Skinke,
     [MyDescription(Text = "Tomat")]
     Tomat,
+    [MyDescription(Text = "Pitabrød")]
+    Pitabrød,
+    [MyDescription(Text = "Dijonsennep")]
+    Dijonsennep,
+    [MyDescription(Text = "Gulerod")]
+    Gulerod,
+    [MyDescription(Text = "Hytteost")]
+    Hytteost,
+    [MyDescription(Text = "Rugflager")]
+    Rugflager,
+    [MyDescription(Text = "Æblemost")]
+    Æblemost,
+    [MyDescription(Text = "Æble")]
+    Æble,
+    [MyDescription(Text = "Hasselnødder")]
+    Hasselnødder,
+    [MyDescription(Text = "Honning")]
+    Honning,
+    [MyDescription(Text = "Skyr")]
+    Skyr,
+
 }

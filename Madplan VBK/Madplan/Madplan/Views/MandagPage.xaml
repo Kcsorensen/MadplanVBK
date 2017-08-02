@@ -7,7 +7,7 @@
     <TableView>
         <TableRoot>
             <TableSection Title="Morgenmad">
-                <extension:NavigateNextCell Label="Vælg Morgenmad" Tapped="Morgenmad_Tapped"/>
+                <extension:NavigateNextCell Label="{Binding MondayBreakfast}" Tapped="Morgenmad_Tapped"/>
             </TableSection>
             <TableSection Title="Mellemmåltid">
 

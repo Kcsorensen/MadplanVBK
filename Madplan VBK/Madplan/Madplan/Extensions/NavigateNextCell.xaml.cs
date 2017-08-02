@@ -31,7 +31,7 @@ namespace Madplan.Extensions
         {
             InitializeComponent();
 
-            BindingContext = this;
+            stackLayout.BindingContext = this;
         }
     }
 }

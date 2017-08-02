@@ -11,9 +11,9 @@
         </ListView.Header>
         <ListView.ItemTemplate>
             <DataTemplate>
-                <ViewCell>
+                <ViewCell Tapped="ViewCell_Tapped">
                     <StackLayout VerticalOptions="Center">
-                        <Label Text="{Binding Name}" Margin="15, 0, 10, 0"/>
+                        <Label Text="{Binding Name}" Margin="15, 0, 10, 0" />
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
