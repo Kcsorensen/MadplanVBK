@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Madplan.Views.ShoppingListPage">
+
+    <ListView ItemsSource="{Binding}">
+        <ListView.Header>
+            <StackLayout Style="{StaticResource listViewHeaderLayoutStyle}">
+                <Label Text="Indkøbsliste" Style="{StaticResource listViewHeaderLabelStyle}" />
+            </StackLayout>        
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" Padding="15, 0, 10, 0">
+                        <Label Text="{Binding Name}" />
+                        <Label Text="{Binding Quantity}"/>
+                        <Label Text="{Binding QuantityType}"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    
+</ContentPage>

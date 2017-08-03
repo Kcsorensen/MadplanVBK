@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Madplan.Extensions
 {
-    public class BaseModel
+    public class BaseModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

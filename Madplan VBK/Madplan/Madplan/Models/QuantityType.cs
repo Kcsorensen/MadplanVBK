@@ -8,12 +8,13 @@ namespace Madplan.Models
 {
     public class QuantityType
     {
-        public const string Spsk = "Spsk";
-        public const string Stk = "Stk";
+        public const string spsk = "spsk.";
+        public const string stk = "stk.";
         public const string Ingen = "Ingen";
-        public const string Skive = "Skive";
-        public const string tsk = "tsk";
+        public const string skive = "skive(r)";
+        public const string tsk = "tsk.";
         public const string dl = "dl";
-
+        public const string knsp = "knsp.";
+        public const string gram = "gram";
     }
 }

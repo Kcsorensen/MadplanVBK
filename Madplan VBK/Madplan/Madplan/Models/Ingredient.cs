@@ -11,6 +11,11 @@ namespace Madplan.Models
         public string Name { get; set; }
         public double Quantity { get; set; }
         public string QuantityType { get; set; }
-    }
+        public bool BasicRecipe { get; set; }
 
+        public Ingredient()
+        {
+            BasicRecipe = false;
+        }
+    }
 }

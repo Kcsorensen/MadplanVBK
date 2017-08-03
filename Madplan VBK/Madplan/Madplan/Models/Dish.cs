@@ -12,6 +12,7 @@ namespace Madplan.Models
         public string Type { get; set; }
         public double Ratio { get; set; }
         public double Persons { get; set; }
+        public int Page { get; set; }
         public List<Ingredient> Ingredients { get; set; }
 
         public Dish()

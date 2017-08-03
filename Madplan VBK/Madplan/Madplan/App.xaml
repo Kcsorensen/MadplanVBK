@@ -4,7 +4,24 @@
              x:Class="Madplan.App">
 	<Application.Resources>
 
-		<!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <Style x:Key="listViewHeaderLayoutStyle" TargetType="Layout">
+                <Setter Property="Padding" Value="0, 10"/>
+                <Setter Property="BackgroundColor" Value="Gray"/>
+            </Style>
+
+            <Style x:Key="listViewHeaderLabelStyle" TargetType="Label">
+                <Setter Property="Margin" Value="15, 0, 10, 0"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+            </Style>
+
+            <!--<Style x:Key="listViewItemLayoutStyle" TargetType="Layout">
+                <Setter Property="Padding" Value="15, 0, 10, 0"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>-->
+
+        </ResourceDictionary>
 
 	</Application.Resources>
 </Application>
