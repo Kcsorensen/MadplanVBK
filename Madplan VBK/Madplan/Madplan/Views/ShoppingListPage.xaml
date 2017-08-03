@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Madplan.Views.ShoppingListPage">
+             x:Class="Madplan.Views.ShoppingListPage"
+             xmlns:m16="clr-namespace:Messier16.Forms.Controls;assembly=Messier16.Forms.Controls">
 
     <ListView ItemsSource="{Binding}">
         <ListView.Header>
@@ -12,10 +13,11 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" Padding="15, 0, 10, 0">
-                        <Label Text="{Binding Name}" />
-                        <Label Text="{Binding Quantity}"/>
-                        <Label Text="{Binding QuantityType}"/>
+                    <StackLayout Orientation="Horizontal" Padding="10, 0, 10, 0">
+                        <m16:Checkbox/>
+                        <Label Text="{Binding Name}" VerticalOptions="Center"/>
+                        <Label Text="{Binding Quantity}" VerticalOptions="Center"/>
+                        <Label Text="{Binding QuantityType}" VerticalOptions="Center"/>
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>

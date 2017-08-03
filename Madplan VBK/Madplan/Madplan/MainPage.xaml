@@ -9,7 +9,7 @@
         <ToolbarItem Order="Primary" Text="Indkøbsliste" Clicked="ShoppingList_Clicked"/>
     </ContentPage.ToolbarItems>
 
-    <TableView Intent="Menu">
+    <TableView Intent="Menu" AbsoluteLayout.LayoutBounds="0, 60, 1, 1" AbsoluteLayout.LayoutFlags="SizeProportional">
         <TableRoot>
             <TableSection Title="Ugedage">
                 <extension:NavigateNextCell Label="Mandag" Tapped="Day_Tapped" ClassId="{x:Static local:Day.Monday}"/>
