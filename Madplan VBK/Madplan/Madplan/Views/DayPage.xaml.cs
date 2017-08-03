@@ -1,6 +1,5 @@
 ﻿using Madplan.Extensions;
 using Madplan.Models;
-using Madplan.Models.db;
 using Madplan.Persistance;
 using SQLite;
 using System;
@@ -53,6 +52,54 @@ namespace Madplan.Views
                 DaySelections.Lunch = WeekSelections.MondayLunch;
                 DaySelections.SecondSnack = WeekSelections.MondaySecondSnack;
                 DaySelections.Dinner = WeekSelections.MondayDinner;
+            }
+            else if (_day == Day.Tuesday)
+            {
+                DaySelections.Breakfast = WeekSelections.TuesdayBreakfast;
+                DaySelections.FirstSnack = WeekSelections.TuesdayFirstSnack;
+                DaySelections.Lunch = WeekSelections.TuesdayLunch;
+                DaySelections.SecondSnack = WeekSelections.TuesdaySecondSnack;
+                DaySelections.Dinner = WeekSelections.TuesdayDinner;
+            }
+            else if (_day == Day.Wednesday)
+            {
+                DaySelections.Breakfast = WeekSelections.WednesdayBreakfast;
+                DaySelections.FirstSnack = WeekSelections.WednesdayFirstSnack;
+                DaySelections.Lunch = WeekSelections.WednesdayLunch;
+                DaySelections.SecondSnack = WeekSelections.WednesdaySecondSnack;
+                DaySelections.Dinner = WeekSelections.WednesdayDinner;
+            }
+            else if (_day == Day.Thursday)
+            {
+                DaySelections.Breakfast = WeekSelections.ThursdayBreakfast;
+                DaySelections.FirstSnack = WeekSelections.ThursdayFirstSnack;
+                DaySelections.Lunch = WeekSelections.ThursdayLunch;
+                DaySelections.SecondSnack = WeekSelections.ThursdaySecondSnack;
+                DaySelections.Dinner = WeekSelections.ThursdayDinner;
+            }
+            else if (_day == Day.Friday)
+            {
+                DaySelections.Breakfast = WeekSelections.FridayBreakfast;
+                DaySelections.FirstSnack = WeekSelections.FridayFirstSnack;
+                DaySelections.Lunch = WeekSelections.FridayLunch;
+                DaySelections.SecondSnack = WeekSelections.FridaySecondSnack;
+                DaySelections.Dinner = WeekSelections.FridayDinner;
+            }
+            else if (_day == Day.Saturday)
+            {
+                DaySelections.Breakfast = WeekSelections.SaturdayBreakfast;
+                DaySelections.FirstSnack = WeekSelections.SaturdayFirstSnack;
+                DaySelections.Lunch = WeekSelections.SaturdayLunch;
+                DaySelections.SecondSnack = WeekSelections.SaturdaySecondSnack;
+                DaySelections.Dinner = WeekSelections.SaturdayDinner;
+            }
+            else if (_day == Day.Sunday)
+            {
+                DaySelections.Breakfast = WeekSelections.SundayBreakfast;
+                DaySelections.FirstSnack = WeekSelections.SundayFirstSnack;
+                DaySelections.Lunch = WeekSelections.SundayLunch;
+                DaySelections.SecondSnack = WeekSelections.SundaySecondSnack;
+                DaySelections.Dinner = WeekSelections.SundayDinner;
             }
 
             BindingContext = DaySelections;

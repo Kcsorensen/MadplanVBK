@@ -16,5 +16,8 @@ namespace Madplan.Models
         public const string dl = "dl";
         public const string knsp = "knsp.";
         public const string gram = "gram";
+        public const string dåse = "dåse(r)";
+        public const string dråbe = "dråbe(r)";
+        public const string pakke = "pakke(r)";
     }
 }

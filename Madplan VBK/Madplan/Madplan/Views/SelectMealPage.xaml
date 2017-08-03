@@ -12,9 +12,20 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell Tapped="ViewCell_Tapped">
-                    <StackLayout VerticalOptions="Center">
-                        <Label Text="{Binding Name}" Margin="15, 0, 10, 0" />
-                    </StackLayout>
+                    <Grid VerticalOptions="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0" Spacing="0" Margin="15, 0, 0, 0">
+                            <Label Text="{Binding Name}" />
+                            <Label Text="{Binding Page, StringFormat='(side: {0})'}" FontSize="Micro"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Spacing="0" Margin="0, 0, 10, 0">
+                            <Label Text="{Binding Ratio, StringFormat='Ratio: {0}'}" FontSize="Micro" />
+                            <Label Text="{Binding Persons, StringFormat='Personer: {0}'}" FontSize="Micro" Margin="0, 0, 10, 0"/>
+                        </StackLayout >
+                    </Grid>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>

@@ -1,5 +1,4 @@
 ﻿using Madplan.Models;
-using Madplan.Models.db;
 using Madplan.Persistance;
 using System;
 using System.Collections.Generic;
@@ -88,7 +87,7 @@ namespace Madplan.Views
 
             if (_day == Day.Tuesday)
             {
-
+                // TODO: Mangler af udfylde de sidste dage
             }
 
             if (_day == Day.Wednesday)

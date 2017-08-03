@@ -118,4 +118,108 @@ public enum IngredientHelper
     Timian,
     [MyDescription(Text = "Persillerod")]
     Persillerod,
+    [MyDescription(Text = "Solsikkekerner")]
+    Solsikkekerner,
+    [MyDescription(Text = "Frisk persille")]
+    Persille,
+    [MyDescription(Text = "Sesamfrø")]
+    Sesamfrø,
+    [MyDescription(Text = "Fuldkornspitabrød")]
+    Fuldkornspitabrød,
+    [MyDescription(Text = "Kakaonibs")]
+    Kakaonibs,
+    [MyDescription(Text = "Pære")]
+    Pære,
+    [MyDescription(Text = "Mozzarella")]
+    Mozzarella,
+    [MyDescription(Text = "Kiwi")]
+    Kiwi,
+    [MyDescription(Text = "Mango")]
+    Mango,
+    [MyDescription(Text = "Frisk mynte")]
+    Mynte,
+    [MyDescription(Text = "Emmentaler")]
+    Emmentaler,
+    [MyDescription(Text = "Tun i vand")]
+    Tun,
+    [MyDescription(Text = "Radicchio")]
+    Radicchio,
+    [MyDescription(Text = "Kartofler")]
+    Kartofler,
+    [MyDescription(Text = "Drueagurker")]
+    Drueagurker,
+    [MyDescription(Text = "Makrel i tomat")]
+    Makrel,
+    [MyDescription(Text = "Oliven")]
+    Oliven,
+    [MyDescription(Text = "Cornichoner")]
+    Cornichoner,
+    [MyDescription(Text = "Majs")]
+    Majs,
+    [MyDescription(Text = "Hakkede tomater")]
+    HakkedeTomater,
+    [MyDescription(Text = "Frisk chili")]
+    Chili,
+    [MyDescription(Text = "Wontondej (el. folidej)")]
+    Wontondej,
+    [MyDescription(Text = "Torskerogn")]
+    Torskerogn,
+    [MyDescription(Text = "Radiser")]
+    Radiser,
+    [MyDescription(Text = "Karse")]
+    Karse,
+    [MyDescription(Text = "Fuldkornsbrød")]
+    Fuldkornsbrød,
+    [MyDescription(Text = "Blomkålsbuketter")]
+    Blomkålsbuketter,
+    [MyDescription(Text = "Rødløg")]
+    Rødløg,
+    [MyDescription(Text = "Hel dansk kylling")]
+    HelKylling,
+    [MyDescription(Text = "Nelliker")]
+    Nelliker,
+    [MyDescription(Text = "Aubergine")]
+    Aubergine,
+    [MyDescription(Text = "Pecorinoost")]
+    Pecorinoost,
+    [MyDescription(Text = "Bruse ris")]
+    BruneRis,
+    [MyDescription(Text = "Blå druer")]
+    BlåDruer,
+    [MyDescription(Text = "Laurbærblade")]
+    Laurbærblade,
+    [MyDescription(Text = "Hvidkål")]
+    Hvidkål,
+    [MyDescription(Text = "Laksefilet")]
+    Laksefilet,
+    [MyDescription(Text = "Avokado")]
+    Avokado,
+    [MyDescription(Text = "Frosne ærter")]
+    FrosneÆrter,
+    [MyDescription(Text = "Frisk ingegær")]
+    Ingegær,
+    [MyDescription(Text = "Kikærter")]
+    Kikærter,
+    [MyDescription(Text = "Wasabi")]
+    Wasabi,
+    [MyDescription(Text = "Sojasovs")]
+    Sojasovs,
+    [MyDescription(Text = "Syltede asier")]
+    SyltedeAsier,
+    [MyDescription(Text = "Rødkål")]
+    Rødkål,
+    [MyDescription(Text = "Rejer")]
+    Rejer,
+    [MyDescription(Text = "Grapefrugt")]
+    Grapefrugt,
+    [MyDescription(Text = "Torsk")]
+    Torsk,
+    [MyDescription(Text = "Knoldselleri")]
+    Knoldselleri,
+    [MyDescription(Text = "Jordskok")]
+    Jordskok,
+    [MyDescription(Text = "Vindruekerneolie")]
+    Vindruekerneolie,
+    [MyDescription(Text = "Vineddike")]
+    Vineddike,
 }

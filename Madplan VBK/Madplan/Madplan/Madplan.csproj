@@ -39,7 +39,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Extensions\BaseModel.cs" />
-    <Compile Include="Extensions\CheckBox.cs" />
     <Compile Include="Extensions\IngredientHelper.cs" />
     <Compile Include="Extensions\MyDescriptionAttribute.cs" />
     <Compile Include="Extensions\NavigateNextCell.xaml.cs">
@@ -51,7 +50,6 @@
     <Compile Include="Models\DataModel.cs" />
     <Compile Include="Models\Day.cs" />
     <Compile Include="Models\DaySelections.cs" />
-    <Compile Include="Models\db\WeekSelectionsTable.cs" />
     <Compile Include="Models\Dish.cs" />
     <Compile Include="Models\DishType.cs" />
     <Compile Include="Extensions\ExtensionMethods.cs" />
