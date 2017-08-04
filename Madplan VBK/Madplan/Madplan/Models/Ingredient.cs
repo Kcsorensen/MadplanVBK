@@ -13,11 +13,13 @@ namespace Madplan.Models
         public string QuantityType { get; set; }
         public bool QuantityVisible { get; set; }
         public bool BasicRecipe { get; set; }
+        public bool ShoppingListChecked { get; set; }
 
         public Ingredient()
         {
             QuantityVisible = true;
             BasicRecipe = false;
+            ShoppingListChecked = false;
         }
     }
 }

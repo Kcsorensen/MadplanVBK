@@ -4,7 +4,7 @@
              x:Class="Madplan.Views.ShoppingListPage"
              xmlns:m16="clr-namespace:Messier16.Forms.Controls;assembly=Messier16.Forms.Controls">
 
-    <ListView ItemsSource="{Binding}">
+    <ListView ItemsSource="{Binding}" ItemTapped="ListViewItem_Tapped">
         <ListView.Header>
             <StackLayout Style="{StaticResource listViewHeaderLayoutStyle}">
                 <Label Text="Indkøbsliste" Style="{StaticResource listViewHeaderLabelStyle}" />
@@ -14,7 +14,7 @@
             <DataTemplate>
                 <ViewCell>
                     <StackLayout Orientation="Horizontal" Padding="10, 0, 10, 0">
-                        <m16:Checkbox/>
+                        <m16:Checkbox Checked="{Binding ShoppingListChecked}"/>
                         <Label Text="{Binding Quantity}" VerticalOptions="Center" IsVisible="{Binding QuantityVisible}"/>
                         <Label Text="{Binding QuantityType}" VerticalOptions="Center" IsVisible="{Binding QuantityVisible}"/>
                         <Label Text="{Binding Name}" VerticalOptions="Center"/>

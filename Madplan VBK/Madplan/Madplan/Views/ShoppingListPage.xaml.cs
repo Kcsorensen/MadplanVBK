@@ -96,5 +96,16 @@ namespace Madplan.Views
 
             base.OnAppearing();
         }
+
+        private void ListViewItem_Tapped(object sender, ItemTappedEventArgs e)
+        {
+            if (e == null)
+                return;
+
+            // De-selecter listviewitem
+            ((ListView)sender).SelectedItem = null;
+        }
+
+
     }
 }
