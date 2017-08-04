@@ -15,14 +15,11 @@ namespace Madplan.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ShoppingListPage : ContentPage
     {
-        private DataModel DataModel;
         private SQLiteAsyncConnection _connection;
 
         public ShoppingListPage()
         {
             InitializeComponent();
-
-            DataModel = new DataModel();
 
             _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
         }
@@ -36,15 +33,13 @@ namespace Madplan.Views
 
             var mondayBreakfast = weekSelections.MondayBreakfast;
 
-            await DataModel.PopulateListOfDishesAsync();
-
             var listOfWeakSelections = weekSelections.GetListOfSelectedMeals();
 
             List<Ingredient> completeListOfIngredients = new List<Ingredient>();
 
             foreach (var item in listOfWeakSelections)
             {
-                completeListOfIngredients.AddRange(DataModel.ListOfDishes.Where(a => a.Name == item).First().Ingredients);
+                completeListOfIngredients.AddRange(DataModel.Current.ListOfMeals.Where(a => a.Name == item).First().Ingredients);
             }
 
             // Find alle ingridients som indgår mere end en gang i completeListOfIngredients

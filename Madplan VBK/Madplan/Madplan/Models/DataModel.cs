@@ -6,21 +6,23 @@ namespace Madplan.Models
 {
     public class DataModel
     {
-        public List<Meal> ListOfDishes { get; set; }
+        public List<Meal> ListOfMeals { get; set; }
+
+        public static DataModel Current = new DataModel();
 
         public DataModel()
         {
-            ListOfDishes = new List<Meal>();
+            ListOfMeals = new List<Meal>();
         }
 
-        public async Task PopulateListOfDishesAsync()
+        public async Task PopulateListOfMealsAsync()
         {
             await Task.Run(() => 
             {
                 #region Morgenmad
 
                 // Hvid æggepandekage med rød peber og ost
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Hvid æggepandekage med rød peber og ost",
                     Type = MealType.Breakfast,
@@ -64,7 +66,7 @@ namespace Madplan.Models
                 });
 
                 // Æggepandekage med skinke og ost
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Æggepandekage med skinke og ost",
                     Type = MealType.Breakfast,
@@ -114,7 +116,7 @@ namespace Madplan.Models
                 });
 
                 // Skyr med Granola
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Skyr med Granola",
                     Type = MealType.Breakfast,
@@ -140,7 +142,7 @@ namespace Madplan.Models
                 });
 
                 // Klapsammen med nøddespread og æg
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Klapsammen med nøddespread og æg",
                     Type = MealType.Breakfast,
@@ -172,7 +174,7 @@ namespace Madplan.Models
                 });
 
                 // Grovpita med skinke, gulerødder og hytteost
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Grovpita med skinke, gulerødder og hytteost",
                     Type = MealType.Breakfast,
@@ -215,7 +217,7 @@ namespace Madplan.Models
                 });
 
                 // Ruggrød med æblemost og nødder
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Ruggrød med æblemost og nødder",
                     Type = MealType.Breakfast,
@@ -264,7 +266,7 @@ namespace Madplan.Models
                 });
 
                 // Knækbrød med æg og hytteost
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Knækbrød med æg og hytteost",
                     Type = MealType.Breakfast,
@@ -301,7 +303,7 @@ namespace Madplan.Models
                 });
 
                 // Pink grød med solbær
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Pink grød med solbær",
                     Type = MealType.Breakfast,
@@ -351,7 +353,7 @@ namespace Madplan.Models
                 });
 
                 // Grød "to go"
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Grød \"to go\"",
                     Type = MealType.Breakfast,
@@ -413,7 +415,7 @@ namespace Madplan.Models
                 });
 
                 // Syrnet mysli
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Syrnet mysli",
                     Type = MealType.Breakfast,
@@ -474,7 +476,7 @@ namespace Madplan.Models
                 });
 
                 // Søndag morgen
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Søndag morgen",
                     Type = MealType.Breakfast,
@@ -536,7 +538,7 @@ namespace Madplan.Models
                 // Rugbolle med chokolade
 
                 // Gulerødder med grønne ærter
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Søndag morgen",
                     Type = MealType.Snack,
@@ -591,7 +593,7 @@ namespace Madplan.Models
                 });
 
                 // Røgbrød med AC-spread
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Røgbrød med AC-spread",
                     Type = MealType.Snack,
@@ -617,7 +619,7 @@ namespace Madplan.Models
                 });
 
                 // Nøddespread på knækbrød
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Nøddespread på knækbrød",
                     Type = MealType.Snack,
@@ -643,7 +645,7 @@ namespace Madplan.Models
                 });
 
                 // Æg med knas
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Æg med knas",
                     Type = MealType.Snack,
@@ -686,7 +688,7 @@ namespace Madplan.Models
                 });
 
                 // Æg med hytteost og mandler
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Æg med hytteost og mandler",
                     Type = MealType.Snack,
@@ -730,7 +732,7 @@ namespace Madplan.Models
                 });
 
                 // Hytteost og æbler med fuldkornspitabrød
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Hytteost og æbler med fuldkornspitabrød",
                     Type = MealType.Snack,
@@ -767,7 +769,7 @@ namespace Madplan.Models
                 });
 
                 // Æble med citron og kakaonibs
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Æble med citron og kakaonibs",
                     Type = MealType.Snack,
@@ -804,7 +806,7 @@ namespace Madplan.Models
                 });
 
                 // Pære med peber og mozzarella
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Pære med peber og mozzarella",
                     Type = MealType.Snack,
@@ -835,7 +837,7 @@ namespace Madplan.Models
                 });
 
                 // Kiwi med knæk
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Kiwi med knæk",
                     Type = MealType.Snack,
@@ -866,7 +868,7 @@ namespace Madplan.Models
                 });
 
                 // Mango, mandler og mynte
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Mango, mandler og mynte",
                     Type = MealType.Snack,
@@ -910,7 +912,7 @@ namespace Madplan.Models
                 #region Frokost
 
                 // Fennikel, parmaskinke og mandler 
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Fennikel, parmaskinke og mandler",
                     Type = MealType.Lunch,
@@ -966,7 +968,7 @@ namespace Madplan.Models
                 });
 
                 // Korn, aguark, nødder og urter 
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Korn, aguark, nødder og urter",
                     Type = MealType.Lunch,
@@ -1028,7 +1030,7 @@ namespace Madplan.Models
                 });
 
                 // Kål, kød og ost
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Kål, kød og ost",
                     Type = MealType.Lunch,
@@ -1091,7 +1093,7 @@ namespace Madplan.Models
                 });
 
                 // Tun, kartofler og æg
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Tun, kartofler og æg",
                     Type = MealType.Lunch,
@@ -1141,7 +1143,7 @@ namespace Madplan.Models
                 });
 
                 // Makrel, kål, rugbrød og skyr
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Makrel, kål, rugbrød og skyr",
                     Type = MealType.Lunch,
@@ -1197,7 +1199,7 @@ namespace Madplan.Models
                 });
 
                 // Korn, bær, hytteost
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Korn, bær, hytteost",
                     Type = MealType.Lunch,
@@ -1254,7 +1256,7 @@ namespace Madplan.Models
                 });
 
                 // Kylling, majs og cornichoner
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Kylling, majs og cornichoner",
                     Type = MealType.Lunch,
@@ -1304,7 +1306,7 @@ namespace Madplan.Models
                 });
 
                 // Kold tomatsuppe
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Kold tomatsuppe",
                     Type = MealType.Lunch,
@@ -1379,7 +1381,7 @@ namespace Madplan.Models
                 });
 
                 // Wontonpakker med hummus og hytteost
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Wontonpakker med hummus og hytteost",
                     Type = MealType.Lunch,
@@ -1422,7 +1424,7 @@ namespace Madplan.Models
                 });
 
                 // Rugbrød med torskerogn, sennepsskyr og karse
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Rugbrød med torskerogn, sennepsskyr og karse",
                     Type = MealType.Lunch,
@@ -1472,7 +1474,7 @@ namespace Madplan.Models
                 });
 
                 // Amar´mad med hummus
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Amar´mad med hummus",
                     Type = MealType.Lunch,
@@ -1515,7 +1517,7 @@ namespace Madplan.Models
                 });
 
                 // Æggesalat på sprødt brød
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Æggesalat på sprødt brød",
                     Type = MealType.Lunch,
@@ -1580,7 +1582,7 @@ namespace Madplan.Models
                 #region Aftensmåltider
 
                 // Wrap med kylling, kål og karry
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Korn, aguark, nødder og urter",
                     Type = MealType.Dinner,
@@ -1647,7 +1649,7 @@ namespace Madplan.Models
                 });
 
                 // Kyllingelår med rødder, lakrids og linser
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Kyllingelår med rødder, lakrids og linser",
                     Type = MealType.Dinner,
@@ -1708,7 +1710,7 @@ namespace Madplan.Models
                 });
 
                 // Kylling med aubergine, tomat og kanel
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Kylling med aubergine, tomat og kanel",
                     Type = MealType.Dinner,
@@ -1771,7 +1773,7 @@ namespace Madplan.Models
                 });
 
                 // Kyllingefilet med pærer, druer og ris
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Kyllingefilet med pærer, druer og ris",
                     Type = MealType.Dinner,
@@ -1833,7 +1835,7 @@ namespace Madplan.Models
                 });
 
                 // Kylling med gulerødder
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Kylling med gulerødder",
                     Type = MealType.Dinner,
@@ -1883,7 +1885,7 @@ namespace Madplan.Models
                 });
 
                 // Laks med avokado, ærter og sesam
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Laks med avokado, ærter og sesam",
                     Type = MealType.Dinner,
@@ -1944,7 +1946,7 @@ namespace Madplan.Models
                 });
 
                 // Laksefrikadeller med kikærter og kål
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Laksefrikadeller med kikærter og kål",
                     Type = MealType.Dinner,
@@ -2024,7 +2026,7 @@ namespace Madplan.Models
                 });
 
                 // Råsyltet laks med ingefær og lime
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Råsyltet laks med ingefær og lime",
                     Type = MealType.Dinner,
@@ -2080,7 +2082,7 @@ namespace Madplan.Models
                 });
 
                 // Æggepandekage med makrel, tomater og rugbrød
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Æggepandekage med makrel, tomater og rugbrød",
                     Type = MealType.Dinner,
@@ -2130,7 +2132,7 @@ namespace Madplan.Models
                 });
 
                 // Tun i wasabi med kål, mandler og agurker
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Tun i wasabi med kål, mandler og agurker",
                     Type = MealType.Dinner,
@@ -2191,7 +2193,7 @@ namespace Madplan.Models
                 });
 
                 // Torskerogn med surt, æg og salat
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Torskerogn med surt, æg og salat",
                     Type = MealType.Dinner,
@@ -2264,7 +2266,7 @@ namespace Madplan.Models
                 });
 
                 // Rejer med chili, grapefrugt og kål
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Rejer med chili, grapefrugt og kål",
                     Type = MealType.Dinner,
@@ -2325,7 +2327,7 @@ namespace Madplan.Models
                 });
 
                 // Torsk med sennepsrødder
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Torsk med sennepsrødder",
                     Type = MealType.Dinner,
@@ -2410,7 +2412,7 @@ namespace Madplan.Models
                 });
 
                 // Laks med urter, syrlige agurker og æg 
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Laks med urter, syrlige agurker og æg",
                     Type = MealType.Dinner,
@@ -2481,7 +2483,7 @@ namespace Madplan.Models
                 });
 
                 // Kødsovs med paste
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Kødsovs med paste",
                     Type = MealType.Dinner,
@@ -2561,7 +2563,7 @@ namespace Madplan.Models
                 });
 
                 // Chili con carne med skyr, æbler og sennep
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Chili con carne med skyr, æbler og sennep",
                     Type = MealType.Dinner,
@@ -2646,7 +2648,7 @@ namespace Madplan.Models
                 });
 
                 // Sprød torsk, råt grønt og sellericreme
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Sprød torsk, råt grønt og sellericreme",
                     Type = MealType.Dinner,
@@ -2708,7 +2710,7 @@ namespace Madplan.Models
                 });
 
                 // Grønt og rejer i rispapir
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Grønt og rejer i rispapir",
                     Type = MealType.Dinner,
@@ -2800,7 +2802,7 @@ namespace Madplan.Models
                 });
 
                 // Frikadeller med rug, ramsløg og salat
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Frikadeller med rug, ramsløg og salat",
                     Type = MealType.Dinner,
@@ -2892,7 +2894,7 @@ namespace Madplan.Models
                 });
 
                 // Torsk og tomatsalat
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Torsk og tomatsalat",
                     Type = MealType.Dinner,
@@ -2942,7 +2944,7 @@ namespace Madplan.Models
                 });
 
                 // Pizza med frisk grønt og kylligefilet
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Pizza med frisk grønt og kylligefilet",
                     Type = MealType.Dinner,
@@ -2993,7 +2995,7 @@ namespace Madplan.Models
                 });
 
                 // Forårsruller med kål og kød
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Forårsruller med kål og kød",
                     Type = MealType.Dinner,
@@ -3049,7 +3051,7 @@ namespace Madplan.Models
                 });
 
                 // Rodfrugter på panden med chorizopølser
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Rodfrugter på panden med chorizopølser",
                     Type = MealType.Dinner,
@@ -3086,7 +3088,7 @@ namespace Madplan.Models
                 });
 
                 // Dumblings med fisk og grønt, hertil råkost
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Dumblings med fisk og grønt, hertil råkost",
                     Type = MealType.Dinner,
@@ -3153,7 +3155,7 @@ namespace Madplan.Models
                 });
 
                 // Kalv i øl og timian
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Kalv i øl og timian",
                     Type = MealType.Dinner,
@@ -3220,7 +3222,7 @@ namespace Madplan.Models
                 });
 
                 // Kartofler med æg og salat
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Kartofler med æg og salat",
                     Type = MealType.Dinner,
@@ -3271,7 +3273,7 @@ namespace Madplan.Models
                 });
 
                 // Edamamebønner med spidskål og dild
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Edamamebønner med spidskål og dild",
                     Type = MealType.Dinner,
@@ -3321,7 +3323,7 @@ namespace Madplan.Models
                 });
 
                 // Kotelet i fad med mynte, kartofler og appelsin
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Kotelet i fad med mynte, kartofler og appelsin",
                     Type = MealType.Dinner,
@@ -3376,7 +3378,7 @@ namespace Madplan.Models
                 });
 
                 // Kød med syrlige kartofler og parmesan
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Kød med syrlige kartofler og parmesan",
                     Type = MealType.Dinner,
@@ -3419,7 +3421,7 @@ namespace Madplan.Models
                 });
 
                 // Fiskefilet med salat
-                ListOfDishes.Add(new Meal()
+                ListOfMeals.Add(new Meal()
                 {
                     Name = "Fiskefilet med salat",
                     Type = MealType.Dinner,

@@ -14,7 +14,6 @@ namespace Madplan.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SelectMealPage : ContentPage
     {
-        private DataModel DataModel;
         private string _day;
         private string _dishType;
 
@@ -25,27 +24,24 @@ namespace Madplan.Views
             _day = day;
             _dishType = dishType;
 
-            label.Text = "Opskrifter til " + _dishType.ToLower();
+            //label.Text = "Opskrifter til " + _dishType.ToLower();
 
-            DataModel = new DataModel();
         }
 
-        protected async override void OnAppearing()
+        protected override void OnAppearing()
         {
             // TODO: Lav en switch, så personer kan vælge om de kun vil se mad for den valgte kategori eller om det vil se mad for alle kategorier
             // TODO: Lav en søgefelt
-
-            await DataModel.PopulateListOfDishesAsync();
 
             IEnumerable<Meal> ListOfMeals = new List<Meal>();
 
             if (_dishType == MealType.FirstSnack || _dishType == MealType.SecondSnack)
             {
-                ListOfMeals = DataModel.ListOfDishes.Where(a => a.Type == MealType.Snack);
+                ListOfMeals = DataModel.Current.ListOfMeals.Where(a => a.Type == MealType.Snack);
             }
             else
             {
-                ListOfMeals = DataModel.ListOfDishes.Where(a => a.Type == _dishType);
+                ListOfMeals = DataModel.Current.ListOfMeals.Where(a => a.Type == _dishType);
             }
 
             BindingContext = ListOfMeals;
@@ -201,6 +197,11 @@ namespace Madplan.Views
             });
 
             await connection.UpdateAsync(weekSelections);
+        }
+
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

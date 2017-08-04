@@ -3,32 +3,79 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Madplan.Views.SelectMealPage">
 
-    <ListView ItemsSource="{Binding}">
-        <ListView.Header>
-            <StackLayout Padding="0, 10" BackgroundColor="Gray">
-                <Label x:Name="label" FontAttributes="Bold"  VerticalTextAlignment="Center" Margin="15, 0, 10, 0"/>
-            </StackLayout>
-        </ListView.Header>
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell Tapped="Meal_Tapped">
-                    <Grid VerticalOptions="Center">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <StackLayout Grid.Column="0" Spacing="0" Margin="15, 0, 0, 0">
-                            <Label Text="{Binding Name}" />
-                            <Label Text="{Binding Page, StringFormat='(side: {0})'}" FontSize="Micro"/>
-                        </StackLayout>
-                        <StackLayout Grid.Column="1" Spacing="0" Margin="0, 0, 10, 0">
-                            <Label Text="{Binding Ratio, StringFormat='Ratio: {0}'}" FontSize="Micro" />
-                            <Label Text="{Binding Persons, StringFormat='Personer: {0}'}" FontSize="Micro" Margin="0, 0, 10, 0"/>
-                        </StackLayout >
-                    </Grid>
+    <TableView Intent="Data" HasUnevenRows="True">
+        <TableRoot>
+            <TableSection Title="Filter">
+                <SwitchCell Text="Sortér efter måltidstype (morgenmad)" On="True"/>
+                <SwitchCell Text="Vis søgefelt" On="False"/>
+                <ViewCell>
+                    <SearchBar Placeholder="Enter text" TextChanged="SearchBar_TextChanged" IsVisible="True"/>
                 </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+            </TableSection>
+            <TableSection Title="Oversigt over morgenmad">
+                <ViewCell>
+                    <ListView ItemsSource="{Binding}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell Tapped="Meal_Tapped">
+                                    <Grid VerticalOptions="Center">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout Grid.Column="0" Spacing="0" Margin="15, 0, 0, 0">
+                                            <Label Text="{Binding Name}" />
+                                            <Label Text="{Binding Page, StringFormat='(side: {0})'}" FontSize="Micro"/>
+                                        </StackLayout>
+                                        <StackLayout Grid.Column="1" Spacing="0" Margin="0, 0, 10, 0">
+                                            <Label Text="{Binding Ratio, StringFormat='Ratio: {0}'}" FontSize="Micro" />
+                                            <Label Text="{Binding Persons, StringFormat='Personer: {0}'}" FontSize="Micro" Margin="0, 0, 10, 0"/>
+                                        </StackLayout >
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+    
+    <!--<StackLayout>
+        <StackLayout Orientation="Horizontal" Padding="15, 8, 10, 8" VerticalOptions="Center">
+            <Label Text="Sorteres efter måltidstype (morgenmad)" VerticalTextAlignment="Center"/>
+            <Switch HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+        
+
+        <ListView ItemsSource="{Binding}">
+            <ListView.Header>
+                <StackLayout Padding="0, 0" BackgroundColor="Gray">
+                    <Label x:Name="label" FontAttributes="Bold"  VerticalTextAlignment="Center" Margin="15, 0, 10, 0"/>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Tapped="Meal_Tapped">
+                        <Grid VerticalOptions="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" Spacing="0" Margin="15, 0, 0, 0">
+                                <Label Text="{Binding Name}" />
+                                <Label Text="{Binding Page, StringFormat='(side: {0})'}" FontSize="Micro"/>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Spacing="0" Margin="0, 0, 10, 0">
+                                <Label Text="{Binding Ratio, StringFormat='Ratio: {0}'}" FontSize="Micro" />
+                                <Label Text="{Binding Persons, StringFormat='Personer: {0}'}" FontSize="Micro" Margin="0, 0, 10, 0"/>
+                            </StackLayout >
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>-->
+
     
 </ContentPage>
