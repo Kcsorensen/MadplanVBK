@@ -30,15 +30,18 @@ namespace Madplan.Views
             DataModel = new DataModel();
         }
 
-        protected override void OnAppearing()
+        protected async override void OnAppearing()
         {
-            DataModel.PopulateListOfDishes();
+            // TODO: Lav en switch, så personer kan vælge om de kun vil se mad for den valgte kategori eller om det vil se mad for alle kategorier
+            // TODO: Lav en søgefelt
 
-            IEnumerable<Dish> ListOfMeals = new List<Dish>();
+            await DataModel.PopulateListOfDishesAsync();
 
-            if (_dishType == DishType.FirstSnack || _dishType == DishType.SecondSnack)
+            IEnumerable<Meal> ListOfMeals = new List<Meal>();
+
+            if (_dishType == MealType.FirstSnack || _dishType == MealType.SecondSnack)
             {
-                ListOfMeals = DataModel.ListOfDishes.Where(a => a.Type == DishType.Snack);
+                ListOfMeals = DataModel.ListOfDishes.Where(a => a.Type == MealType.Snack);
             }
             else
             {
@@ -50,10 +53,11 @@ namespace Madplan.Views
             base.OnAppearing();
         }
 
-        private async void ViewCell_Tapped(object sender, EventArgs e)
+        private async void Meal_Tapped(object sender, EventArgs e)
         {
             var viewCell = sender as ViewCell;
-            var stackLayout = viewCell.View as StackLayout;
+            var grid = viewCell.View as Grid;
+            var stackLayout = grid.Children[0] as StackLayout;
             var selectedMeal = (stackLayout.Children[0] as Label).Text;
 
             await SaveSelected(selectedMeal);
@@ -67,53 +71,134 @@ namespace Madplan.Views
 
             var weekSelections = await connection.Table<WeekSelections>().FirstAsync();
 
-            if (_day == Day.Monday)
+            await Task.Run(() => 
             {
-                if (_dishType == DishType.Breakfast)
-                    weekSelections.MondayBreakfast = selectedMeal;
+                if (_day == Day.Monday)
+                {
+                    if (_dishType == MealType.Breakfast)
+                        weekSelections.MondayBreakfast = selectedMeal;
 
-                if (_dishType == DishType.FirstSnack)
-                    weekSelections.MondayFirstSnack = selectedMeal;
+                    if (_dishType == MealType.FirstSnack)
+                        weekSelections.MondayFirstSnack = selectedMeal;
 
-                if (_dishType == DishType.Lunch)
-                    weekSelections.MondayLunch = selectedMeal;
+                    if (_dishType == MealType.Lunch)
+                        weekSelections.MondayLunch = selectedMeal;
 
-                if (_dishType == DishType.SecondSnack)
-                    weekSelections.MondaySecondSnack = selectedMeal;
+                    if (_dishType == MealType.SecondSnack)
+                        weekSelections.MondaySecondSnack = selectedMeal;
 
-                if (_dishType == DishType.Dinner)
-                    weekSelections.MondayDinner = selectedMeal;
-            }
+                    if (_dishType == MealType.Dinner)
+                        weekSelections.MondayDinner = selectedMeal;
+                }
 
-            if (_day == Day.Tuesday)
-            {
-                // TODO: Mangler af udfylde de sidste dage
-            }
+                if (_day == Day.Tuesday)
+                {
+                    if (_dishType == MealType.Breakfast)
+                        weekSelections.TuesdayBreakfast = selectedMeal;
 
-            if (_day == Day.Wednesday)
-            {
+                    if (_dishType == MealType.FirstSnack)
+                        weekSelections.TuesdayFirstSnack = selectedMeal;
 
-            }
+                    if (_dishType == MealType.Lunch)
+                        weekSelections.TuesdayLunch = selectedMeal;
 
-            if (_day == Day.Thursday)
-            {
+                    if (_dishType == MealType.SecondSnack)
+                        weekSelections.TuesdaySecondSnack = selectedMeal;
 
-            }
+                    if (_dishType == MealType.Dinner)
+                        weekSelections.TuesdayDinner = selectedMeal;
+                }
 
-            if (_day == Day.Friday)
-            {
+                if (_day == Day.Wednesday)
+                {
+                    if (_dishType == MealType.Breakfast)
+                        weekSelections.WednesdayBreakfast = selectedMeal;
 
-            }
+                    if (_dishType == MealType.FirstSnack)
+                        weekSelections.WednesdayFirstSnack = selectedMeal;
 
-            if (_day == Day.Saturday)
-            {
+                    if (_dishType == MealType.Lunch)
+                        weekSelections.WednesdayLunch = selectedMeal;
 
-            }
+                    if (_dishType == MealType.SecondSnack)
+                        weekSelections.WednesdaySecondSnack = selectedMeal;
 
-            if (_day == Day.Sunday)
-            {
+                    if (_dishType == MealType.Dinner)
+                        weekSelections.WednesdayDinner = selectedMeal;
+                }
 
-            }
+                if (_day == Day.Thursday)
+                {
+                    if (_dishType == MealType.Breakfast)
+                        weekSelections.ThursdayBreakfast = selectedMeal;
+
+                    if (_dishType == MealType.FirstSnack)
+                        weekSelections.ThursdayFirstSnack = selectedMeal;
+
+                    if (_dishType == MealType.Lunch)
+                        weekSelections.ThursdayLunch = selectedMeal;
+
+                    if (_dishType == MealType.SecondSnack)
+                        weekSelections.ThursdaySecondSnack = selectedMeal;
+
+                    if (_dishType == MealType.Dinner)
+                        weekSelections.ThursdayDinner = selectedMeal;
+                }
+
+                if (_day == Day.Friday)
+                {
+                    if (_dishType == MealType.Breakfast)
+                        weekSelections.FridayBreakfast = selectedMeal;
+
+                    if (_dishType == MealType.FirstSnack)
+                        weekSelections.FridayFirstSnack = selectedMeal;
+
+                    if (_dishType == MealType.Lunch)
+                        weekSelections.FridayLunch = selectedMeal;
+
+                    if (_dishType == MealType.SecondSnack)
+                        weekSelections.FridaySecondSnack = selectedMeal;
+
+                    if (_dishType == MealType.Dinner)
+                        weekSelections.FridayDinner = selectedMeal;
+                }
+
+                if (_day == Day.Saturday)
+                {
+                    if (_dishType == MealType.Breakfast)
+                        weekSelections.SaturdayBreakfast = selectedMeal;
+
+                    if (_dishType == MealType.FirstSnack)
+                        weekSelections.SaturdayFirstSnack = selectedMeal;
+
+                    if (_dishType == MealType.Lunch)
+                        weekSelections.SaturdayLunch = selectedMeal;
+
+                    if (_dishType == MealType.SecondSnack)
+                        weekSelections.SaturdaySecondSnack = selectedMeal;
+
+                    if (_dishType == MealType.Dinner)
+                        weekSelections.SaturdayDinner = selectedMeal;
+                }
+
+                if (_day == Day.Sunday)
+                {
+                    if (_dishType == MealType.Breakfast)
+                        weekSelections.SundayBreakfast = selectedMeal;
+
+                    if (_dishType == MealType.FirstSnack)
+                        weekSelections.SundayFirstSnack = selectedMeal;
+
+                    if (_dishType == MealType.Lunch)
+                        weekSelections.SundayLunch = selectedMeal;
+
+                    if (_dishType == MealType.SecondSnack)
+                        weekSelections.SundaySecondSnack = selectedMeal;
+
+                    if (_dishType == MealType.Dinner)
+                        weekSelections.SundayDinner = selectedMeal;
+                }
+            });
 
             await connection.UpdateAsync(weekSelections);
         }

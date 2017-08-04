@@ -1,30 +1,33 @@
 ﻿using Madplan.Extensions;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Madplan.Models
 {
     public class DataModel
     {
-        public List<Dish> ListOfDishes { get; set; }
+        public List<Meal> ListOfDishes { get; set; }
 
         public DataModel()
         {
-            ListOfDishes = new List<Dish>();
+            ListOfDishes = new List<Meal>();
         }
 
-        public void PopulateListOfDishes()
+        public async Task PopulateListOfDishesAsync()
         {
-            #region Morgenmad
-
-            // Hvid æggepandekage med rød peber og ost
-            ListOfDishes.Add(new Dish()
+            await Task.Run(() => 
             {
-                Name = "Hvid æggepandekage med rød peber og ost",
-                Type = DishType.Breakfast,
-                Ratio = 0.9,
-                Persons = 1,
-                Page = 96,
-                Ingredients = new List<Ingredient>()
+                #region Morgenmad
+
+                // Hvid æggepandekage med rød peber og ost
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Hvid æggepandekage med rød peber og ost",
+                    Type = MealType.Breakfast,
+                    Ratio = 0.9,
+                    Persons = 1,
+                    Page = 96,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -42,7 +45,8 @@ namespace Madplan.Models
                     {
                         Name = IngredientHelper.Olivenolie.GetDescription(),
                         Quantity = 0,
-                        QuantityType = QuantityType.Ingen
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                     new Ingredient()
                     {
@@ -57,17 +61,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.spsk
                     },
                 }
-            });
+                });
 
-            // Æggepandekage med skinke og ost
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Æggepandekage med skinke og ost",
-                Type = DishType.Breakfast,
-                Ratio = 0.7,
-                Persons = 1,
-                Page = 98,
-                Ingredients = new List<Ingredient>()
+                // Æggepandekage med skinke og ost
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Æggepandekage med skinke og ost",
+                    Type = MealType.Breakfast,
+                    Ratio = 0.7,
+                    Persons = 1,
+                    Page = 98,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -85,7 +89,8 @@ namespace Madplan.Models
                     {
                         Name = IngredientHelper.Olivenolie.GetDescription(),
                         Quantity = 0,
-                        QuantityType = QuantityType.Ingen
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                     new Ingredient()
                     {
@@ -106,17 +111,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.stk
                     },
                 }
-            });
+                });
 
-            // Skyr med Granola
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Skyr med Granola",
-                Type = DishType.Breakfast,
-                Ratio = 0.6,
-                Persons = 1,
-                Page = 100,
-                Ingredients = new List<Ingredient>()
+                // Skyr med Granola
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Skyr med Granola",
+                    Type = MealType.Breakfast,
+                    Ratio = 0.6,
+                    Persons = 1,
+                    Page = 100,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -132,17 +137,17 @@ namespace Madplan.Models
                         BasicRecipe = true
                     },
                 }
-            });
+                });
 
-            // Klapsammen med nøddespread og æg
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Klapsammen med nøddespread og æg",
-                Type = DishType.Breakfast,
-                Ratio = 0.3,
-                Persons = 1,
-                Page = 101,
-                Ingredients = new List<Ingredient>()
+                // Klapsammen med nøddespread og æg
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Klapsammen med nøddespread og æg",
+                    Type = MealType.Breakfast,
+                    Ratio = 0.3,
+                    Persons = 1,
+                    Page = 101,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -164,17 +169,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.stk,
                     },
                 }
-            });
+                });
 
-            // Grovpita med skinke, gulerødder og hytteost
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Grovpita med skinke, gulerødder og hytteost",
-                Type = DishType.Breakfast,
-                Ratio = 0.6,
-                Persons = 1,
-                Page = 102,
-                Ingredients = new List<Ingredient>()
+                // Grovpita med skinke, gulerødder og hytteost
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Grovpita med skinke, gulerødder og hytteost",
+                    Type = MealType.Breakfast,
+                    Ratio = 0.6,
+                    Persons = 1,
+                    Page = 102,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -207,17 +212,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.spsk
                     },
                 }
-            });
+                });
 
-            // Ruggrød med æblemost og nødder
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Ruggrød med æblemost og nødder",
-                Type = DishType.Breakfast,
-                Ratio = 0.2,
-                Persons = 1,
-                Page = 104,
-                Ingredients = new List<Ingredient>()
+                // Ruggrød med æblemost og nødder
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Ruggrød med æblemost og nødder",
+                    Type = MealType.Breakfast,
+                    Ratio = 0.2,
+                    Persons = 1,
+                    Page = 104,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -256,17 +261,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.spsk
                     },
                 }
-            });
+                });
 
-            // Knækbrød med æg og hytteost
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Knækbrød med æg og hytteost",
-                Type = DishType.Breakfast,
-                Ratio = 0.4,
-                Persons = 1,
-                Page = 106,
-                Ingredients = new List<Ingredient>()
+                // Knækbrød med æg og hytteost
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Knækbrød med æg og hytteost",
+                    Type = MealType.Breakfast,
+                    Ratio = 0.4,
+                    Persons = 1,
+                    Page = 106,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -293,17 +298,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.spsk
                     },
                 }
-            });
+                });
 
-            // Pink grød med solbær
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Pink grød med solbær",
-                Type = DishType.Breakfast,
-                Ratio = 0.3,
-                Persons = 1,
-                Page = 108,
-                Ingredients = new List<Ingredient>()
+                // Pink grød med solbær
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Pink grød med solbær",
+                    Type = MealType.Breakfast,
+                    Ratio = 0.3,
+                    Persons = 1,
+                    Page = 108,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -343,17 +348,17 @@ namespace Madplan.Models
                     },
 
                 }
-            });
+                });
 
-            // Grød "to go"
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Grød \"to go\"",
-                Type = DishType.Breakfast,
-                Ratio = 0.4,
-                Persons = 1,
-                Page = 110,
-                Ingredients = new List<Ingredient>()
+                // Grød "to go"
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Grød \"to go\"",
+                    Type = MealType.Breakfast,
+                    Ratio = 0.4,
+                    Persons = 1,
+                    Page = 110,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -405,17 +410,17 @@ namespace Madplan.Models
                     },
 
                 }
-            });
+                });
 
-            // Syrnet mysli
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Syrnet mysli",
-                Type = DishType.Breakfast,
-                Ratio = 0.4,
-                Persons = 2,
-                Page = 112,
-                Ingredients = new List<Ingredient>()
+                // Syrnet mysli
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Syrnet mysli",
+                    Type = MealType.Breakfast,
+                    Ratio = 0.4,
+                    Persons = 2,
+                    Page = 112,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -466,17 +471,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.spsk
                     },
                 }
-            });
+                });
 
-            // Søndag morgen
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Søndag morgen",
-                Type = DishType.Breakfast,
-                Ratio = 0.8,
-                Persons = 1,
-                Page = 114,
-                Ingredients = new List<Ingredient>()
+                // Søndag morgen
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Søndag morgen",
+                    Type = MealType.Breakfast,
+                    Ratio = 0.8,
+                    Persons = 1,
+                    Page = 114,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -522,23 +527,23 @@ namespace Madplan.Models
                         BasicRecipe = true
                     },
                 }
-            });
+                });
 
-            #endregion
+                #endregion
 
-            #region Mellemmåltider
+                #region Mellemmåltider
 
-            // Rugbolle med chokolade
+                // Rugbolle med chokolade
 
-            // Gulerødder med grønne ærter
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Søndag morgen",
-                Type = DishType.Snack,
-                Ratio = 0.5,
-                Persons = 1,
-                Page = 120,
-                Ingredients = new List<Ingredient>()
+                // Gulerødder med grønne ærter
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Søndag morgen",
+                    Type = MealType.Snack,
+                    Ratio = 0.5,
+                    Persons = 1,
+                    Page = 120,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -583,17 +588,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.stk
                     },
                 }
-            });
+                });
 
-            // Røgbrød med AC-spread
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Røgbrød med AC-spread",
-                Type = DishType.Snack,
-                Ratio = 0.3,
-                Persons = 1,
-                Page = 122,
-                Ingredients = new List<Ingredient>()
+                // Røgbrød med AC-spread
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Røgbrød med AC-spread",
+                    Type = MealType.Snack,
+                    Ratio = 0.3,
+                    Persons = 1,
+                    Page = 122,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -609,17 +614,17 @@ namespace Madplan.Models
                         BasicRecipe = true
                     },
                 }
-            });
+                });
 
-            // Nøddespread på knækbrød
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Nøddespread på knækbrød",
-                Type = DishType.Snack,
-                Ratio = 0.2,
-                Persons = 1,
-                Page = 123,
-                Ingredients = new List<Ingredient>()
+                // Nøddespread på knækbrød
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Nøddespread på knækbrød",
+                    Type = MealType.Snack,
+                    Ratio = 0.2,
+                    Persons = 1,
+                    Page = 123,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -635,17 +640,17 @@ namespace Madplan.Models
                         BasicRecipe = true
                     },
                 }
-            });
+                });
 
-            // Æg med knas
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Æg med knas",
-                Type = DishType.Snack,
-                Ratio = 1.9,
-                Persons = 1,
-                Page = 124,
-                Ingredients = new List<Ingredient>()
+                // Æg med knas
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Æg med knas",
+                    Type = MealType.Snack,
+                    Ratio = 1.9,
+                    Persons = 1,
+                    Page = 124,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -678,17 +683,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.stk,
                     },
                 }
-            });
+                });
 
-            // Æg med hytteost og mandler
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Æg med hytteost og mandler",
-                Type = DishType.Snack,
-                Ratio = 2.3,
-                Persons = 1,
-                Page = 126,
-                Ingredients = new List<Ingredient>()
+                // Æg med hytteost og mandler
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Æg med hytteost og mandler",
+                    Type = MealType.Snack,
+                    Ratio = 2.3,
+                    Persons = 1,
+                    Page = 126,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -707,6 +712,7 @@ namespace Madplan.Models
                         Name = IngredientHelper.Persille.GetDescription(),
                         Quantity = 0,
                         QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                     new Ingredient()
                     {
@@ -721,17 +727,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.stk,
                     },
                 }
-            });
+                });
 
-            // Hytteost og æbler med fuldkornspitabrød
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Hytteost og æbler med fuldkornspitabrød",
-                Type = DishType.Snack,
-                Ratio = 0.3,
-                Persons = 1,
-                Page = 128,
-                Ingredients = new List<Ingredient>()
+                // Hytteost og æbler med fuldkornspitabrød
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Hytteost og æbler med fuldkornspitabrød",
+                    Type = MealType.Snack,
+                    Ratio = 0.3,
+                    Persons = 1,
+                    Page = 128,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -758,17 +764,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.spsk,
                     },
                 }
-            });
+                });
 
-            // Æble med citron og kakaonibs
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Æble med citron og kakaonibs",
-                Type = DishType.Snack,
-                Ratio = 0.8,
-                Persons = 1,
-                Page = 130,
-                Ingredients = new List<Ingredient>()
+                // Æble med citron og kakaonibs
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Æble med citron og kakaonibs",
+                    Type = MealType.Snack,
+                    Ratio = 0.8,
+                    Persons = 1,
+                    Page = 130,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -795,17 +801,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.tsk,
                     },
                 }
-            });
+                });
 
-            // Pære med peber og mozzarella
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Pære med peber og mozzarella",
-                Type = DishType.Snack,
-                Ratio = 0.6,
-                Persons = 1,
-                Page = 132,
-                Ingredients = new List<Ingredient>()
+                // Pære med peber og mozzarella
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Pære med peber og mozzarella",
+                    Type = MealType.Snack,
+                    Ratio = 0.6,
+                    Persons = 1,
+                    Page = 132,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -826,17 +832,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.stk,
                     },
                 }
-            });
+                });
 
-            // Kiwi med knæk
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Kiwi med knæk",
-                Type = DishType.Snack,
-                Ratio = 0.5,
-                Persons = 1,
-                Page = 133,
-                Ingredients = new List<Ingredient>()
+                // Kiwi med knæk
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Kiwi med knæk",
+                    Type = MealType.Snack,
+                    Ratio = 0.5,
+                    Persons = 1,
+                    Page = 133,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -857,17 +863,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.stk,
                     },
                 }
-            });
+                });
 
-            // Mango, mandler og mynte
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Mango, mandler og mynte",
-                Type = DishType.Snack,
-                Ratio = 0.1,
-                Persons = 1,
-                Page = 134,
-                Ingredients = new List<Ingredient>()
+                // Mango, mandler og mynte
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Mango, mandler og mynte",
+                    Type = MealType.Snack,
+                    Ratio = 0.1,
+                    Persons = 1,
+                    Page = 134,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -880,6 +886,7 @@ namespace Madplan.Models
                         Name = IngredientHelper.Mynte.GetDescription(),
                         Quantity = 0,
                         QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                     new Ingredient()
                     {
@@ -895,22 +902,22 @@ namespace Madplan.Models
                     },
 
                 }
-            });
+                });
 
 
-            #endregion
+                #endregion
 
-            #region Frokost
+                #region Frokost
 
-            // Fennikel, parmaskinke og mandler 
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Fennikel, parmaskinke og mandler",
-                Type = DishType.Lunch,
-                Ratio = 0.5,
-                Persons = 1,
-                Page = 138,
-                Ingredients = new List<Ingredient>()
+                // Fennikel, parmaskinke og mandler 
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Fennikel, parmaskinke og mandler",
+                    Type = MealType.Lunch,
+                    Ratio = 0.5,
+                    Persons = 1,
+                    Page = 138,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -940,7 +947,8 @@ namespace Madplan.Models
                     {
                         Name = IngredientHelper.Dild.GetDescription(),
                         Quantity = 0,
-                        QuantityType = QuantityType.Ingen
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                     new Ingredient()
                     {
@@ -955,17 +963,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.skive
                     },
                 }
-            });
+                });
 
-            // Korn, aguark, nødder og urter 
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Korn, aguark, nødder og urter",
-                Type = DishType.Lunch,
-                Ratio = 0.6,
-                Persons = 1,
-                Page = 140,
-                Ingredients = new List<Ingredient>()
+                // Korn, aguark, nødder og urter 
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Korn, aguark, nødder og urter",
+                    Type = MealType.Lunch,
+                    Ratio = 0.6,
+                    Persons = 1,
+                    Page = 140,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -995,7 +1003,8 @@ namespace Madplan.Models
                     {
                         Name = IngredientHelper.Basilikum.GetDescription(),
                         Quantity = 0,
-                        QuantityType = QuantityType.Ingen
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                     new Ingredient()
                     {
@@ -1016,17 +1025,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.spsk
                     },
                 }
-            });
+                });
 
-            // Kål, kød og ost
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Kål, kød og ost",
-                Type = DishType.Lunch,
-                Ratio = 1.1,
-                Persons = 1,
-                Page = 142,
-                Ingredients = new List<Ingredient>()
+                // Kål, kød og ost
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Kål, kød og ost",
+                    Type = MealType.Lunch,
+                    Ratio = 1.1,
+                    Persons = 1,
+                    Page = 142,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1049,8 +1058,9 @@ namespace Madplan.Models
                     new Ingredient()
                     {
                         Name = IngredientHelper.Olivenolie.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.spsk
+                        Quantity = 0,
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                     new Ingredient()
                     {
@@ -1074,20 +1084,21 @@ namespace Madplan.Models
                     {
                         Name = IngredientHelper.Dild.GetDescription(),
                         Quantity = 0,
-                        QuantityType = QuantityType.Ingen
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                 }
-            });
+                });
 
-            // Tun, kartofler og æg
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Tun, kartofler og æg",
-                Type = DishType.Lunch,
-                Ratio = 1.1,
-                Persons = 1,
-                Page = 144,
-                Ingredients = new List<Ingredient>()
+                // Tun, kartofler og æg
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Tun, kartofler og æg",
+                    Type = MealType.Lunch,
+                    Ratio = 1.1,
+                    Persons = 1,
+                    Page = 144,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1116,8 +1127,9 @@ namespace Madplan.Models
                     new Ingredient()
                     {
                         Name = IngredientHelper.Olivenolie.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.spsk
+                        Quantity = 0,
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                     new Ingredient()
                     {
@@ -1126,17 +1138,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.stk
                     },
                 }
-            });
+                });
 
-            // Makrel, kål, rugbrød og skyr
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Makrel, kål, rugbrød og skyr",
-                Type = DishType.Lunch,
-                Ratio = 0.9,
-                Persons = 1,
-                Page = 146,
-                Ingredients = new List<Ingredient>()
+                // Makrel, kål, rugbrød og skyr
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Makrel, kål, rugbrød og skyr",
+                    Type = MealType.Lunch,
+                    Ratio = 0.9,
+                    Persons = 1,
+                    Page = 146,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1172,7 +1184,8 @@ namespace Madplan.Models
                     {
                         Name = IngredientHelper.Dild.GetDescription(),
                         Quantity = 0,
-                        QuantityType = QuantityType.Ingen
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                     new Ingredient()
                     {
@@ -1181,17 +1194,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.skive
                     },
                 }
-            });
+                });
 
-            // Korn, bær, hytteost
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Korn, bær, hytteost",
-                Type = DishType.Lunch,
-                Ratio = 0.5,
-                Persons = 1,
-                Page = 148,
-                Ingredients = new List<Ingredient>()
+                // Korn, bær, hytteost
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Korn, bær, hytteost",
+                    Type = MealType.Lunch,
+                    Ratio = 0.5,
+                    Persons = 1,
+                    Page = 148,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1209,13 +1222,15 @@ namespace Madplan.Models
                     {
                         Name = IngredientHelper.Dild.GetDescription(),
                         Quantity = 0,
-                        QuantityType = QuantityType.Ingen
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                     new Ingredient()
                     {
                         Name = IngredientHelper.Persille.GetDescription(),
                         Quantity = 0,
-                        QuantityType = QuantityType.Ingen
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                     new Ingredient()
                     {
@@ -1236,17 +1251,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.spsk
                     },
                 }
-            });
+                });
 
-            // Kylling, majs og cornichoner
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Kylling, majs og cornichoner",
-                Type = DishType.Lunch,
-                Ratio = 1.3,
-                Persons = 1,
-                Page = 149,
-                Ingredients = new List<Ingredient>()
+                // Kylling, majs og cornichoner
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Kylling, majs og cornichoner",
+                    Type = MealType.Lunch,
+                    Ratio = 1.3,
+                    Persons = 1,
+                    Page = 149,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1281,21 +1296,22 @@ namespace Madplan.Models
                     new Ingredient()
                     {
                         Name = IngredientHelper.Olivenolie.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.spsk
+                        Quantity = 0,
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                 }
-            });
+                });
 
-            // Kold tomatsuppe
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Kold tomatsuppe",
-                Type = DishType.Lunch,
-                Ratio = 0.3,
-                Persons = 1,
-                Page = 150,
-                Ingredients = new List<Ingredient>()
+                // Kold tomatsuppe
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Kold tomatsuppe",
+                    Type = MealType.Lunch,
+                    Ratio = 0.3,
+                    Persons = 1,
+                    Page = 150,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1331,7 +1347,8 @@ namespace Madplan.Models
                     {
                         Name = IngredientHelper.Basilikum.GetDescription(),
                         Quantity = 0,
-                        QuantityType = QuantityType.Ingen
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                     new Ingredient()
                     {
@@ -1348,8 +1365,9 @@ namespace Madplan.Models
                     new Ingredient()
                     {
                         Name = IngredientHelper.Olivenolie.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.tsk
+                        Quantity = 0,
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                     new Ingredient()
                     {
@@ -1358,17 +1376,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.tsk
                     },
                 }
-            });
+                });
 
-            // Wontonpakker med hummus og hytteost
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Wontonpakker med hummus og hytteost",
-                Type = DishType.Lunch,
-                Ratio = 0.4,
-                Persons = 1,
-                Page = 152,
-                Ingredients = new List<Ingredient>()
+                // Wontonpakker med hummus og hytteost
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Wontonpakker med hummus og hytteost",
+                    Type = MealType.Lunch,
+                    Ratio = 0.4,
+                    Persons = 1,
+                    Page = 152,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1401,17 +1419,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.tsk
                     },
                 }
-            });
+                });
 
-            // Rugbrød med torskerogn, sennepsskyr og karse
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Rugbrød med torskerogn, sennepsskyr og karse",
-                Type = DishType.Lunch,
-                Ratio = 0.4,
-                Persons = 1,
-                Page = 154,
-                Ingredients = new List<Ingredient>()
+                // Rugbrød med torskerogn, sennepsskyr og karse
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Rugbrød med torskerogn, sennepsskyr og karse",
+                    Type = MealType.Lunch,
+                    Ratio = 0.4,
+                    Persons = 1,
+                    Page = 154,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1447,20 +1465,21 @@ namespace Madplan.Models
                     {
                         Name = IngredientHelper.Karse.GetDescription(),
                         Quantity = 0,
-                        QuantityType = QuantityType.Ingen
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                 }
-            });
+                });
 
-            // Amar´mad med hummus
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Amar´mad med hummus",
-                Type = DishType.Lunch,
-                Ratio = 0.3,
-                Persons = 1,
-                Page = 155,
-                Ingredients = new List<Ingredient>()
+                // Amar´mad med hummus
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Amar´mad med hummus",
+                    Type = MealType.Lunch,
+                    Ratio = 0.3,
+                    Persons = 1,
+                    Page = 155,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1493,17 +1512,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.skive
                     },
                 }
-            });
+                });
 
-            // Æggesalat på sprødt brød
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Æggesalat på sprødt brød",
-                Type = DishType.Lunch,
-                Ratio = 0.7,
-                Persons = 1,
-                Page = 156,
-                Ingredients = new List<Ingredient>()
+                // Æggesalat på sprødt brød
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Æggesalat på sprødt brød",
+                    Type = MealType.Lunch,
+                    Ratio = 0.7,
+                    Persons = 1,
+                    Page = 156,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1554,21 +1573,21 @@ namespace Madplan.Models
                         QuantityType = QuantityType.stk
                     },
                 }
-            });
+                });
 
-            #endregion
+                #endregion
 
-            #region Aftensmåltider
+                #region Aftensmåltider
 
-            // Wrap med kylling, kål og karry
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Korn, aguark, nødder og urter",
-                Type = DishType.Dinner,
-                Ratio = 1.0,
-                Persons = 1,
-                Page = 160,
-                Ingredients = new List<Ingredient>()
+                // Wrap med kylling, kål og karry
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Korn, aguark, nødder og urter",
+                    Type = MealType.Dinner,
+                    Ratio = 1.0,
+                    Persons = 1,
+                    Page = 160,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1625,17 +1644,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.dl
                     },
                 }
-            });
+                });
 
-            // Kyllingelår med rødder, lakrids og linser
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Kyllingelår med rødder, lakrids og linser",
-                Type = DishType.Dinner,
-                Ratio = 1.0,
-                Persons = 1,
-                Page = 162,
-                Ingredients = new List<Ingredient>()
+                // Kyllingelår med rødder, lakrids og linser
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Kyllingelår med rødder, lakrids og linser",
+                    Type = MealType.Dinner,
+                    Ratio = 1.0,
+                    Persons = 1,
+                    Page = 162,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1686,17 +1705,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.tsk
                     },
                 }
-            });
+                });
 
-            // Kylling med aubergine, tomat og kanel
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Kylling med aubergine, tomat og kanel",
-                Type = DishType.Dinner,
-                Ratio = 14.0,
-                Persons = 4,
-                Page = 164,
-                Ingredients = new List<Ingredient>()
+                // Kylling med aubergine, tomat og kanel
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Kylling med aubergine, tomat og kanel",
+                    Type = MealType.Dinner,
+                    Ratio = 14.0,
+                    Persons = 4,
+                    Page = 164,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1732,7 +1751,8 @@ namespace Madplan.Models
                     {
                         Name = IngredientHelper.Persille.GetDescription(),
                         Quantity = 0,
-                        QuantityType = QuantityType.Ingen
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                     new Ingredient()
                     {
@@ -1743,21 +1763,22 @@ namespace Madplan.Models
                     new Ingredient()
                     {
                         Name = IngredientHelper.Olivenolie.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.spsk
+                        Quantity = 0,
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                 }
-            });
+                });
 
-            // Kyllingefilet med pærer, druer og ris
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Kyllingefilet med pærer, druer og ris",
-                Type = DishType.Dinner,
-                Ratio = 1.1,
-                Persons = 1,
-                Page = 166,
-                Ingredients = new List<Ingredient>()
+                // Kyllingefilet med pærer, druer og ris
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Kyllingefilet med pærer, druer og ris",
+                    Type = MealType.Dinner,
+                    Ratio = 1.1,
+                    Persons = 1,
+                    Page = 166,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1793,7 +1814,8 @@ namespace Madplan.Models
                     {
                         Name = IngredientHelper.Mynte.GetDescription(),
                         Quantity = 0,
-                        QuantityType = QuantityType.Ingen
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                     new Ingredient()
                     {
@@ -1808,17 +1830,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.stk
                     },
                 }
-            });
+                });
 
-            // Kylling med gulerødder
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Kylling med gulerødder",
-                Type = DishType.Dinner,
-                Ratio = 0.8,
-                Persons = 1,
-                Page = 168,
-                Ingredients = new List<Ingredient>()
+                // Kylling med gulerødder
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Kylling med gulerødder",
+                    Type = MealType.Dinner,
+                    Ratio = 0.8,
+                    Persons = 1,
+                    Page = 168,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1854,20 +1876,21 @@ namespace Madplan.Models
                     {
                         Name = IngredientHelper.Dild.GetDescription(),
                         Quantity = 0,
-                        QuantityType = QuantityType.Ingen
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                 }
-            });
+                });
 
-            // Laks med avokado, ærter og sesam
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Laks med avokado, ærter og sesam",
-                Type = DishType.Dinner,
-                Ratio = 1.1,
-                Persons = 1,
-                Page = 170,
-                Ingredients = new List<Ingredient>()
+                // Laks med avokado, ærter og sesam
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Laks med avokado, ærter og sesam",
+                    Type = MealType.Dinner,
+                    Ratio = 1.1,
+                    Persons = 1,
+                    Page = 170,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1918,17 +1941,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.spsk
                     },
                 }
-            });
+                });
 
-            // Laksefrikadeller med kikærter og kål
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Laksefrikadeller med kikærter og kål",
-                Type = DishType.Dinner,
-                Ratio = 0.9,
-                Persons = 1,
-                Page = 172,
-                Ingredients = new List<Ingredient>()
+                // Laksefrikadeller med kikærter og kål
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Laksefrikadeller med kikærter og kål",
+                    Type = MealType.Dinner,
+                    Ratio = 0.9,
+                    Persons = 1,
+                    Page = 172,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -1969,8 +1992,9 @@ namespace Madplan.Models
                     new Ingredient()
                     {
                         Name = IngredientHelper.Olivenolie.GetDescription(),
-                        Quantity = 2,
-                        QuantityType = QuantityType.spsk
+                        Quantity = 0,
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                     new Ingredient()
                     {
@@ -1997,17 +2021,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.tsk
                     },
                 }
-            });
+                });
 
-            // Råsyltet laks med ingefær og lime
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Råsyltet laks med ingefær og lime",
-                Type = DishType.Dinner,
-                Ratio = 0.9,
-                Persons = 1,
-                Page = 174,
-                Ingredients = new List<Ingredient>()
+                // Råsyltet laks med ingefær og lime
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Råsyltet laks med ingefær og lime",
+                    Type = MealType.Dinner,
+                    Ratio = 0.9,
+                    Persons = 1,
+                    Page = 174,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -2049,20 +2073,21 @@ namespace Madplan.Models
                     {
                         Name = IngredientHelper.Dild.GetDescription(),
                         Quantity = 0,
-                        QuantityType = QuantityType.Ingen
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                 }
-            });
+                });
 
-            // Æggepandekage med makrel, tomater og rugbrød
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Æggepandekage med makrel, tomater og rugbrød",
-                Type = DishType.Dinner,
-                Ratio = 1.3,
-                Persons = 1,
-                Page = 176,
-                Ingredients = new List<Ingredient>()
+                // Æggepandekage med makrel, tomater og rugbrød
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Æggepandekage med makrel, tomater og rugbrød",
+                    Type = MealType.Dinner,
+                    Ratio = 1.3,
+                    Persons = 1,
+                    Page = 176,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -2098,20 +2123,21 @@ namespace Madplan.Models
                     {
                         Name = IngredientHelper.Persille.GetDescription(),
                         Quantity = 0,
-                        QuantityType = QuantityType.Ingen
+                        QuantityType = QuantityType.Ingen,
+                        QuantityVisible = false
                     },
                 }
-            });
+                });
 
-            // Tun i wasabi med kål, mandler og agurker
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Tun i wasabi med kål, mandler og agurker",
-                Type = DishType.Dinner,
-                Ratio = 1.8,
-                Persons = 1,
-                Page = 178,
-                Ingredients = new List<Ingredient>()
+                // Tun i wasabi med kål, mandler og agurker
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Tun i wasabi med kål, mandler og agurker",
+                    Type = MealType.Dinner,
+                    Ratio = 1.8,
+                    Persons = 1,
+                    Page = 178,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -2162,17 +2188,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.spsk
                     },
                 }
-            });
+                });
 
-            // Torskerogn med surt, æg og salat
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Torskerogn med surt, æg og salat",
-                Type = DishType.Dinner,
-                Ratio = 0.8,
-                Persons = 1,
-                Page = 180,
-                Ingredients = new List<Ingredient>()
+                // Torskerogn med surt, æg og salat
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Torskerogn med surt, æg og salat",
+                    Type = MealType.Dinner,
+                    Ratio = 0.8,
+                    Persons = 1,
+                    Page = 180,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -2235,17 +2261,17 @@ namespace Madplan.Models
                         QuantityType = QuantityType.stk
                     },
                 }
-            });
+                });
 
-            // Rejer med chili, grapefrugt og kål
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Rejer med chili, grapefrugt og kål",
-                Type = DishType.Dinner,
-                Ratio = 1.4,
-                Persons = 1,
-                Page = 182,
-                Ingredients = new List<Ingredient>()
+                // Rejer med chili, grapefrugt og kål
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Rejer med chili, grapefrugt og kål",
+                    Type = MealType.Dinner,
+                    Ratio = 1.4,
+                    Persons = 1,
+                    Page = 182,
+                    Ingredients = new List<Ingredient>()
                 {
                     new Ingredient()
                     {
@@ -2296,149 +2322,1181 @@ namespace Madplan.Models
                         QuantityType = QuantityType.spsk
                     },
                 }
-            });
+                });
 
-            // Torsk med sennepsrødder
-            ListOfDishes.Add(new Dish()
-            {
-                Name = "Torsk med sennepsrødder",
-                Type = DishType.Dinner,
-                Ratio = 1.3,
-                Persons = 1,
-                Page = 184,
-                Ingredients = new List<Ingredient>()
+                // Torsk med sennepsrødder
+                ListOfDishes.Add(new Meal()
                 {
-                    new Ingredient()
+                    Name = "Torsk med sennepsrødder",
+                    Type = MealType.Dinner,
+                    Ratio = 1.3,
+                    Persons = 1,
+                    Page = 184,
+                    Ingredients = new List<Ingredient>()
                     {
-                        Name = IngredientHelper.Torsk.GetDescription(),
-                        Quantity = 120,
-                        QuantityType = QuantityType.gram
-                    },
-                    new Ingredient()
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Torsk.GetDescription(),
+                            Quantity = 120,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Æg.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Chiafrø.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.spsk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Citron.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Gulerod.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Persillerod.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Knoldselleri.GetDescription(),
+                            Quantity = 50,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Jordskok.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Hasselnødder.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.spsk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Vindruekerneolie.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.spsk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Vineddike.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.spsk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Dijonsennep.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.tsk
+                        },
+                    }
+                });
+
+                // Laks med urter, syrlige agurker og æg 
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Laks med urter, syrlige agurker og æg",
+                    Type = MealType.Dinner,
+                    Ratio = 0.9,
+                    Persons = 1,
+                    Page = 186,
+                    Ingredients = new List<Ingredient>()
                     {
-                        Name = IngredientHelper.Æg.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.stk
-                    },
-                    new Ingredient()
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Laksefilet.GetDescription(),
+                            Quantity = 120,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Purløg.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Dild.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Basilikum.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Persille.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Æbleeddike.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.dl
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Agurk.GetDescription(),
+                            Quantity = 0.24,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Rugkerner.GetDescription(),
+                            Quantity = 50,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Æg.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk
+                        },
+                    }
+                });
+
+                // Kødsovs med paste
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Kødsovs med paste",
+                    Type = MealType.Dinner,
+                    Ratio = 0.8,
+                    Persons = 2,
+                    Page = 188,
+                    Ingredients = new List<Ingredient>()
                     {
-                        Name = IngredientHelper.Chiafrø.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.spsk
-                    },
-                    new Ingredient()
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.HakketOksekød.GetDescription(),
+                            Quantity = 250,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Rødløg.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Hvidløg.GetDescription(),
+                            Quantity = 4,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Gulerod.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.FlåedeTomater.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.dåse,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.GrønneLinser.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.dl
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Olivenolie.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Citron.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.GrovPasta.GetDescription(),
+                            Quantity = 80,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Parmesanost.GetDescription(),
+                            Quantity = 2,
+                            QuantityType = QuantityType.spsk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Knoldselleri.GetDescription(),
+                            Quantity = 100,
+                            QuantityType = QuantityType.gram
+                        },
+                    }
+                });
+
+                // Chili con carne med skyr, æbler og sennep
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Chili con carne med skyr, æbler og sennep",
+                    Type = MealType.Dinner,
+                    Ratio = 0.9,
+                    Persons = 2,
+                    Page = 190,
+                    Ingredients = new List<Ingredient>()
                     {
-                        Name = IngredientHelper.Citron.GetDescription(),
-                        Quantity = 0.5,
-                        QuantityType = QuantityType.stk
-                    },
-                    new Ingredient()
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.HakketOksekød.GetDescription(),
+                            Quantity = 250,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Rødløg.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Hvidløg.GetDescription(),
+                            Quantity = 2,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Gulerod.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Chili.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.spsk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Bønner.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.dåse
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Øl.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Chokolade.GetDescription(),
+                            Quantity = 20,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Rødkål.GetDescription(),
+                            Quantity = 200,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Æble.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Skyr.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.dl
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Dijonsennep.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.spsk
+                        },
+                    }
+                });
+
+                // Sprød torsk, råt grønt og sellericreme
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Sprød torsk, råt grønt og sellericreme",
+                    Type = MealType.Dinner,
+                    Ratio = 0.7,
+                    Persons = 1,
+                    Page = 192,
+                    Ingredients = new List<Ingredient>()
                     {
-                        Name = IngredientHelper.Gulerod.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.stk
-                    },
-                    new Ingredient()
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Selleri.GetDescription(),
+                            Quantity = 0.25,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Torsk.GetDescription(),
+                            Quantity = 120,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Gulerod.GetDescription(),
+                            Quantity = 50,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Persillerod.GetDescription(),
+                            Quantity = 50,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Rødbeder.GetDescription(),
+                            Quantity = 50,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Olivenolie.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Honning.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.spsk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Citron.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk
+                        },
+                    }
+                });
+
+                // Grønt og rejer i rispapir
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Grønt og rejer i rispapir",
+                    Type = MealType.Dinner,
+                    Ratio = 0.5,
+                    Persons = 1,
+                    Page = 194,
+                    Ingredients = new List<Ingredient>()
                     {
-                        Name = IngredientHelper.Persillerod.GetDescription(),
-                        Quantity = 0.5,
-                        QuantityType = QuantityType.stk
-                    },
-                    new Ingredient()
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Rejer.GetDescription(),
+                            Quantity = 100,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Forårsløg.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Peberfrugt.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Basilikum.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Fennikel.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Sesamfrø.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.spsk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Rispapir.GetDescription(),
+                            Quantity = 2,
+                            QuantityType = QuantityType.plade
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Fishsauce.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.spsk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Lime.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Honning.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.spsk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Chili.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.spsk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.SaltedePeanuts.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.tsk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Jordnøddeolie.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.spsk
+                        },
+                    }
+                });
+
+                // Frikadeller med rug, ramsløg og salat
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Frikadeller med rug, ramsløg og salat",
+                    Type = MealType.Dinner,
+                    Ratio = 1.3,
+                    Persons = 4,
+                    Page = 196,
+                    Ingredients = new List<Ingredient>()
                     {
-                        Name = IngredientHelper.Knoldselleri.GetDescription(),
-                        Quantity = 50,
-                        QuantityType = QuantityType.gram
-                    },
-                    new Ingredient()
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.HakketKalvOgOkse.GetDescription(),
+                            Quantity = 500,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Æg.GetDescription(),
+                            Quantity = 3,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Mælk.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.dl,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Rugflager.GetDescription(),
+                            Quantity = 100,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Æblemost.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.dl,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Hvidløg.GetDescription(),
+                            Quantity = 4,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Rapsolie.GetDescription(),
+                            Quantity = 2,
+                            QuantityType = QuantityType.spsk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Edamamebønner.GetDescription(),
+                            Quantity = 100,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Hytteost.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.dl
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Honning.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.spsk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Citron.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Dild.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Spidskål.GetDescription(),
+                            Quantity = 80,
+                            QuantityType = QuantityType.gram
+                        },
+                    }
+                });
+
+                // Torsk og tomatsalat
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Torsk og tomatsalat",
+                    Type = MealType.Dinner,
+                    Ratio = 1.02,
+                    Persons = 1,
+                    Page = 198,
+                    Ingredients = new List<Ingredient>()
                     {
-                        Name = IngredientHelper.Jordskok.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.stk
-                    },
-                    new Ingredient()
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Torsk.GetDescription(),
+                            Quantity = 150,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Tomat.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Rødløg.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Persille.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Rugkerner.GetDescription(),
+                            Quantity = 50,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Oliven.GetDescription(),
+                            Quantity = 7,
+                            QuantityType = QuantityType.stk
+                        },
+                    }
+                });
+
+                // Pizza med frisk grønt og kylligefilet
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Pizza med frisk grønt og kylligefilet",
+                    Type = MealType.Dinner,
+                    Ratio = 0.9,
+                    Persons = 1,
+                    Page = 200,
+                    Ingredients = new List<Ingredient>()
                     {
-                        Name = IngredientHelper.Hasselnødder.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.spsk
-                    },
-                    new Ingredient()
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Pizza.GetDescription(),
+                            Quantity = 0.25,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Kyllingbryst.GetDescription(),
+                            Quantity = 120,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Gulerod.GetDescription(),
+                            Quantity = 150,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Olivenolie.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Citron.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Basilikum.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                    }
+                });
+
+                // Forårsruller med kål og kød
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Forårsruller med kål og kød",
+                    Type = MealType.Dinner,
+                    Ratio = 1.3,
+                    Persons = 2,
+                    Page = 202,
+                    Ingredients = new List<Ingredient>()
                     {
-                        Name = IngredientHelper.Vindruekerneolie.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.spsk
-                    },
-                    new Ingredient()
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Kyllingbryst.GetDescription(),
+                            Quantity = 200,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Rødkål.GetDescription(),
+                            Quantity = 100,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Ingegær.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.tsk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Mandler.GetDescription(),
+                            Quantity = 2,
+                            QuantityType = QuantityType.spsk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Sojasovs.GetDescription(),
+                            Quantity = 2,
+                            QuantityType = QuantityType.spsk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Forårsrulledej.GetDescription(),
+                            Quantity = 4,
+                            QuantityType = QuantityType.plade,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Vindruekerneolie.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                    }
+                });
+
+                // Rodfrugter på panden med chorizopølser
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Rodfrugter på panden med chorizopølser",
+                    Type = MealType.Dinner,
+                    Ratio = 0.5,
+                    Persons = 1,
+                    Page = 204,
+                    Ingredients = new List<Ingredient>()
                     {
-                        Name = IngredientHelper.Vineddike.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.spsk
-                    },
-                    new Ingredient()
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Chorizopølser.GetDescription(),
+                            Quantity = 4,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Gulerod.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Persillerod.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Rødløg.GetDescription(),
+                            Quantity = 0.25,
+                            QuantityType = QuantityType.stk,
+                        },
+                    }
+                });
+
+                // Dumblings med fisk og grønt, hertil råkost
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Dumblings med fisk og grønt, hertil råkost",
+                    Type = MealType.Dinner,
+                    Ratio = 0.7,
+                    Persons = 1,
+                    Page = 206,
+                    Ingredients = new List<Ingredient>()
                     {
-                        Name = IngredientHelper.Dijonsennep.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.tsk
-                    },
-                }
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Blomkålsbuketter.GetDescription(),
+                            Quantity = 50,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Broccoli.GetDescription(),
+                            Quantity = 50,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Wontondej.GetDescription(),
+                            Quantity = 5,
+                            QuantityType = QuantityType.plade,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Torsk.GetDescription(),
+                            Quantity = 100,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Sojasovs.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.tsk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Mandler.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.tsk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Gulerod.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Spidskål.GetDescription(),
+                            Quantity = 50,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Citron.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.stk,
+                        },
+                    }
+                });
+
+                // Kalv i øl og timian
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Kalv i øl og timian",
+                    Type = MealType.Dinner,
+                    Ratio = 1.1,
+                    Persons = 1,
+                    Page = 208,
+                    Ingredients = new List<Ingredient>()
+                    {
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Kalvekotelet.GetDescription(),
+                            Quantity = 300,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Broccoli.GetDescription(),
+                            Quantity = 50,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Spidskål.GetDescription(),
+                            Quantity = 50,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Gulerod.GetDescription(),
+                            Quantity = 50,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Timian.GetDescription(),
+                            Quantity = 2,
+                            QuantityType = QuantityType.spsk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Dijonsennep.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.tsk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Radicchio.GetDescription(),
+                            Quantity = 0.25,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Øl.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Fuldkornsbrød.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.skive,
+                        },
+                    }
+                });
+
+                // Kartofler med æg og salat
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Kartofler med æg og salat",
+                    Type = MealType.Dinner,
+                    Ratio = 0.8,
+                    Persons = 1,
+                    Page = 210,
+                    Ingredients = new List<Ingredient>()
+                    {
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Hjertesalat.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Kartofler.GetDescription(),
+                            Quantity = 80,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Forårsløg.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Olivenolie.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Vineddike.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Æg.GetDescription(),
+                            Quantity = 2,
+                            QuantityType = QuantityType.stk,
+                        },
+                    }
+                });
+
+                // Edamamebønner med spidskål og dild
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Edamamebønner med spidskål og dild",
+                    Type = MealType.Dinner,
+                    Ratio = 0.5,
+                    Persons = 1,
+                    Page = 212,
+                    Ingredients = new List<Ingredient>()
+                    {
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Edamamebønner.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.pose
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Hytteost.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.dl,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Honning.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.spsk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Citron.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Dild.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Spidskål.GetDescription(),
+                            Quantity = 100,
+                            QuantityType = QuantityType.gram,
+                        },
+                    }
+                });
+
+                // Kotelet i fad med mynte, kartofler og appelsin
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Kotelet i fad med mynte, kartofler og appelsin",
+                    Type = MealType.Dinner,
+                    Ratio = 0.8,
+                    Persons = 1,
+                    Page = 214,
+                    Ingredients = new List<Ingredient>()
+                    {
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.RødAppelsin.GetDescription(),
+                            Quantity = 0.0,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Mynte.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Kartofler.GetDescription(),
+                            Quantity = 75,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Svinekotelet.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Honning.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.spsk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Sojasovs.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.spsk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Mandler.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.spsk,
+                        },
+                    }
+                });
+
+                // Kød med syrlige kartofler og parmesan
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Kød med syrlige kartofler og parmesan",
+                    Type = MealType.Dinner,
+                    Ratio = 0.9,
+                    Persons = 1,
+                    Page = 216,
+                    Ingredients = new List<Ingredient>()
+                    {
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Oksebøf.GetDescription(),
+                            Quantity = 150,
+                            QuantityType = QuantityType.gram
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Kartofler.GetDescription(),
+                            Quantity = 6,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Eddike.GetDescription(),
+                            Quantity = 0.5,
+                            QuantityType = QuantityType.dl,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Rosmarin.GetDescription(),
+                            Quantity = 2,
+                            QuantityType = QuantityType.spsk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Parmesanost.GetDescription(),
+                            Quantity = 20,
+                            QuantityType = QuantityType.gram,
+                        },
+                    }
+                });
+
+                // Fiskefilet med salat
+                ListOfDishes.Add(new Meal()
+                {
+                    Name = "Fiskefilet med salat",
+                    Type = MealType.Dinner,
+                    Ratio = 1.7,
+                    Persons = 1,
+                    Page = 218,
+                    Ingredients = new List<Ingredient>()
+                    {
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Fiskefilet.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Æg.GetDescription(),
+                            Quantity = 1,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Mysli.GetDescription(),
+                            Quantity = 25,
+                            QuantityType = QuantityType.gram,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Vindruekerneolie.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Radicchio.GetDescription(),
+                            Quantity = 0.25,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Drueagurker.GetDescription(),
+                            Quantity = 4,
+                            QuantityType = QuantityType.stk,
+                        },
+                        new Ingredient()
+                        {
+                            Name = IngredientHelper.Dild.GetDescription(),
+                            Quantity = 0,
+                            QuantityType = QuantityType.Ingen,
+                            QuantityVisible = false
+                        },
+                    }
+                });
+
+                #endregion
+
+                #region Desserter
+
+                // Honningbruschetta
+
+                // Koldskål
+
+                // Æggesnaps med tørrede bær
+
+                // Trifli med mango, makroner og skyr
+
+                // Marengs med chokolade og frugtskyr
+
+
+
+                #endregion
+
+                #region Grundopskrifter
+
+                #endregion
             });
-
-            // Laks med urter, syrlige agurker og æg 
-
-            // Kødsovs med paste
-
-            // Chili con carne med skyr, æbler og sennep
-
-            // Sprød laks, råt grønt og sellericreme
-
-            // Grønt og rejer i rispapir
-
-            // Frikadeller med rug, ramsløg og salat
-
-            // Torsk og tomatsalat
-
-            // Pizza med frisk grønt og kylligefilet
-
-            // Forårsruller med kål og kød
-
-            // Rodfrugter på panden med chorizopølser
-
-            // Dumblings med fisk og grønt, hertil råkost
-
-            // Kalv i øl og timian
-
-            // Kartofler med æg og salat
-
-            // Edamamebønner med spidskål og dild
-
-            // Kotelet i fad med mynte, kartofler og appelsin
-
-            // Kød med syrlige kartofler og parmesan
-
-            // Fiskefilet med salat
-
-            #endregion
-
-            #region Desserter
-
-            // Honningbruschetta
-
-            // Koldskål
-
-            // Æggesnaps med tørrede bær
-
-            // Trifli med mango, makroner og skyr
-
-            // Marengs med chokolade og frugtskyr
-
-            
-
-            #endregion
-
-            #region Grundopskrifter
-
-            #endregion
         }
-
     }
 }

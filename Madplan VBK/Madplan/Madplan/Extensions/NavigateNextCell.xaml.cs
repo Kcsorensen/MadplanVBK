@@ -11,6 +11,8 @@ namespace Madplan.Extensions
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NavigateNextCell : ViewCell
     {
+        // TODO: Lav et felt hvor det fremgår hvor mange retter for den given dag, som er valgt.
+
         public static readonly BindableProperty LabelProperty =
             BindableProperty.Create("Label", typeof(string), typeof(ViewCell), null);
 

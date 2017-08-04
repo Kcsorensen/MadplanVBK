@@ -6,25 +6,25 @@
              x:Class="Madplan.Views.DayPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Order="Primary" Text="Clear" Clicked="Clear_Clicked"/>
+        <ToolbarItem Order="Primary" Text="Ryd" Clicked="Clear_Clicked"/>
     </ContentPage.ToolbarItems>
 
     <TableView>
         <TableRoot>
             <TableSection Title="Morgenmad">
-                <extension:NavigateNextCell Label="{Binding Breakfast}" Tapped="SelectMeal_Tapped" ClassId="{x:Static local:DishType.Breakfast}"/>
+                <extension:NavigateNextCell Label="{Binding Breakfast}" Tapped="SelectMeal_Tapped" ClassId="{x:Static local:MealType.Breakfast}"/>
             </TableSection>
             <TableSection Title="Mellemmåltid">
-                <extension:NavigateNextCell Label="{Binding FirstSnack}" Tapped="SelectMeal_Tapped" ClassId="{x:Static local:DishType.FirstSnack}"/>
+                <extension:NavigateNextCell Label="{Binding FirstSnack}" Tapped="SelectMeal_Tapped" ClassId="{x:Static local:MealType.FirstSnack}"/>
             </TableSection>
             <TableSection Title="Frokost">
-                <extension:NavigateNextCell Label="{Binding Lunch}" Tapped="SelectMeal_Tapped" ClassId="{x:Static local:DishType.Lunch}"/>
+                <extension:NavigateNextCell Label="{Binding Lunch}" Tapped="SelectMeal_Tapped" ClassId="{x:Static local:MealType.Lunch}"/>
             </TableSection>
             <TableSection Title="Mellemmåltid">
-                <extension:NavigateNextCell Label="{Binding SecondSnack}" Tapped="SelectMeal_Tapped" ClassId="{x:Static local:DishType.SecondSnack}"/>
+                <extension:NavigateNextCell Label="{Binding SecondSnack}" Tapped="SelectMeal_Tapped" ClassId="{x:Static local:MealType.SecondSnack}"/>
             </TableSection>
             <TableSection Title="Aftensmad">
-                <extension:NavigateNextCell Label="{Binding Dinner}" Tapped="SelectMeal_Tapped" ClassId="{x:Static local:DishType.Dinner}"/>
+                <extension:NavigateNextCell Label="{Binding Dinner}" Tapped="SelectMeal_Tapped" ClassId="{x:Static local:MealType.Dinner}"/>
             </TableSection>
         </TableRoot>
     </TableView>

@@ -265,5 +265,96 @@ namespace Madplan.Models
         }
 
         #endregion
+
+        public List<string> GetListOfSelectedMeals()
+        {
+            var list = new List<string>();
+
+            // Mandag
+            if (MondayBreakfast != Meal.Default)
+                list.Add(MondayBreakfast);
+            if (MondayFirstSnack != Meal.Default)
+                list.Add(MondayFirstSnack);
+            if (MondayLunch != Meal.Default)
+                list.Add(MondayLunch);
+            if (MondaySecondSnack != Meal.Default)
+                list.Add(MondaySecondSnack);
+            if (MondayDinner != Meal.Default)
+                list.Add(MondayDinner);
+
+            // Tirsdag
+            if (TuesdayBreakfast != Meal.Default)
+                list.Add(TuesdayBreakfast);
+            if (TuesdayFirstSnack != Meal.Default)
+                list.Add(TuesdayFirstSnack);
+            if (TuesdayLunch != Meal.Default)
+                list.Add(TuesdayLunch);
+            if (TuesdaySecondSnack != Meal.Default)
+                list.Add(TuesdaySecondSnack);
+            if (TuesdayDinner != Meal.Default)
+                list.Add(TuesdayDinner);
+
+            // Onsdag
+            if (WednesdayBreakfast != Meal.Default)
+                list.Add(WednesdayBreakfast);
+            if (WednesdayFirstSnack != Meal.Default)
+                list.Add(WednesdayFirstSnack);
+            if (WednesdayLunch != Meal.Default)
+                list.Add(WednesdayLunch);
+            if (WednesdaySecondSnack != Meal.Default)
+                list.Add(WednesdaySecondSnack);
+            if (WednesdayDinner != Meal.Default)
+                list.Add(WednesdayDinner);
+
+            // Torsdag
+            if (ThursdayBreakfast != Meal.Default)
+                list.Add(ThursdayBreakfast);
+            if (ThursdayFirstSnack != Meal.Default)
+                list.Add(ThursdayFirstSnack);
+            if (ThursdayLunch != Meal.Default)
+                list.Add(ThursdayLunch);
+            if (ThursdaySecondSnack != Meal.Default)
+                list.Add(ThursdaySecondSnack);
+            if (ThursdayDinner != Meal.Default)
+                list.Add(ThursdayDinner);
+
+            // Fredag
+            if (FridayBreakfast != Meal.Default)
+                list.Add(FridayBreakfast);
+            if (FridayFirstSnack != Meal.Default)
+                list.Add(FridayFirstSnack);
+            if (FridayLunch != Meal.Default)
+                list.Add(FridayLunch);
+            if (FridaySecondSnack != Meal.Default)
+                list.Add(FridaySecondSnack);
+            if (FridayDinner != Meal.Default)
+                list.Add(FridayDinner);
+
+            // Lørdag
+            if (SaturdayBreakfast != Meal.Default)
+                list.Add(SaturdayBreakfast);
+            if (SaturdayFirstSnack != Meal.Default)
+                list.Add(SaturdayFirstSnack);
+            if (SaturdayLunch != Meal.Default)
+                list.Add(SaturdayLunch);
+            if (SaturdaySecondSnack != Meal.Default)
+                list.Add(SaturdaySecondSnack);
+            if (SaturdayDinner != Meal.Default)
+                list.Add(SaturdayDinner);
+
+            // Søndag
+            if (SundayBreakfast != Meal.Default)
+                list.Add(SundayBreakfast);
+            if (SundayFirstSnack != Meal.Default)
+                list.Add(SundayFirstSnack);
+            if (SundayLunch != Meal.Default)
+                list.Add(SundayLunch);
+            if (SundaySecondSnack != Meal.Default)
+                list.Add(SundaySecondSnack);
+            if (SundayDinner != Meal.Default)
+                list.Add(SundayDinner);
+
+            return list;
+        }
     }
 }

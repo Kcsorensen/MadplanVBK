@@ -222,4 +222,63 @@ public enum IngredientHelper
     Vindruekerneolie,
     [MyDescription(Text = "Vineddike")]
     Vineddike,
+    [MyDescription(Text = "Purløg")]
+    Purløg,
+    [MyDescription(Text = "Hakket oksekød")]
+    HakketOksekød,
+    [MyDescription(Text = "Flåede tomater")]
+    FlåedeTomater,
+    [MyDescription(Text = "Grov paste")]
+    GrovPasta,
+    [MyDescription(Text = "Parmesanost")]
+    Parmesanost,
+    [MyDescription(Text = "Bønner i tomat")]
+    Bønner,
+    [MyDescription(Text = "Mørk øl")]
+    Øl,
+    [MyDescription(Text = "Mørk chokolade")]
+    Chokolade,
+    [MyDescription(Text = "Selleri")]
+    Selleri,
+    [MyDescription(Text = "Rødbeder")]
+    Rødbeder,
+    [MyDescription(Text = "Forårsløg")]
+    Forårsløg,
+    [MyDescription(Text = "Rispapir")]
+    Rispapir,
+    [MyDescription(Text = "Saltede peanuts")]
+    SaltedePeanuts,
+    [MyDescription(Text = "Jordnøddeolie")]
+    Jordnøddeolie,
+    [MyDescription(Text = "Hakket kalv og okse")]
+    HakketKalvOgOkse,
+    [MyDescription(Text = "Frosne edamamebønner")]
+    Edamamebønner,
+    [MyDescription(Text = "Frossen tomatpizza")]
+    Pizza,
+    [MyDescription(Text = "Forårsrulledej")]
+    Forårsrulledej,
+    [MyDescription(Text = "Små chorizopølser")]
+    Chorizopølser,
+    [MyDescription(Text = "Broccoli")]
+    Broccoli,
+    [MyDescription(Text = "Kalvekotelet med ben")]
+    Kalvekotelet,
+    [MyDescription(Text = "Hjertesalat")]
+    Hjertesalat,
+    [MyDescription(Text = "Rød appelsin")]
+    RødAppelsin,
+    [MyDescription(Text = "Svinekotelet")]
+    Svinekotelet,
+    [MyDescription(Text = "Oksebøf")]
+    Oksebøf,
+    [MyDescription(Text = "Eddike")]
+    Eddike,
+    [MyDescription(Text = "Rosmarin")]
+    Rosmarin,
+    [MyDescription(Text = "Fiskefilet")]
+    Fiskefilet,
+    [MyDescription(Text = "Mysli")]
+    Mysli,
+
 }

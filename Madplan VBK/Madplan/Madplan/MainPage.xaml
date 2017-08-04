@@ -9,7 +9,7 @@
         <ToolbarItem Order="Primary" Text="Indkøbsliste" Clicked="ShoppingList_Clicked"/>
     </ContentPage.ToolbarItems>
 
-    <TableView Intent="Menu" AbsoluteLayout.LayoutBounds="0, 60, 1, 1" AbsoluteLayout.LayoutFlags="SizeProportional">
+    <TableView Intent="Menu" HasUnevenRows="False">
         <TableRoot>
             <TableSection Title="Ugedage">
                 <extension:NavigateNextCell Label="Mandag" Tapped="Day_Tapped" ClassId="{x:Static local:Day.Monday}"/>
@@ -19,6 +19,19 @@
                 <extension:NavigateNextCell Label="Fredag" Tapped="Day_Tapped" ClassId="{x:Static local:Day.Friday}"/>
                 <extension:NavigateNextCell Label="Lørdag" Tapped="Day_Tapped" ClassId="{x:Static local:Day.Saturday}"/>
                 <extension:NavigateNextCell Label="Søndag" Tapped="Day_Tapped" ClassId="{x:Static local:Day.Sunday}"/>
+            </TableSection>
+            <TableSection Title="Oversigt">
+                <!--<ViewCell>
+                    <StackLayout Spacing="0" Padding="17, 0, 5, 0">
+                        <Label Text="Gennemsnitlige Ratio Mandag"/>
+                        <Label Text="Gennemsnitlige Ratio Tirsdag"/>
+                        <Label Text="Gennemsnitlige Ratio Onsdag"/>
+                        <Label Text="Gennemsnitlige Ratio Torsdag"/>
+                        <Label Text="Gennemsnitlige Ratio Fredag"/>
+                        <Label Text="Gennemsnitlige Ratio Lørdag"/>
+                        <Label Text="Gennemsnitlige Ratio Søndag"/>
+                    </StackLayout>
+                </ViewCell>-->
             </TableSection>
         </TableRoot>
     </TableView>

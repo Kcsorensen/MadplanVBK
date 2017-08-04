@@ -19,5 +19,9 @@ namespace Madplan.Models
         public const string dåse = "dåse(r)";
         public const string dråbe = "dråbe(r)";
         public const string pakke = "pakke(r)";
+        public const string plade = "plade(r)";
+        public const string pose = "pose(r)";
+
+
     }
 }

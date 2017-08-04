@@ -21,6 +21,8 @@ namespace Madplan
 
         protected async override void OnAppearing()
         {
+            // TODO: Lav en oversigt på Mainpage med gennemsnitlig Ratio for hver dag, og senere kan der laves en samlede energitilskud i kcal.
+
             await _connection.CreateTableAsync<WeekSelections>();
 
             if (await _connection.Table<WeekSelections>().CountAsync() == 0)
@@ -28,53 +30,53 @@ namespace Madplan
                 await _connection.InsertAsync(new WeekSelections()
                 {
                     // Mandag
-                    MondayBreakfast = "Vælg Måltid",
-                    MondayFirstSnack = "Vælg Måltid",
-                    MondayLunch = "Vælg Måltid",
-                    MondaySecondSnack = "Vælg Måltid",
-                    MondayDinner = "Vælg Måltid",
+                    MondayBreakfast = Meal.Default,
+                    MondayFirstSnack = Meal.Default,
+                    MondayLunch = Meal.Default,
+                    MondaySecondSnack = Meal.Default,
+                    MondayDinner = Meal.Default,
 
                     // Tirsdag
-                    TuesdayBreakfast = "Vælg Måltid",
-                    TuesdayFirstSnack = "Vælg Måltid",
-                    TuesdayLunch = "Vælg Måltid",
-                    TuesdaySecondSnack = "Vælg Måltid",
-                    TuesdayDinner = "Vælg Måltid",
+                    TuesdayBreakfast = Meal.Default,
+                    TuesdayFirstSnack = Meal.Default,
+                    TuesdayLunch = Meal.Default,
+                    TuesdaySecondSnack = Meal.Default,
+                    TuesdayDinner = Meal.Default,
 
                     // Onsdag
-                    WednesdayBreakfast = "Vælg Måltid",
-                    WednesdayFirstSnack = "Vælg Måltid",
-                    WednesdayLunch = "Vælg Måltid",
-                    WednesdaySecondSnack = "Vælg Måltid",
-                    WednesdayDinner = "Vælg Måltid",
+                    WednesdayBreakfast = Meal.Default,
+                    WednesdayFirstSnack = Meal.Default,
+                    WednesdayLunch = Meal.Default,
+                    WednesdaySecondSnack = Meal.Default,
+                    WednesdayDinner = Meal.Default,
 
                     // Torsdag
-                    ThursdayBreakfast = "Vælg Måltid",
-                    ThursdayFirstSnack = "Vælg Måltid",
-                    ThursdayLunch = "Vælg Måltid",
-                    ThursdaySecondSnack = "Vælg Måltid",
-                    ThursdayDinner = "Vælg Måltid",
+                    ThursdayBreakfast = Meal.Default,
+                    ThursdayFirstSnack = Meal.Default,
+                    ThursdayLunch = Meal.Default,
+                    ThursdaySecondSnack = Meal.Default,
+                    ThursdayDinner = Meal.Default,
 
                     // Fredag
-                    FridayBreakfast = "Vælg Måltid",
-                    FridayFirstSnack = "Vælg Måltid",
-                    FridayLunch = "Vælg Måltid",
-                    FridaySecondSnack = "Vælg Måltid",
-                    FridayDinner = "Vælg Måltid",
+                    FridayBreakfast = Meal.Default,
+                    FridayFirstSnack = Meal.Default,
+                    FridayLunch = Meal.Default,
+                    FridaySecondSnack = Meal.Default,
+                    FridayDinner = Meal.Default,
 
                     // Lørdag
-                    SaturdayBreakfast = "Vælg Måltid",
-                    SaturdayFirstSnack = "Vælg Måltid",
-                    SaturdayLunch = "Vælg Måltid",
-                    SaturdaySecondSnack = "Vælg Måltid",
-                    SaturdayDinner = "Vælg Måltid",
+                    SaturdayBreakfast = Meal.Default,
+                    SaturdayFirstSnack = Meal.Default,
+                    SaturdayLunch = Meal.Default,
+                    SaturdaySecondSnack = Meal.Default,
+                    SaturdayDinner = Meal.Default,
 
                     // Søndag
-                    SundayBreakfast = "Vælg Måltid",
-                    SundayFirstSnack = "Vælg Måltid",
-                    SundayLunch = "Vælg Måltid",
-                    SundaySecondSnack = "Vælg Måltid",
-                    SundayDinner = "Vælg Måltid"
+                    SundayBreakfast = Meal.Default,
+                    SundayFirstSnack = Meal.Default,
+                    SundayLunch = Meal.Default,
+                    SundaySecondSnack = Meal.Default,
+                    SundayDinner = Meal.Default
                 });
             }
 

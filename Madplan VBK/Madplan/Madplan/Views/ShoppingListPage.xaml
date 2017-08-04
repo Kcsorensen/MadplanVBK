@@ -15,9 +15,9 @@
                 <ViewCell>
                     <StackLayout Orientation="Horizontal" Padding="10, 0, 10, 0">
                         <m16:Checkbox/>
+                        <Label Text="{Binding Quantity}" VerticalOptions="Center" IsVisible="{Binding QuantityVisible}"/>
+                        <Label Text="{Binding QuantityType}" VerticalOptions="Center" IsVisible="{Binding QuantityVisible}"/>
                         <Label Text="{Binding Name}" VerticalOptions="Center"/>
-                        <Label Text="{Binding Quantity}" VerticalOptions="Center"/>
-                        <Label Text="{Binding QuantityType}" VerticalOptions="Center"/>
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>

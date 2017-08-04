@@ -8,7 +8,6 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\Xamarin.Forms.Platform.pdb
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.csprojResolveAssemblyReference.cache
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.MainPage.xaml.g.cs
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.App.xaml.g.cs
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.dll
@@ -31,3 +30,4 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\ExifLib.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\Messier16.Forms.Controls.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\Messier16.Forms.Controls.pdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.csprojResolveAssemblyReference.cache
