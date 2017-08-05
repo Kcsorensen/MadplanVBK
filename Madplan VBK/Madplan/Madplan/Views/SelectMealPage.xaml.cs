@@ -16,6 +16,7 @@ namespace Madplan.Views
     {
         private string _day;
         private string _dishType;
+        private IEnumerable<Meal> ListOfMeals;
 
         public SelectMealPage(string day, string dishType)
         {
@@ -24,27 +25,26 @@ namespace Madplan.Views
             _day = day;
             _dishType = dishType;
 
-            //label.Text = "Opskrifter til " + _dishType.ToLower();
+            // Navn på sortSwitch
+            if (_dishType == MealType.FirstSnack || _dishType == MealType.SecondSnack)
+                sortSwitch.Text = "Sortér efter måltidstype (" + MealType.Snack.ToLower() + ")";
+            else
+                sortSwitch.Text = "Sortér efter måltidstype (" + _dishType.ToLower() + ")";
+
+            // Navn på tableSectionListOfMeals
+            if (_dishType == MealType.FirstSnack || _dishType == MealType.SecondSnack)
+                tableSectionListOfMeals.Title = "Oversigt over " + MealType.Snack.ToLower();
+            else
+                tableSectionListOfMeals.Title = "Oversigt over " + _dishType.ToLower();
 
         }
 
-        protected override void OnAppearing()
+        protected async override void OnAppearing()
         {
             // TODO: Lav en switch, så personer kan vælge om de kun vil se mad for den valgte kategori eller om det vil se mad for alle kategorier
             // TODO: Lav en søgefelt
 
-            IEnumerable<Meal> ListOfMeals = new List<Meal>();
-
-            if (_dishType == MealType.FirstSnack || _dishType == MealType.SecondSnack)
-            {
-                ListOfMeals = DataModel.Current.ListOfMeals.Where(a => a.Type == MealType.Snack);
-            }
-            else
-            {
-                ListOfMeals = DataModel.Current.ListOfMeals.Where(a => a.Type == _dishType);
-            }
-
-            BindingContext = ListOfMeals;
+            await sortListOfMealsAsync(_dishType);
 
             base.OnAppearing();
         }
@@ -199,8 +199,62 @@ namespace Madplan.Views
             await connection.UpdateAsync(weekSelections);
         }
 
+        private async Task sortListOfMealsAsync(string mealType = null)
+        {
+            ListOfMeals = new List<Meal>();
+
+            await Task.Run(() =>
+            {
+                if (mealType == null)
+                {
+                    ListOfMeals = DataModel.Current.ListOfMeals;
+                }
+                else
+                {
+                    if (mealType == MealType.FirstSnack || mealType == MealType.SecondSnack)
+                    {
+                        ListOfMeals = DataModel.Current.ListOfMeals.Where(a => a.Type == MealType.Snack);
+                    }
+                    else
+                    {
+                        ListOfMeals = DataModel.Current.ListOfMeals.Where(a => a.Type == mealType);
+                    }
+                }
+            });
+
+            BindingContext = ListOfMeals;
+
+        }
+
         private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
+
+        }
+
+        private async void sortSwitch_OnChanged(object sender, ToggledEventArgs e)
+        {
+
+            if (e.Value == false)
+            {
+                await sortListOfMealsAsync();
+            }
+            else
+            {
+                await sortListOfMealsAsync(_dishType);
+            }
+
+
+            //if (e.Value == false)
+            //{
+            //    tableSectionListOfMeals.Title = "Oversigt over alle måltider";
+            //}
+            //else
+            //{
+            //    if (_dishType == MealType.FirstSnack || _dishType == MealType.SecondSnack)
+            //        tableSectionListOfMeals.Title = "Oversigt over " + MealType.Snack.ToLower();
+            //    else
+            //        tableSectionListOfMeals.Title = "Oversigt over " + _dishType.ToLower();
+            //}
 
         }
     }
