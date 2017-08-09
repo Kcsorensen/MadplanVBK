@@ -6,8 +6,8 @@
 
         <ResourceDictionary>
             <Style x:Key="listViewHeaderLayoutStyle" TargetType="Layout">
-                <Setter Property="Padding" Value="0, 10"/>
-                <Setter Property="BackgroundColor" Value="Gray"/>
+                <Setter Property="Padding" Value="0, 12"/>
+                <Setter Property="BackgroundColor" Value="SeaGreen"/>
             </Style>
 
             <Style x:Key="listViewHeaderLabelStyle" TargetType="Label">

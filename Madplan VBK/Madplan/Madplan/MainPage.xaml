@@ -6,7 +6,9 @@
              x:Class="Madplan.MainPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Order="Primary" Text="Indkøbsliste" Clicked="ShoppingList_Clicked"/>
+        <ToolbarItem Order="Primary" Text="Indkøbsliste" Clicked="GroceryList_Clicked"/>
+        <ToolbarItem Order="Secondary" Text="Fødevarer" Clicked="Food_Clicked"/>
+        <ToolbarItem Order="Secondary" Text="Opskrifter" Clicked="Recipe_Clicked"/>
     </ContentPage.ToolbarItems>
 
     <TableView Intent="Menu" HasUnevenRows="False">

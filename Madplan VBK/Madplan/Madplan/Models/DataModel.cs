@@ -13,12 +13,14 @@ namespace Madplan.Models
     public class DataModel
     {
         public List<Meal> ListOfMeals { get; set; }
+        public List<Food> ListOfFood { get; set; }
 
         public static DataModel Current = new DataModel();
 
         public DataModel()
         {
             ListOfMeals = new List<Meal>();
+            ListOfFood = new List<Food>();
         }
 
         public async Task PopulateListOfMealsAsync()
@@ -3525,15 +3527,13 @@ namespace Madplan.Models
             var csv = new CsvReader(sr);
             csv.Configuration.Delimiter = ";";
 
-            var list = new List<Food>();
-
             int counter = 0;
 
             while (csv.Read())
             {
-                if (counter > 1)
+                if (counter > 0)
                 {
-                    list.Add(new Food()
+                    ListOfFood.Add(new Food()
                     {
                         Navn = csv.GetField<string>(0),
 
@@ -3542,7 +3542,7 @@ namespace Madplan.Models
                         Svind = csv.GetField<string>(2).ConvertToDouble(),
 
                         EnergiKj = csv.GetField<string>(3).ConvertToDouble(),
-                        EnerguKcal = csv.GetField<string>(4).ConvertToDouble(),
+                        EnergiKcal = csv.GetField<string>(4).ConvertToDouble(),
 
                         ProteinTotal = csv.GetField<string>(7).ConvertToDouble(),
                         ProteinDeklaration = csv.GetField<string>(8).ConvertToDouble(),
@@ -3577,8 +3577,6 @@ namespace Madplan.Models
 
                 counter++;
             }
-
-            int u = 2;
         }
     }
 }

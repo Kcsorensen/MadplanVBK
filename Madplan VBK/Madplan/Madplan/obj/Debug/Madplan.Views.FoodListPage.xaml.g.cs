@@ -12,12 +12,16 @@ namespace Madplan.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\kcsorensen\\Documents\\GitHub\\MadplanVBK\\Madplan VBK\\Madplan\\Madplan\\Views" +
-        "\\ShoppingListPage.xaml")]
-    public partial class ShoppingListPage : global::Xamarin.Forms.ContentPage {
+        "\\FoodListPage.xaml")]
+    public partial class FoodListPage : global::Xamarin.Forms.ContentPage {
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.ListView listview;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ShoppingListPage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(FoodListPage));
+            listview = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "listview");
         }
     }
 }

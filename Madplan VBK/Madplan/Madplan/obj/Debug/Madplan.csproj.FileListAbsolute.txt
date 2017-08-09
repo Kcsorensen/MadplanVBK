@@ -25,7 +25,6 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\SQLite-net.xml
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.Views.DayPage.xaml.g.cs
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.Views.SelectMealPage.xaml.g.cs
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.Views.ShoppingListPage.xaml.g.cs
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\Madplan.dll.config
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\ExifLib.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\Messier16.Forms.Controls.dll
@@ -33,3 +32,7 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.csprojResolveAssemblyReference.cache
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\CsvHelper.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\CsvHelper.xml
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.Views.GroceryListPage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.Views.FoodListPage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.Views.FoodInfoPage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.Views.MealListPage.xaml.g.cs

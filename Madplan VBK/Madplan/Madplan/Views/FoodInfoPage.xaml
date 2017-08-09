@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Madplan.Views.FoodInfoPage">
+
+    <StackLayout>
+        <StackLayout Style="{StaticResource listViewHeaderLayoutStyle}">
+            <Label Text="Næringsindhold pr. 100 gram" Style="{StaticResource listViewHeaderLabelStyle}"/>
+        </StackLayout>
+
+        <StackLayout Padding="15, 0, 10, 0">
+            <Label Text="{Binding Navn}" FontAttributes="Bold" Margin="0, 0, 0, 5"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="Energi (kJ)" FontAttributes="Bold" />
+                <Label Grid.Column="1" Text="{Binding EnergiKj, StringFormat='{}{0:#,#.0}'}" />
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="Energi (kcal)" FontAttributes="Bold"/>
+                <Label Grid.Column="1" Text="{Binding EnergiKcal, StringFormat='{}{0:#,#.0}'}" />
+            </Grid>
+
+            <Label Text="Protein (g)" FontAttributes="Bold"/>
+            <Label Text="Fedt, total (g)" FontAttributes="Bold" />
+            <Label Text=" - Mættet (g)"/>
+            <Label Text=" - Enkeltumættet (g)"/>
+            <Label Text=" - Flerumættet (g)"/>
+            <Label Text=" - Cholesterol (g)"/>
+            <Label Text="Kulhydrater, total (g)" FontAttributes="Bold"/>
+            <Label Text=" - Tilgængelige (g)"/>
+            <Label Text=" - Tilsat sukker (g)"/>
+            <Label Text=" - Kostfibre (g)"/>
+            
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

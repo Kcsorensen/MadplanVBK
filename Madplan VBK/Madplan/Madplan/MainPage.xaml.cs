@@ -95,9 +95,20 @@ namespace Madplan
             Navigation.PushAsync(new DayPage(day));
         }
 
-        private void ShoppingList_Clicked(object sender, EventArgs e)
+        private void GroceryList_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ShoppingListPage());
+            Navigation.PushAsync(new GroceryListPage());
         }
+
+        private void Food_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new FoodListPage());
+        }
+
+        private void Recipe_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MealListPage());
+        }
+
     }
 }

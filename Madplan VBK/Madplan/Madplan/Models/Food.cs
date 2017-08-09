@@ -18,7 +18,7 @@ namespace Madplan.Models
         public int FoodId { get; set; }
         public double Svind { get; set; }
         public double EnergiKj { get; set; }
-        public double EnerguKcal { get; set; }
+        public double EnergiKcal { get; set; }
         public double Ncf { get; set; } // Proteinomregningsfaktor(NCF)
         public double TotalN { get; set; }
         public double ProteinTotal { get; set; }

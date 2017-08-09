@@ -13,11 +13,11 @@ using Xamarin.Forms.Xaml;
 namespace Madplan.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ShoppingListPage : ContentPage
+    public partial class GroceryListPage : ContentPage
     {
         private SQLiteAsyncConnection _connection;
 
-        public ShoppingListPage()
+        public GroceryListPage()
         {
             InitializeComponent();
 
