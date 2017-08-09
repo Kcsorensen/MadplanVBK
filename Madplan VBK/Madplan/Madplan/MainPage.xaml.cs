@@ -83,6 +83,8 @@ namespace Madplan
             // Load PopulateListOfMealsAsync i en singleton, så det kun skal gøres en gang.
             await DataModel.Current.PopulateListOfMealsAsync();
 
+            DataModel.Current.ReadCsvFile();
+
             base.OnAppearing();
         }
 

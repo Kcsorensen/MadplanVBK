@@ -99,6 +99,7 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "Madplan.Android.dll" comes first in this list. */
 		"Madplan.Android.dll",
+		"CsvHelper.dll",
 		"ExifLib.dll",
 		"FormsViewGroup.dll",
 		"Messier16.Forms.Android.Controls.dll",

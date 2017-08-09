@@ -50,6 +50,8 @@
     <Compile Include="Models\DataModel.cs" />
     <Compile Include="Models\Day.cs" />
     <Compile Include="Models\DaySelections.cs" />
+    <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\FoodDb.cs" />
     <Compile Include="Models\Meal.cs" />
     <Compile Include="Models\MealType.cs" />
     <Compile Include="Extensions\ExtensionMethods.cs" />
@@ -119,6 +121,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <EmbeddedResource Include="Resources\FoodDatabase.csv" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\DayPage.xaml">
