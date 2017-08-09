@@ -73,3 +73,5 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Andr
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\obj\Release\android\assets\Xamarin.Forms.Xaml.dll.mdb
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Release\Madplan.dll.mdb
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Release\Madplan.Android.dll.mdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Release\CsvHelper.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Release\CsvHelper.xml
