@@ -83,7 +83,7 @@ namespace Madplan
             // Load PopulateListOfMealsAsync i en singleton, så det kun skal gøres en gang.
             await DataModel.Current.PopulateListOfMealsAsync();
 
-            DataModel.Current.ReadCsvFile();
+            await DataModel.Current.ReadCsvFileAsync();
 
             base.OnAppearing();
         }
@@ -107,7 +107,7 @@ namespace Madplan
 
         private void Recipe_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MealListPage());
+            Navigation.PushAsync(new RecipeListPage());
         }
 
     }

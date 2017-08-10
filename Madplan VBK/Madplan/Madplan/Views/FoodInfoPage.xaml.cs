@@ -16,6 +16,8 @@ namespace Madplan.Views
         private string _foodName;
         private Food _food;
 
+        // TODO: Mangler at lave rediger click event
+
         public FoodInfoPage(string foodName)
         {
             _foodName = foodName;
@@ -28,6 +30,11 @@ namespace Madplan.Views
             BindingContext = _food;
 
             InitializeComponent();
+        }
+
+        private void Edit_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new FoodEditPage());
         }
     }
 }

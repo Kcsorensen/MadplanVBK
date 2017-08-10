@@ -1,45 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extension="clr-namespace:Madplan.Extensions"
              x:Class="Madplan.Views.FoodInfoPage">
 
-    <StackLayout>
-        <StackLayout Style="{StaticResource listViewHeaderLayoutStyle}">
-            <Label Text="Næringsindhold pr. 100 gram" Style="{StaticResource listViewHeaderLabelStyle}"/>
-        </StackLayout>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Text="Rediger" Clicked="Edit_Clicked"/>
+    </ContentPage.ToolbarItems>
 
-        <StackLayout Padding="15, 0, 10, 0">
-            <Label Text="{Binding Navn}" FontAttributes="Bold" Margin="0, 0, 0, 5"/>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Text="Energi (kJ)" FontAttributes="Bold" />
-                <Label Grid.Column="1" Text="{Binding EnergiKj, StringFormat='{}{0:#,#.0}'}" />
-            </Grid>
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Text="Energi (kcal)" FontAttributes="Bold"/>
-                <Label Grid.Column="1" Text="{Binding EnergiKcal, StringFormat='{}{0:#,#.0}'}" />
-            </Grid>
+        <StackLayout>
+            <StackLayout Style="{StaticResource listViewHeaderLayoutStyle}">
+                <Label Text="Næringsindhold pr. 100 gram" Style="{StaticResource listViewHeaderLabelStyle}"/>
+            </StackLayout>
 
-            <Label Text="Protein (g)" FontAttributes="Bold"/>
-            <Label Text="Fedt, total (g)" FontAttributes="Bold" />
-            <Label Text=" - Mættet (g)"/>
-            <Label Text=" - Enkeltumættet (g)"/>
-            <Label Text=" - Flerumættet (g)"/>
-            <Label Text=" - Cholesterol (g)"/>
-            <Label Text="Kulhydrater, total (g)" FontAttributes="Bold"/>
-            <Label Text=" - Tilgængelige (g)"/>
-            <Label Text=" - Tilsat sukker (g)"/>
-            <Label Text=" - Kostfibre (g)"/>
-            
-        </StackLayout>
+        <ScrollView Margin="0, 0, 0, 10">
+            <StackLayout Padding="15, 0, 10, 0">
+                <Label Text="{Binding Navn}" FontAttributes="Bold" Margin="0, 5, 0, 0"/>
+                <BoxView HeightRequest="1" Color="Black" VerticalOptions="Fill" Margin="0, 0, 0, 5"/>
+
+                <extension:FoodInfoLabel Text="Energi (kJ)" Value="{Binding EnergiKj, StringFormat='{0:N1}'}" FontAttributes="Bold"/>
+                <extension:FoodInfoLabel Text="Energi (kcal)" Value="{Binding EnergiKcal, StringFormat='{0:N1}'}" FontAttributes="Bold" />
+                <extension:FoodInfoLabel Text="Protein (g)" Value="{Binding ProteinTotal, StringFormat='{0:N1}'}" FontAttributes="Bold" Margin="0, 10, 0, 0"/>
+                <extension:FoodInfoLabel Text="Fedt, total (g)" Value="{Binding FedtTotal, StringFormat='{0:N1}'}" FontAttributes="Bold"/>
+                <extension:FoodInfoLabel Text=" - Mættet (g)" Value="{Binding SumMaettedeFedtsyrer, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - Enkeltumættet (g)" Value="{Binding SumMonoumaettedeFedtsyrer, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - Flerumættet (g)" Value="{Binding SumPolymaettedeFedtsyrer, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - Transfedt (g)" Value="{Binding TransFedtsyrer, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - Cholesterol (g)" Value="{Binding Cholesterol, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text="Kulhydrater, total (g)" Value="{Binding KulhydratDifferens, StringFormat='{0:N1}'}" FontAttributes="Bold"/>
+                <extension:FoodInfoLabel Text=" - Tilgængelige (g)" Value="{Binding KulhydratTilgaengelig, StringFormat='{0:N1}'}" FontAttributes="Bold"/>
+                <extension:FoodInfoLabel Text=" - Tilsat sukker (g)" Value="{Binding TilsatSukker, StringFormat='{0:N1}'}" FontAttributes="Bold"/>
+                <extension:FoodInfoLabel Text=" - Kostfibre (g)" Value="{Binding Kostfiber, StringFormat='{0:N1}'}" FontAttributes="Bold" />
+
+                <Label Text="Vitaminer og mineraler" FontAttributes="Bold" Margin="0, 10, 0, 0"/>
+                <extension:FoodInfoLabel Text=" - A-vitamin (RE)" Value="{Binding Avitamin, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - B12-vitamin (µg)" Value="{Binding B12vitamin, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - C-vitamin (µg)" Value="{Binding Cvitamin, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - D-vitamin (µg)" Value="{Binding Dvitamin, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - E-vitamin (α-TE)" Value="{Binding Evitamin, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - K1-vitamin (µg)" Value="{Binding K1vitamin, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - Calcium, Ca (mg)" Value="{Binding Calcium, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - Jern, Fe (mg)" Value="{Binding Jern, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - Zink, Zn (mg)" Value="{Binding Zink, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - Magnesium, Mg (mg)" Value="{Binding Magnesium, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - Selen, Se (µg)" Value="{Binding Selen, StringFormat='{0:N1}'}" />
+
+            </StackLayout>
+        </ScrollView>
     </StackLayout>
+
+
 
 </ContentPage>

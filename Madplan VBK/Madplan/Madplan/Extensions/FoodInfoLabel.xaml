@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Madplan.Extensions.FoodInfoLabel">
+
+
+    <Grid x:Name="grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="labelText" Grid.Column="0" Text="{Binding Text}" FontAttributes="{Binding FontAttributes}" />
+        <Label x:Name="labelValue" Grid.Column="1" Text="{Binding Value}" />
+    </Grid>
+
+</StackLayout>

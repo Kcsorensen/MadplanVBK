@@ -3509,74 +3509,89 @@ namespace Madplan.Models
             });
         }
 
-        public void ReadCsvFile()
+        public async Task ReadCsvFileAsync()
         {
             var assembly = typeof(DataModel).GetTypeInfo().Assembly;
-            Stream stream = assembly.GetManifestResourceStream("Madplan.Resources.FoodDatabase.csv");
 
-            string text;
-
-            // Der bruges Encoding.GetEncoding("iso-8859-1") for at den læser ÆØÅ korrekt
-            using (var reader = new System.IO.StreamReader(stream, Encoding.GetEncoding("iso-8859-1")))
+            await Task.Run(() =>
             {
-                text = reader.ReadToEnd();
-            }
+                Stream stream = assembly.GetManifestResourceStream("Madplan.Resources.FoodDatabase.csv");
 
-            TextReader sr = new StringReader(text);
+                string text;
 
-            var csv = new CsvReader(sr);
-            csv.Configuration.Delimiter = ";";
-
-            int counter = 0;
-
-            while (csv.Read())
-            {
-                if (counter > 0)
+                // Der bruges Encoding.GetEncoding("iso-8859-1") for at den læser ÆØÅ korrekt
+                using (var reader = new System.IO.StreamReader(stream, Encoding.GetEncoding("iso-8859-1")))
                 {
-                    ListOfFood.Add(new Food()
-                    {
-                        Navn = csv.GetField<string>(0),
-
-                        FoodId = csv.GetField<int>(1),
-
-                        Svind = csv.GetField<string>(2).ConvertToDouble(),
-
-                        EnergiKj = csv.GetField<string>(3).ConvertToDouble(),
-                        EnergiKcal = csv.GetField<string>(4).ConvertToDouble(),
-
-                        ProteinTotal = csv.GetField<string>(7).ConvertToDouble(),
-                        ProteinDeklaration = csv.GetField<string>(8).ConvertToDouble(),
-
-                        KulhydratDifferens = csv.GetField<string>(9).ConvertToDouble(),
-                        KulhydratTilgaengelig = csv.GetField<string>(10).ConvertToDouble(),
-                        KulhydratDeklaration = csv.GetField<string>(11).ConvertToDouble(),
-                        SukkerarterIalt = csv.GetField<string>(95).ConvertToDouble(),
-                        TilsatSukker = csv.GetField<string>(12).ConvertToDouble(),
-
-                        Kostfiber = csv.GetField<string>(13).ConvertToDouble(),
-
-                        FedtTotal = csv.GetField<string>(14).ConvertToDouble(),
-
-                        Vand = csv.GetField<string>(19).ConvertToDouble(),
-                        Avitamin = csv.GetField<string>(20).ConvertToDouble(),
-                        Dvitamin = csv.GetField<string>(23).ConvertToDouble(),
-                        Evitamin = csv.GetField<string>(26).ConvertToDouble(),
-                        Cvitamin = csv.GetField<string>(44).ConvertToDouble(),
-
-                        Natrium = csv.GetField<string>(48).ConvertToDouble(),
-                        Kalium = csv.GetField<string>(49).ConvertToDouble(),
-                        Calcium = csv.GetField<string>(50).ConvertToDouble(),
-                        Magnesium = csv.GetField<string>(51).ConvertToDouble(),
-                        Jern = csv.GetField<string>(53).ConvertToDouble(),
-
-                        Glycose = csv.GetField<string>(87).ConvertToDouble(),
-
-                        Cholesterol = csv.GetField<string>(162).ConvertToDouble(),
-                    });
+                    text = reader.ReadToEnd();
                 }
 
-                counter++;
-            }
+                TextReader sr = new StringReader(text);
+
+                var csv = new CsvReader(sr);
+                csv.Configuration.Delimiter = ";";
+
+                int counter = 0;
+
+                while (csv.Read())
+                {
+                    if (counter > 0)
+                    {
+                        ListOfFood.Add(new Food()
+                        {
+                            Navn = csv.GetField<string>(0),
+
+                            FoodId = csv.GetField<int>(1),
+
+                            Svind = csv.GetField<string>(2).ConvertToDouble(),
+
+                            EnergiKj = csv.GetField<string>(3).ConvertToDouble(),
+                            EnergiKcal = csv.GetField<string>(4).ConvertToDouble(),
+
+                            ProteinTotal = csv.GetField<string>(7).ConvertToDouble(),
+                            ProteinDeklaration = csv.GetField<string>(8).ConvertToDouble(),
+
+                            KulhydratDifferens = csv.GetField<string>(9).ConvertToDouble(),
+                            KulhydratTilgaengelig = csv.GetField<string>(10).ConvertToDouble(),
+                            KulhydratDeklaration = csv.GetField<string>(11).ConvertToDouble(),
+                            SukkerarterIalt = csv.GetField<string>(95).ConvertToDouble(),
+                            TilsatSukker = csv.GetField<string>(12).ConvertToDouble(),
+
+                            Kostfiber = csv.GetField<string>(13).ConvertToDouble(),
+
+                            FedtTotal = csv.GetField<string>(14).ConvertToDouble(),
+                            SumMaettedeFedtsyrer = csv.GetField<string>(155).ConvertToDouble(),
+                            SumMonoumaettedeFedtsyrer = csv.GetField<string>(156).ConvertToDouble(),
+                            SumPolymaettedeFedtsyrer = csv.GetField<string>(157).ConvertToDouble(),
+                            TransFedtsyrer = csv.GetField<string>(161).ConvertToDouble(),
+                            Cholesterol = csv.GetField<string>(162).ConvertToDouble(),
+
+                            Vand = csv.GetField<string>(19).ConvertToDouble(),
+                            Avitamin = csv.GetField<string>(20).ConvertToDouble(),
+                            B12vitamin = csv.GetField<string>(43).ConvertToDouble(),
+                            Cvitamin = csv.GetField<string>(44).ConvertToDouble(),
+                            Dvitamin = csv.GetField<string>(23).ConvertToDouble(),
+                            Evitamin = csv.GetField<string>(26).ConvertToDouble(),
+                            K1vitamin = csv.GetField<string>(31).ConvertToDouble(),
+
+                            Natrium = csv.GetField<string>(48).ConvertToDouble(),
+                            Kalium = csv.GetField<string>(49).ConvertToDouble(),
+                            Calcium = csv.GetField<string>(50).ConvertToDouble(),
+                            Magnesium = csv.GetField<string>(51).ConvertToDouble(),
+                            Jern = csv.GetField<string>(53).ConvertToDouble(),
+                            Zink = csv.GetField<string>(55).ConvertToDouble(),
+                            Selen = csv.GetField<string>(59).ConvertToDouble(),
+
+                            Glycose = csv.GetField<string>(87).ConvertToDouble(),
+
+
+                        });
+                    }
+
+                    counter++;
+                }
+            });
+
+
         }
     }
 }

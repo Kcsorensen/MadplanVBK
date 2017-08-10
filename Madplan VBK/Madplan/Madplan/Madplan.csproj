@@ -39,6 +39,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Extensions\BaseModel.cs" />
+    <Compile Include="Extensions\FoodInfoLabel.xaml.cs">
+      <DependentUpon>FoodInfoLabel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\IngredientHelper.cs" />
     <Compile Include="Extensions\MyDescriptionAttribute.cs" />
     <Compile Include="Extensions\NavigateNextCell.xaml.cs">
@@ -63,14 +66,17 @@
     <Compile Include="Views\DayPage.xaml.cs">
       <DependentUpon>DayPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\FoodEditPage.xaml.cs">
+      <DependentUpon>FoodEditPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\FoodInfoPage.xaml.cs">
       <DependentUpon>FoodInfoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FoodListPage.xaml.cs">
       <DependentUpon>FoodListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MealListPage.xaml.cs">
-      <DependentUpon>MealListPage.xaml</DependentUpon>
+    <Compile Include="Views\RecipeListPage.xaml.cs">
+      <DependentUpon>RecipeListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SelectMealPage.xaml.cs">
       <DependentUpon>SelectMealPage.xaml</DependentUpon>
@@ -169,7 +175,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\MealListPage.xaml">
+    <EmbeddedResource Include="Extensions\FoodInfoLabel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\RecipeListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\FoodEditPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
