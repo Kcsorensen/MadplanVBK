@@ -34,7 +34,7 @@ namespace Madplan.Views
 
         private void Edit_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new FoodEditPage());
+            Navigation.PushAsync(new FoodEditPage(_food));
         }
     }
 }

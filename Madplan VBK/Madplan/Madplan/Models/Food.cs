@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using Madplan.Extensions;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,45 +8,63 @@ using System.Threading.Tasks;
 
 namespace Madplan.Models
 {
-    public class Food
+    public class Food : BaseModel
     {
         // TODO: Der mangler en property. Der burde være 181 og der er kun 180.
+        #region private fields
+
+        private string _navn;
+        private double _energiKj;
+        private double _energiKcal;
+        private double _proteinTotal;
+        private double _kulhydratDifferens;
+        private double _kulhydratTilgaengelig;
+        private double _tilsatSukker;
+        private double _kostfiber;
+        private double _fedtTotal;
+        private double _avitamin;
+        private double _dvitamin;
+        private double _evitamin;
+        private double _k1vitamin;
+        private double _b12vitamin;
+        private double _cvitamin;
+        private double _calcium;
+        private double _magnesium;
+        private double _jern;
+        private double _zink;
+        private double _selen;
+        private double _sumMaettedeFedtsyrer;
+        private double _cadmium;
+        private double _sumMonoumaettedeFedtsyrer;
+        private double _sumPolymaettedeFedtsyrer;
+        private double _transFedtsyrer;
+        private double _cholesterol;
+        #endregion
+
+        #region public properties
 
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
-        public string Navn { get; set; }
         public int FoodId { get; set; }
         public double Svind { get; set; }
-        public double EnergiKj { get; set; }
-        public double EnergiKcal { get; set; }
         public double Ncf { get; set; } // Proteinomregningsfaktor(NCF)
         public double TotalN { get; set; }
-        public double ProteinTotal { get; set; }
         public double ProteinDeklaration { get; set; }
-        public double KulhydratDifferens { get; set; }
-        public double KulhydratTilgaengelig { get; set; }
         public double KulhydratDeklaration { get; set; }
-        public double TilsatSukker { get; set; }
-        public double Kostfiber { get; set; }
-        public double FedtTotal { get; set; }
         public double FCF { get; set; } // Fedtsyrekonverteringsfaktor (FCF)
         public double Alkohol { get; set; }
         public double Aske { get; set; }
         public double Torstof { get; set; } // Tørstof
         public double Vand { get; set; }
-        public double Avitamin { get; set; }
         public double Retinol { get; set; }
         public double Bcaroten { get; set; }
-        public double Dvitamin { get; set; }
         public double D3cholecalciferol { get; set; }
         public double Hydroxycholecalciferol { get; set; } // 25-hydroxycholecalciferol
-        public double Evitamin { get; set; }
         public double AlfaTokoferol { get; set; }
         public double GammaTokoferol { get; set; }
         public double DeltaTokoferol { get; set; }
         public double AlfaTokotrienol { get; set; }
-        public double K1vitamin { get; set; }
         public double B1vitamin { get; set; }
         public double Thiamin { get; set; }
         public double HET { get; set; } // HET, hydroxyethylthiazole
@@ -57,29 +76,21 @@ namespace Madplan.Models
         public double Biotin { get; set; }
         public double Folat { get; set; }
         public double FritFolat { get; set; }
-        public double B12vitamin { get; set; }
-        public double Cvitamin { get; set; }
         public double Lascorbinsyre { get; set; } // L-ascorbinsyre
         public double Ldehydroascorbinsyre { get; set; } // L-dehydroascorbinsyre
         public double Chlorid { get; set; }
         public double Natrium { get; set; }
         public double Kalium { get; set; }
-        public double Calcium { get; set; }
-        public double Magnesium { get; set; }
         public double Phosphor { get; set; }
-        public double Jern { get; set; }
         public double Kobber { get; set; }
-        public double Zink { get; set; }
         public double Jod { get; set; }
         public double Mangan { get; set; }
         public double Chrom { get; set; }
-        public double Selen { get; set; }
         public double Molybdbaen { get; set; } // Molybdæm
         public double Cobolt { get; set; }
         public double Nikkel { get; set; }
         public double kviksolv { get; set; } // Kviksølv
         public double Arsen { get; set; }
-        public double Cadmium { get; set; }
         public double Bly { get; set; }
         public double Tin { get; set; }
         public double Lmaelkesyre { get; set; } // L-mælkesyre
@@ -169,14 +180,9 @@ namespace Madplan.Models
         public double C226n3 { get; set; } // C22:6,n-3 cervonic acid DHA cis 4,7,10,13,16,19-docosahexaensyre
         public double AndrePolymaettedeFedtsyrer { get; set; } // Andre Polymættede Fedtsyrer
         public double AndreFedtsyrer { get; set; }
-        public double SumMaettedeFedtsyrer { get; set; }
-        public double SumMonoumaettedeFedtsyrer { get; set; }
-        public double SumPolymaettedeFedtsyrer { get; set; }
         public double FedtsyrerTotal { get; set; }
         public double Sumn3Fedtsyrer { get; set; } // Sum n-3 fedtsyrer
         public double Sumn6Fedtsyrer { get; set; }
-        public double TransFedtsyrer { get; set; }
-        public double Cholesterol { get; set; }
         public double Isoleucin { get; set; }
         public double Leucin { get; set; }
         public double Lusin { get; set; }
@@ -195,5 +201,137 @@ namespace Madplan.Models
         public double Glucin { get; set; }
         public double Prolin { get; set; }
         public double Serin { get; set; }
+
+        public string Navn
+        {
+            get { return _navn; }
+            set { SetValue(ref _navn, value); }
+        }
+        public double EnergiKj
+        {
+            get { return _energiKj; }
+            set { SetValue(ref _energiKj, value); }
+        }
+        public double EnergiKcal
+        {
+            get { return _energiKcal; }
+            set { SetValue(ref _energiKcal, value); }
+        }
+        public double ProteinTotal
+        {
+            get { return _proteinTotal; }
+            set { SetValue(ref _proteinTotal, value); }
+        }
+        public double KulhydratDifferens
+        {
+            get { return _kulhydratDifferens; }
+            set { SetValue(ref _kulhydratDifferens, value); }
+        }
+        public double KulhydratTilgaengelig
+        {
+            get { return _kulhydratTilgaengelig; }
+            set { SetValue(ref _kulhydratTilgaengelig, value); }
+        }
+        public double TilsatSukker
+        {
+            get { return _tilsatSukker; }
+            set { SetValue(ref _tilsatSukker, value); }
+        }
+        public double Kostfiber
+        {
+            get { return _kostfiber; }
+            set { SetValue(ref _kostfiber, value); }
+        }
+        public double FedtTotal
+        {
+            get { return _fedtTotal; }
+            set { SetValue(ref _fedtTotal, value); }
+        }
+        public double Avitamin
+        {
+            get { return _avitamin; }
+            set { SetValue(ref _avitamin, value); }
+        }
+        public double Dvitamin
+        {
+            get { return _dvitamin; }
+            set { SetValue(ref _dvitamin, value); }
+        }
+        public double Evitamin
+        {
+            get { return _evitamin; }
+            set { SetValue(ref _evitamin, value); }
+        }
+        public double K1vitamin
+        {
+            get { return _k1vitamin; }
+            set { SetValue(ref _k1vitamin, value); }
+        }
+        public double B12vitamin
+        {
+            get { return _b12vitamin; }
+            set { SetValue(ref _b12vitamin, value); }
+        }
+        public double Cvitamin
+        {
+            get { return _cvitamin; }
+            set { SetValue(ref _cvitamin, value); }
+        }
+        public double Calcium
+        {
+            get { return _calcium; }
+            set { SetValue(ref _calcium, value); }
+        }
+        public double Magnesium
+        {
+            get { return _magnesium; }
+            set { SetValue(ref _magnesium, value); }
+        }
+        public double Jern
+        {
+            get { return _jern; }
+            set { SetValue(ref _jern, value); }
+        }
+        public double Zink
+        {
+            get { return _zink; }
+            set { SetValue(ref _zink, value); }
+        }
+        public double Selen
+        {
+            get { return _selen; }
+            set { SetValue(ref _selen, value); }
+        }
+        public double Cadmium
+        {
+            get { return _cadmium; }
+            set { SetValue(ref _cadmium, value); }
+        }
+        public double SumMaettedeFedtsyrer
+        {
+            get { return _sumMaettedeFedtsyrer; }
+            set { SetValue(ref _sumMaettedeFedtsyrer, value); }
+        }
+        public double SumMonoumaettedeFedtsyrer
+        {
+            get { return _sumMonoumaettedeFedtsyrer; }
+            set { SetValue(ref _sumMonoumaettedeFedtsyrer, value); }
+        }
+        public double SumPolymaettedeFedtsyrer
+        {
+            get { return _sumPolymaettedeFedtsyrer; }
+            set { SetValue(ref _sumPolymaettedeFedtsyrer, value); }
+        }
+        public double TransFedtsyrer
+        {
+            get { return _transFedtsyrer; }
+            set { SetValue(ref _transFedtsyrer, value); }
+        }
+        public double Cholesterol
+        {
+            get { return _cholesterol; }
+            set { SetValue(ref _cholesterol, value); }
+        }
+        #endregion
     }
 }

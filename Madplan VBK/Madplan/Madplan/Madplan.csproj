@@ -39,6 +39,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Extensions\BaseModel.cs" />
+    <Compile Include="Extensions\DataEntryCell.xaml.cs">
+      <DependentUpon>DataEntryCell.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\FoodInfoLabel.xaml.cs">
       <DependentUpon>FoodInfoLabel.xaml</DependentUpon>
     </Compile>
@@ -188,6 +191,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\FoodEditPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Extensions\DataEntryCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

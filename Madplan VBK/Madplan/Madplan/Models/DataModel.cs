@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -3575,6 +3576,7 @@ namespace Madplan.Models
 
                             Natrium = csv.GetField<string>(48).ConvertToDouble(),
                             Kalium = csv.GetField<string>(49).ConvertToDouble(),
+                            Cadmium = csv.GetField<string>(65).ConvertToDouble(),
                             Calcium = csv.GetField<string>(50).ConvertToDouble(),
                             Magnesium = csv.GetField<string>(51).ConvertToDouble(),
                             Jern = csv.GetField<string>(53).ConvertToDouble(),
@@ -3582,8 +3584,6 @@ namespace Madplan.Models
                             Selen = csv.GetField<string>(59).ConvertToDouble(),
 
                             Glycose = csv.GetField<string>(87).ConvertToDouble(),
-
-
                         });
                     }
 
@@ -3592,6 +3592,53 @@ namespace Madplan.Models
             });
 
 
+        }
+
+        public void UpdateFood(Food food)
+        {
+            if (food == null)
+                return;
+
+            if (ListOfFood.Any(a => a.FoodId != food.FoodId))
+                return;
+
+            var oldFood = ListOfFood.Where(a => a.FoodId == food.FoodId).First();
+
+            oldFood.Navn = food.Navn;
+            oldFood.EnergiKj = food.EnergiKj;
+            oldFood.EnergiKcal = food.EnergiKcal;
+
+            oldFood.ProteinTotal = food.ProteinTotal;
+
+            oldFood.KulhydratDifferens = food.KulhydratDifferens;
+            oldFood.KulhydratTilgaengelig = oldFood.KulhydratTilgaengelig;
+            oldFood.SukkerarterIalt = food.SukkerarterIalt;
+            oldFood.TilsatSukker = food.TilsatSukker;
+
+            oldFood.Kostfiber = food.Kostfiber;
+
+            oldFood.FedtTotal = food.FedtTotal;
+            oldFood.SumMaettedeFedtsyrer = food.SumMaettedeFedtsyrer;
+            oldFood.SumMonoumaettedeFedtsyrer = food.SumMonoumaettedeFedtsyrer;
+            oldFood.SumPolymaettedeFedtsyrer = food.SumPolymaettedeFedtsyrer;
+            oldFood.TransFedtsyrer = food.TransFedtsyrer;
+            oldFood.Cholesterol = food.Cholesterol;
+
+            oldFood.Avitamin = food.Avitamin;
+            oldFood.B12vitamin = food.B12vitamin;
+            oldFood.Cvitamin = food.Cvitamin;
+            oldFood.Dvitamin = food.Dvitamin;
+            oldFood.Evitamin = food.Evitamin;
+            oldFood.K1vitamin = food.K1vitamin;
+
+            oldFood.Natrium = food.Natrium;
+            oldFood.Kalium = food.Kalium;
+            oldFood.Cadmium = food.Cadmium;
+            oldFood.Calcium = food.Calcium;
+            oldFood.Magnesium = food.Magnesium;
+            oldFood.Jern = food.Jern;
+            oldFood.Zink = food.Jern;
+            oldFood.Selen = food.Jern;
         }
     }
 }

@@ -29,9 +29,9 @@
                 <extension:FoodInfoLabel Text=" - Transfedt (g)" Value="{Binding TransFedtsyrer, StringFormat='{0:N1}'}"/>
                 <extension:FoodInfoLabel Text=" - Cholesterol (g)" Value="{Binding Cholesterol, StringFormat='{0:N1}'}"/>
                 <extension:FoodInfoLabel Text="Kulhydrater, total (g)" Value="{Binding KulhydratDifferens, StringFormat='{0:N1}'}" FontAttributes="Bold"/>
-                <extension:FoodInfoLabel Text=" - Tilgængelige (g)" Value="{Binding KulhydratTilgaengelig, StringFormat='{0:N1}'}" FontAttributes="Bold"/>
-                <extension:FoodInfoLabel Text=" - Tilsat sukker (g)" Value="{Binding TilsatSukker, StringFormat='{0:N1}'}" FontAttributes="Bold"/>
-                <extension:FoodInfoLabel Text=" - Kostfibre (g)" Value="{Binding Kostfiber, StringFormat='{0:N1}'}" FontAttributes="Bold" />
+                <extension:FoodInfoLabel Text=" - Tilgængelige (g)" Value="{Binding KulhydratTilgaengelig, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - Tilsat sukker (g)" Value="{Binding TilsatSukker, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - Kostfibre (g)" Value="{Binding Kostfiber, StringFormat='{0:N1}'}" />
 
                 <Label Text="Vitaminer og mineraler" FontAttributes="Bold" Margin="0, 10, 0, 0"/>
                 <extension:FoodInfoLabel Text=" - A-vitamin (RE)" Value="{Binding Avitamin, StringFormat='{0:N1}'}"/>
@@ -40,6 +40,7 @@
                 <extension:FoodInfoLabel Text=" - D-vitamin (µg)" Value="{Binding Dvitamin, StringFormat='{0:N1}'}"/>
                 <extension:FoodInfoLabel Text=" - E-vitamin (α-TE)" Value="{Binding Evitamin, StringFormat='{0:N1}'}"/>
                 <extension:FoodInfoLabel Text=" - K1-vitamin (µg)" Value="{Binding K1vitamin, StringFormat='{0:N1}'}"/>
+                <extension:FoodInfoLabel Text=" - Cadmium, Cd (µg)" Value="{Binding Cadmium, StringFormat='{0:N1}'}"/>
                 <extension:FoodInfoLabel Text=" - Calcium, Ca (mg)" Value="{Binding Calcium, StringFormat='{0:N1}'}"/>
                 <extension:FoodInfoLabel Text=" - Jern, Fe (mg)" Value="{Binding Jern, StringFormat='{0:N1}'}"/>
                 <extension:FoodInfoLabel Text=" - Zink, Zn (mg)" Value="{Binding Zink, StringFormat='{0:N1}'}"/>
