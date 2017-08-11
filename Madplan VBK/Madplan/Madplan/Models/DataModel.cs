@@ -3594,51 +3594,54 @@ namespace Madplan.Models
 
         }
 
-        public void UpdateFood(Food food)
+        public async Task UpdateFoodAsync(Food food)
         {
             if (food == null)
                 return;
 
-            if (ListOfFood.Any(a => a.FoodId != food.FoodId))
-                return;
+            if (ListOfFood.Any(a => a.FoodId == food.FoodId))
+            {
+                await Task.Run(() =>
+                {
+                    var oldFood = ListOfFood.Where(a => a.FoodId == food.FoodId).First();
 
-            var oldFood = ListOfFood.Where(a => a.FoodId == food.FoodId).First();
+                    oldFood.Navn = food.Navn;
+                    oldFood.EnergiKj = food.EnergiKj;
+                    oldFood.EnergiKcal = food.EnergiKcal;
 
-            oldFood.Navn = food.Navn;
-            oldFood.EnergiKj = food.EnergiKj;
-            oldFood.EnergiKcal = food.EnergiKcal;
+                    oldFood.ProteinTotal = food.ProteinTotal;
 
-            oldFood.ProteinTotal = food.ProteinTotal;
+                    oldFood.KulhydratDifferens = food.KulhydratDifferens;
+                    oldFood.KulhydratTilgaengelig = oldFood.KulhydratTilgaengelig;
+                    oldFood.SukkerarterIalt = food.SukkerarterIalt;
+                    oldFood.TilsatSukker = food.TilsatSukker;
 
-            oldFood.KulhydratDifferens = food.KulhydratDifferens;
-            oldFood.KulhydratTilgaengelig = oldFood.KulhydratTilgaengelig;
-            oldFood.SukkerarterIalt = food.SukkerarterIalt;
-            oldFood.TilsatSukker = food.TilsatSukker;
+                    oldFood.Kostfiber = food.Kostfiber;
 
-            oldFood.Kostfiber = food.Kostfiber;
+                    oldFood.FedtTotal = food.FedtTotal;
+                    oldFood.SumMaettedeFedtsyrer = food.SumMaettedeFedtsyrer;
+                    oldFood.SumMonoumaettedeFedtsyrer = food.SumMonoumaettedeFedtsyrer;
+                    oldFood.SumPolymaettedeFedtsyrer = food.SumPolymaettedeFedtsyrer;
+                    oldFood.TransFedtsyrer = food.TransFedtsyrer;
+                    oldFood.Cholesterol = food.Cholesterol;
 
-            oldFood.FedtTotal = food.FedtTotal;
-            oldFood.SumMaettedeFedtsyrer = food.SumMaettedeFedtsyrer;
-            oldFood.SumMonoumaettedeFedtsyrer = food.SumMonoumaettedeFedtsyrer;
-            oldFood.SumPolymaettedeFedtsyrer = food.SumPolymaettedeFedtsyrer;
-            oldFood.TransFedtsyrer = food.TransFedtsyrer;
-            oldFood.Cholesterol = food.Cholesterol;
+                    oldFood.Avitamin = food.Avitamin;
+                    oldFood.B12vitamin = food.B12vitamin;
+                    oldFood.Cvitamin = food.Cvitamin;
+                    oldFood.Dvitamin = food.Dvitamin;
+                    oldFood.Evitamin = food.Evitamin;
+                    oldFood.K1vitamin = food.K1vitamin;
 
-            oldFood.Avitamin = food.Avitamin;
-            oldFood.B12vitamin = food.B12vitamin;
-            oldFood.Cvitamin = food.Cvitamin;
-            oldFood.Dvitamin = food.Dvitamin;
-            oldFood.Evitamin = food.Evitamin;
-            oldFood.K1vitamin = food.K1vitamin;
-
-            oldFood.Natrium = food.Natrium;
-            oldFood.Kalium = food.Kalium;
-            oldFood.Cadmium = food.Cadmium;
-            oldFood.Calcium = food.Calcium;
-            oldFood.Magnesium = food.Magnesium;
-            oldFood.Jern = food.Jern;
-            oldFood.Zink = food.Jern;
-            oldFood.Selen = food.Jern;
+                    oldFood.Natrium = food.Natrium;
+                    oldFood.Kalium = food.Kalium;
+                    oldFood.Cadmium = food.Cadmium;
+                    oldFood.Calcium = food.Calcium;
+                    oldFood.Magnesium = food.Magnesium;
+                    oldFood.Jern = food.Jern;
+                    oldFood.Zink = food.Jern;
+                    oldFood.Selen = food.Jern;
+                });
+            }
         }
     }
 }

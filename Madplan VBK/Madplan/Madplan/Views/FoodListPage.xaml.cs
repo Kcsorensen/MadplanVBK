@@ -52,5 +52,10 @@ namespace Madplan.Views
 
             Navigation.PushAsync(new FoodInfoPage(foodName));
         }
+
+        private void Create_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new FoodCreatePage());
+        }
     }
 }

@@ -87,3 +87,5 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Andr
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\obj\Debug\res\drawable-hdpi\makro.png
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\obj\Debug\res\drawable-xhdpi\makro.png
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\obj\Debug\res\drawable-xxhdpi\makro.png
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\Newtonsoft.Json.xml

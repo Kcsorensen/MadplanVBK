@@ -4,7 +4,7 @@
              x:Class="Madplan.Views.FoodListPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Order="Primary" Text="Tilføj"/>
+        <ToolbarItem Order="Primary" Text="Tilføj" Clicked="Create_Clicked"/>
     </ContentPage.ToolbarItems>
 
     <StackLayout>

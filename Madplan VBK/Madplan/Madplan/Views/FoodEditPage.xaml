@@ -3,7 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:extension="clr-namespace:Madplan.Extensions"
              x:Class="Madplan.Views.FoodEditPage">
-  <!--Pages can be added as references or inline-->
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Text="Gem" Clicked="Save_Clicked"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage Title="Makro m.m." Icon="Makro.png">
 
         <TableView HasUnevenRows="True">

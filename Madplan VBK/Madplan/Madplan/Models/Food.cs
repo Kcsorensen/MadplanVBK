@@ -47,6 +47,138 @@ namespace Madplan.Models
         public int Id { get; set; }
 
         public int FoodId { get; set; }
+
+        public string Navn
+        {
+            get { return _navn; }
+            set { SetValue(ref _navn, value); }
+        }
+        public double EnergiKj
+        {
+            get { return _energiKj; }
+            set { SetValue(ref _energiKj, value); }
+        }
+        public double EnergiKcal
+        {
+            get { return _energiKcal; }
+            set { SetValue(ref _energiKcal, value); }
+        }
+        public double ProteinTotal
+        {
+            get { return _proteinTotal; }
+            set { SetValue(ref _proteinTotal, value); }
+        }
+        public double KulhydratDifferens
+        {
+            get { return _kulhydratDifferens; }
+            set { SetValue(ref _kulhydratDifferens, value); }
+        }
+        public double KulhydratTilgaengelig
+        {
+            get { return _kulhydratTilgaengelig; }
+            set { SetValue(ref _kulhydratTilgaengelig, value); }
+        }
+        public double TilsatSukker
+        {
+            get { return _tilsatSukker; }
+            set { SetValue(ref _tilsatSukker, value); }
+        }
+        public double Kostfiber
+        {
+            get { return _kostfiber; }
+            set { SetValue(ref _kostfiber, value); }
+        }
+        public double FedtTotal
+        {
+            get { return _fedtTotal; }
+            set { SetValue(ref _fedtTotal, value); }
+        }
+        public double Avitamin
+        {
+            get { return _avitamin; }
+            set { SetValue(ref _avitamin, value); }
+        }
+        public double Dvitamin
+        {
+            get { return _dvitamin; }
+            set { SetValue(ref _dvitamin, value); }
+        }
+        public double Evitamin
+        {
+            get { return _evitamin; }
+            set { SetValue(ref _evitamin, value); }
+        }
+        public double K1vitamin
+        {
+            get { return _k1vitamin; }
+            set { SetValue(ref _k1vitamin, value); }
+        }
+        public double B12vitamin
+        {
+            get { return _b12vitamin; }
+            set { SetValue(ref _b12vitamin, value); }
+        }
+        public double Cvitamin
+        {
+            get { return _cvitamin; }
+            set { SetValue(ref _cvitamin, value); }
+        }
+        public double Calcium
+        {
+            get { return _calcium; }
+            set { SetValue(ref _calcium, value); }
+        }
+        public double Magnesium
+        {
+            get { return _magnesium; }
+            set { SetValue(ref _magnesium, value); }
+        }
+        public double Jern
+        {
+            get { return _jern; }
+            set { SetValue(ref _jern, value); }
+        }
+        public double Zink
+        {
+            get { return _zink; }
+            set { SetValue(ref _zink, value); }
+        }
+        public double Selen
+        {
+            get { return _selen; }
+            set { SetValue(ref _selen, value); }
+        }
+        public double Cadmium
+        {
+            get { return _cadmium; }
+            set { SetValue(ref _cadmium, value); }
+        }
+        public double SumMaettedeFedtsyrer
+        {
+            get { return _sumMaettedeFedtsyrer; }
+            set { SetValue(ref _sumMaettedeFedtsyrer, value); }
+        }
+        public double SumMonoumaettedeFedtsyrer
+        {
+            get { return _sumMonoumaettedeFedtsyrer; }
+            set { SetValue(ref _sumMonoumaettedeFedtsyrer, value); }
+        }
+        public double SumPolymaettedeFedtsyrer
+        {
+            get { return _sumPolymaettedeFedtsyrer; }
+            set { SetValue(ref _sumPolymaettedeFedtsyrer, value); }
+        }
+        public double TransFedtsyrer
+        {
+            get { return _transFedtsyrer; }
+            set { SetValue(ref _transFedtsyrer, value); }
+        }
+        public double Cholesterol
+        {
+            get { return _cholesterol; }
+            set { SetValue(ref _cholesterol, value); }
+        }
+
         public double Svind { get; set; }
         public double Ncf { get; set; } // Proteinomregningsfaktor(NCF)
         public double TotalN { get; set; }
@@ -201,137 +333,6 @@ namespace Madplan.Models
         public double Glucin { get; set; }
         public double Prolin { get; set; }
         public double Serin { get; set; }
-
-        public string Navn
-        {
-            get { return _navn; }
-            set { SetValue(ref _navn, value); }
-        }
-        public double EnergiKj
-        {
-            get { return _energiKj; }
-            set { SetValue(ref _energiKj, value); }
-        }
-        public double EnergiKcal
-        {
-            get { return _energiKcal; }
-            set { SetValue(ref _energiKcal, value); }
-        }
-        public double ProteinTotal
-        {
-            get { return _proteinTotal; }
-            set { SetValue(ref _proteinTotal, value); }
-        }
-        public double KulhydratDifferens
-        {
-            get { return _kulhydratDifferens; }
-            set { SetValue(ref _kulhydratDifferens, value); }
-        }
-        public double KulhydratTilgaengelig
-        {
-            get { return _kulhydratTilgaengelig; }
-            set { SetValue(ref _kulhydratTilgaengelig, value); }
-        }
-        public double TilsatSukker
-        {
-            get { return _tilsatSukker; }
-            set { SetValue(ref _tilsatSukker, value); }
-        }
-        public double Kostfiber
-        {
-            get { return _kostfiber; }
-            set { SetValue(ref _kostfiber, value); }
-        }
-        public double FedtTotal
-        {
-            get { return _fedtTotal; }
-            set { SetValue(ref _fedtTotal, value); }
-        }
-        public double Avitamin
-        {
-            get { return _avitamin; }
-            set { SetValue(ref _avitamin, value); }
-        }
-        public double Dvitamin
-        {
-            get { return _dvitamin; }
-            set { SetValue(ref _dvitamin, value); }
-        }
-        public double Evitamin
-        {
-            get { return _evitamin; }
-            set { SetValue(ref _evitamin, value); }
-        }
-        public double K1vitamin
-        {
-            get { return _k1vitamin; }
-            set { SetValue(ref _k1vitamin, value); }
-        }
-        public double B12vitamin
-        {
-            get { return _b12vitamin; }
-            set { SetValue(ref _b12vitamin, value); }
-        }
-        public double Cvitamin
-        {
-            get { return _cvitamin; }
-            set { SetValue(ref _cvitamin, value); }
-        }
-        public double Calcium
-        {
-            get { return _calcium; }
-            set { SetValue(ref _calcium, value); }
-        }
-        public double Magnesium
-        {
-            get { return _magnesium; }
-            set { SetValue(ref _magnesium, value); }
-        }
-        public double Jern
-        {
-            get { return _jern; }
-            set { SetValue(ref _jern, value); }
-        }
-        public double Zink
-        {
-            get { return _zink; }
-            set { SetValue(ref _zink, value); }
-        }
-        public double Selen
-        {
-            get { return _selen; }
-            set { SetValue(ref _selen, value); }
-        }
-        public double Cadmium
-        {
-            get { return _cadmium; }
-            set { SetValue(ref _cadmium, value); }
-        }
-        public double SumMaettedeFedtsyrer
-        {
-            get { return _sumMaettedeFedtsyrer; }
-            set { SetValue(ref _sumMaettedeFedtsyrer, value); }
-        }
-        public double SumMonoumaettedeFedtsyrer
-        {
-            get { return _sumMonoumaettedeFedtsyrer; }
-            set { SetValue(ref _sumMonoumaettedeFedtsyrer, value); }
-        }
-        public double SumPolymaettedeFedtsyrer
-        {
-            get { return _sumPolymaettedeFedtsyrer; }
-            set { SetValue(ref _sumPolymaettedeFedtsyrer, value); }
-        }
-        public double TransFedtsyrer
-        {
-            get { return _transFedtsyrer; }
-            set { SetValue(ref _transFedtsyrer, value); }
-        }
-        public double Cholesterol
-        {
-            get { return _cholesterol; }
-            set { SetValue(ref _cholesterol, value); }
-        }
         #endregion
     }
 }
