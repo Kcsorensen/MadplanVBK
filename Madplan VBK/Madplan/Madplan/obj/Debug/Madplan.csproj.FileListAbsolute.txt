@@ -40,5 +40,6 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.Views.FoodEditPage.xaml.g.cs
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.Extensions.DataEntryCell.xaml.g.cs
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\obj\Debug\Madplan.Views.FoodCreatePage.xaml.g.cs
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\Newtonsoft.Json.dll
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\ExpressMapper.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\ExpressMapper.pdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan\bin\Debug\ExpressMapper.xml

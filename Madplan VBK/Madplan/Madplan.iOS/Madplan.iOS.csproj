@@ -123,6 +123,9 @@
     <Reference Include="ExifLib, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\ExifLib.PCL.1.0.2-pre01\lib\netstandard1.0\ExifLib.dll</HintPath>
     </Reference>
+    <Reference Include="ExpressMapper, Version=1.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Expressmapper.1.9.1\lib\dotnet\ExpressMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Messier16.Forms.Controls, Version=85.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Messier16.Forms.Controls.0.5.1\lib\Xamarin.iOS10\Messier16.Forms.Controls.dll</HintPath>
     </Reference>
@@ -130,9 +133,6 @@
       <HintPath>..\..\packages\Messier16.Forms.Controls.0.5.1\lib\Xamarin.iOS10\Messier16.Forms.iOS.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="PCLStorage, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.dll</HintPath>
     </Reference>
@@ -186,5 +186,7 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\NETStandard.Library.2.0.0\build\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\NETStandard.Library.2.0.0\build\NETStandard.Library.targets'))" />
   </Target>
+  <Import Project="..\..\packages\NETStandard.Library.2.0.0\build\NETStandard.Library.targets" Condition="Exists('..\..\packages\NETStandard.Library.2.0.0\build\NETStandard.Library.targets')" />
 </Project>

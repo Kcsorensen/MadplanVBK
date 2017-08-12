@@ -87,5 +87,8 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Andr
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\obj\Debug\res\drawable-hdpi\makro.png
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\obj\Debug\res\drawable-xhdpi\makro.png
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\obj\Debug\res\drawable-xxhdpi\makro.png
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\Newtonsoft.Json.dll
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\ExpressMapper.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\ExpressMapper.pdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\ExpressMapper.xml
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\bin\Debug\ExpressMapper.dll.mdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Madplan\Madplan.Android\obj\Debug\android\assets\ExpressMapper.dll.mdb
