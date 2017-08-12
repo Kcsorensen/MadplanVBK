@@ -26,7 +26,15 @@ namespace Madplan.Views
 
         private void Save_Clicked(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(navnEntry.Text))
+            {
+                DisplayAlert("Fejl", "Madvaren mangler et navn", "OK");
+                return;
+            }
 
+            DataModel.Current.AddNewFood(_food);
+
+            Navigation.PopAsync();
         }
     }
 }

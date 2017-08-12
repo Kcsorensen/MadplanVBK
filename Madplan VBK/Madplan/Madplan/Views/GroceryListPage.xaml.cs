@@ -39,7 +39,7 @@ namespace Madplan.Views
 
             foreach (var item in listOfWeakSelections)
             {
-                completeListOfIngredients.AddRange(DataModel.Current.ListOfMeals.Where(a => a.Name == item).First().Ingredients);
+                completeListOfIngredients.AddRange(DataModel.Current.ListOfRecipes.Where(a => a.Name == item).First().Ingredients);
             }
 
             // Find alle ingridients som indgår mere end en gang i completeListOfIngredients

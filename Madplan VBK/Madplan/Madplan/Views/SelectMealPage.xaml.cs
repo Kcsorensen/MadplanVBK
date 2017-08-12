@@ -207,17 +207,17 @@ namespace Madplan.Views
             {
                 if (mealType == null)
                 {
-                    ListOfMeals = DataModel.Current.ListOfMeals;
+                    ListOfMeals = DataModel.Current.ListOfRecipes;
                 }
                 else
                 {
                     if (mealType == MealType.FirstSnack || mealType == MealType.SecondSnack)
                     {
-                        ListOfMeals = DataModel.Current.ListOfMeals.Where(a => a.Type == MealType.Snack);
+                        ListOfMeals = DataModel.Current.ListOfRecipes.Where(a => a.Type == MealType.Snack);
                     }
                     else
                     {
-                        ListOfMeals = DataModel.Current.ListOfMeals.Where(a => a.Type == mealType);
+                        ListOfMeals = DataModel.Current.ListOfRecipes.Where(a => a.Type == mealType);
                     }
                 }
             });

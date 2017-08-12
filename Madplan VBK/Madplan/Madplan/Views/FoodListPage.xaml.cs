@@ -1,6 +1,7 @@
 ﻿using Madplan.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,20 +14,18 @@ namespace Madplan.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FoodListPage : ContentPage
     {
-        private List<Food> _listOfFood;
+        private ObservableCollection<Food> _listOfFood;
 
         public FoodListPage()
         {
             InitializeComponent();
 
-            _listOfFood = new List<Food>();
+            _listOfFood = new ObservableCollection<Food>();
         }
 
         protected override void OnAppearing()
         {
             _listOfFood = DataModel.Current.ListOfFood;
-
-            //var newList = _listOfFood.Where(a => a.Navn.StartsWith("A")).ToList();
 
             listview.ItemsSource = filterListOfFood();
 
@@ -56,6 +55,22 @@ namespace Madplan.Views
         private void Create_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new FoodCreatePage());
+        }
+
+        private void Edit_Clicked(object sender, EventArgs e)
+        {
+            var menuItem = sender as MenuItem;
+            var food = menuItem.CommandParameter as Food;
+
+            Navigation.PushAsync(new FoodEditPage(food));
+        }
+
+        private void Delete_Clicked(object sender, EventArgs e)
+        {
+            var menuItem = sender as MenuItem;
+            var food = menuItem.CommandParameter as Food;
+
+            DataModel.Current.DeleteFood(food);
         }
     }
 }

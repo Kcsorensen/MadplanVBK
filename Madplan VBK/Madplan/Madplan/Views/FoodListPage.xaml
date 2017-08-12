@@ -19,8 +19,8 @@
                 <DataTemplate>
                     <TextCell Text="{Binding Navn}" Tapped="ListViewItem_Tapped">
                         <TextCell.ContextActions>
-                            <MenuItem Text="Rediger"/>
-                            <MenuItem Text="Slet" IsDestructive="True"/>
+                            <MenuItem Text="Rediger" Clicked="Edit_Clicked" CommandParameter="{Binding .}"/>
+                            <MenuItem Text="Slet" IsDestructive="True" Clicked="Delete_Clicked" CommandParameter="{Binding .}"/>
                         </TextCell.ContextActions>
                     </TextCell>
                 </DataTemplate>
