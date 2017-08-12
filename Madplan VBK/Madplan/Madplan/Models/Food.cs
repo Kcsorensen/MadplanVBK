@@ -13,7 +13,7 @@ namespace Madplan.Models
         // TODO: Der mangler en property. Der burde være 181 og der er kun 180.
         #region private fields
 
-        private string _navn;
+        private string _name;
         private double _energiKj;
         private double _energiKcal;
         private double _proteinTotal;
@@ -48,10 +48,10 @@ namespace Madplan.Models
 
         public int FoodId { get; set; }
 
-        public string Navn
+        public string Name
         {
-            get { return _navn; }
-            set { SetValue(ref _navn, value); }
+            get { return _name; }
+            set { SetValue(ref _name, value); }
         }
         public double EnergiKj
         {
@@ -93,6 +93,15 @@ namespace Madplan.Models
             get { return _fedtTotal; }
             set { SetValue(ref _fedtTotal, value); }
         }
+
+        public double Quantity { get; set; }
+        public string QuantityType { get; set; }
+        public bool QuantityVisible { get; set; }
+        public bool BasicRecipe { get; set; }
+        public bool ShoppingListChecked { get; set; }
+
+
+
         public double Avitamin
         {
             get { return _avitamin; }
@@ -334,5 +343,12 @@ namespace Madplan.Models
         public double Prolin { get; set; }
         public double Serin { get; set; }
         #endregion
+
+        public Food()
+        {
+            QuantityVisible = true;
+            BasicRecipe = false;
+            ShoppingListChecked = false;
+        }
     }
 }

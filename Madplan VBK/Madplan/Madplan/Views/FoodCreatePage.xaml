@@ -16,7 +16,7 @@
                                 <ViewCell>
                                     <StackLayout Orientation="Horizontal" Padding="15, 5, 10, 5">
                                         <Label Text="Navn" MinimumWidthRequest="150" VerticalOptions="Center"/>
-                                        <Entry x:Name="navnEntry" Text="{Binding Navn}" Placeholder="Indtast navn" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End"/>
+                                        <Entry x:Name="navnEntry" Text="{Binding Name}" Placeholder="Indtast navn" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End"/>
                                     </StackLayout>
                                 </ViewCell>
                             </TableSection>

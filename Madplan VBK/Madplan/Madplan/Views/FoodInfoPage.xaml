@@ -16,7 +16,7 @@
 
         <ScrollView Margin="0, 0, 0, 10">
             <StackLayout Padding="15, 0, 10, 0">
-                <Label Text="{Binding Navn}" FontAttributes="Bold" Margin="0, 5, 0, 0"/>
+                <Label Text="{Binding Name}" FontAttributes="Bold" Margin="0, 5, 0, 0"/>
                 <BoxView HeightRequest="1" Color="Black" VerticalOptions="Fill" Margin="0, 0, 0, 5"/>
 
                 <extension:FoodInfoLabel Text="Energi (kJ)" Value="{Binding EnergiKj, StringFormat='{0:N1}'}" FontAttributes="Bold"/>

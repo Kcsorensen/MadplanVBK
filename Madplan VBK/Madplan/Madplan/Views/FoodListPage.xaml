@@ -9,7 +9,7 @@
 
     <StackLayout>
         <SearchBar Placeholder="Søg..." TextChanged="SearchBar_TextChanged"/>
-        <ListView x:Name="listview">
+        <ListView x:Name="listView">
             <ListView.Header>
                 <StackLayout Style="{StaticResource listViewHeaderLayoutStyle}">
                     <Label Text="Oversigt over fødevarer" Style="{StaticResource listViewHeaderLabelStyle}" />
@@ -17,7 +17,7 @@
             </ListView.Header>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Navn}" Tapped="ListViewItem_Tapped">
+                    <TextCell Text="{Binding Name}" Tapped="ListViewItem_Tapped">
                         <TextCell.ContextActions>
                             <MenuItem Text="Rediger" Clicked="Edit_Clicked" CommandParameter="{Binding .}"/>
                             <MenuItem Text="Slet" IsDestructive="True" Clicked="Delete_Clicked" CommandParameter="{Binding .}"/>

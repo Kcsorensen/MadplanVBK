@@ -16,7 +16,7 @@ namespace Madplan.Views
     {
         private string _day;
         private string _dishType;
-        private IEnumerable<Meal> ListOfMeals;
+        private IEnumerable<Recipe> ListOfMeals;
 
         public SelectMealPage(string day, string dishType)
         {
@@ -201,7 +201,7 @@ namespace Madplan.Views
 
         private async Task sortListOfMealsAsync(string mealType = null)
         {
-            ListOfMeals = new List<Meal>();
+            ListOfMeals = new List<Recipe>();
 
             await Task.Run(() =>
             {

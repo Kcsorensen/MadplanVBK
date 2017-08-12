@@ -3,6 +3,7 @@ using Madplan.Persistance;
 using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,11 +34,11 @@ namespace Madplan.Views
 
             var mondayBreakfast = weekSelections.MondayBreakfast;
 
-            var listOfWeakSelections = weekSelections.GetListOfSelectedMeals();
+            var listOfWeekSelections = weekSelections.GetListOfSelectedMeals();
 
-            List<Ingredient> completeListOfIngredients = new List<Ingredient>();
+            List<Food> completeListOfIngredients = new List<Food>();
 
-            foreach (var item in listOfWeakSelections)
+            foreach (var item in listOfWeekSelections)
             {
                 completeListOfIngredients.AddRange(DataModel.Current.ListOfRecipes.Where(a => a.Name == item).First().Ingredients);
             }
@@ -45,19 +46,19 @@ namespace Madplan.Views
             // Find alle ingridients som indgår mere end en gang i completeListOfIngredients
             var listofDuplicates = completeListOfIngredients.GroupBy(a => a.Name).Where(b => b.Count() > 1).Select(c => c).ToList();
 
-            List<Ingredient> sortedListOfIngredients = new List<Ingredient>();
+            List<Food> sortedListOfIngredients = new List<Food>();
 
-            foreach (var ingridient in completeListOfIngredients)
+            foreach (var ingredient in completeListOfIngredients)
             {
                 // Undersøg om den betragtede ingredient indgår flere gange i completeListOfIngredients.
 
                 // Den betratede ingridient indgår flere gang i completeListOfIngredients. På baggrund heraf undersøges det hvordan den skal addes til sortedListOfIngredients.
-                if (listofDuplicates.Any(a => a.Key == ingridient.Name))
+                if (listofDuplicates.Any(a => a.Key == ingredient.Name))
                 {
                     // Den betragtede ingridient ikke er added til sortedListOfIngredients endnu, hvorfor den skal addes.
-                    if (!sortedListOfIngredients.Any(a => a.Name == ingridient.Name))
+                    if (!sortedListOfIngredients.Any(a => a.Name == ingredient.Name))
                     {
-                        sortedListOfIngredients.Add(ingridient);
+                        sortedListOfIngredients.Add(ingredient);
                     }
                     // Den betragtede ingridient er allerede added til sortedListOfIngredients. 
                     // På baggrund heraf undersøges det om QuantityType er den samme som den allerede added ingridient med samme navn.
@@ -65,17 +66,17 @@ namespace Madplan.Views
                     else
                     {
                         // Bliver kasseret hvis QuantityType = Ingen.
-                        if (ingridient.QuantityType != QuantityType.Ingen)
+                        if (ingredient.QuantityType != QuantityType.Ingen)
                         {
                             // QuantityType for den betragtede ingridient er den samme som den allerede added ingridient med samme navn. Quantity forsøges med den value den betragtede ingridient har.
-                            if (sortedListOfIngredients.Any(a => a.Name == ingridient.Name && a.QuantityType == ingridient.QuantityType))
+                            if (sortedListOfIngredients.Any(a => a.Name == ingredient.Name && a.QuantityType == ingredient.QuantityType))
                             {
-                                sortedListOfIngredients.Where(b => b.Name == ingridient.Name && b.QuantityType == ingridient.QuantityType).First().Quantity += ingridient.Quantity;
+                                sortedListOfIngredients.Where(b => b.Name == ingredient.Name && b.QuantityType == ingredient.QuantityType).First().Quantity += ingredient.Quantity;
                             }
                             // QuantityType for den betragtede ingridient er ikke den samme som den allerede added ingridient med samme navn. Den betragtede ingridient addes til sortedListOfIngredients
                             else
                             {
-                                sortedListOfIngredients.Add(ingridient);
+                                sortedListOfIngredients.Add(ingredient);
                             }
                         }
                     }
@@ -83,7 +84,7 @@ namespace Madplan.Views
                 // Den betratede ingridient indgår ikke flere gang i completeListOfIngredients og skal derfor bare addes til sortedListOfIngredients
                 else
                 {
-                    sortedListOfIngredients.Add(ingridient);
+                    sortedListOfIngredients.Add(ingredient);
                 }
             }
 

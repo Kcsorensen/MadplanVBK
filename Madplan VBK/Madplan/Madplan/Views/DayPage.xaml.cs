@@ -120,11 +120,11 @@ namespace Madplan.Views
             {
                 if (_day == Day.Monday)
                 {
-                    WeekSelections.MondayBreakfast = Meal.Default;
-                    WeekSelections.MondayFirstSnack = Meal.Default; 
-                    WeekSelections.MondayLunch = Meal.Default;
-                    WeekSelections.MondaySecondSnack = Meal.Default;
-                    WeekSelections.MondayDinner = Meal.Default;
+                    WeekSelections.MondayBreakfast = Recipe.Default;
+                    WeekSelections.MondayFirstSnack = Recipe.Default; 
+                    WeekSelections.MondayLunch = Recipe.Default;
+                    WeekSelections.MondaySecondSnack = Recipe.Default;
+                    WeekSelections.MondayDinner = Recipe.Default;
 
                     DaySelections.Breakfast = WeekSelections.MondayBreakfast;
                     DaySelections.FirstSnack = WeekSelections.MondayFirstSnack;
@@ -134,11 +134,11 @@ namespace Madplan.Views
                 }
                 else if (_day == Day.Tuesday)
                 {
-                    WeekSelections.TuesdayBreakfast = Meal.Default;
-                    WeekSelections.TuesdayFirstSnack = Meal.Default;
-                    WeekSelections.TuesdayLunch = Meal.Default;
-                    WeekSelections.TuesdaySecondSnack = Meal.Default;
-                    WeekSelections.TuesdayDinner = Meal.Default;
+                    WeekSelections.TuesdayBreakfast = Recipe.Default;
+                    WeekSelections.TuesdayFirstSnack = Recipe.Default;
+                    WeekSelections.TuesdayLunch = Recipe.Default;
+                    WeekSelections.TuesdaySecondSnack = Recipe.Default;
+                    WeekSelections.TuesdayDinner = Recipe.Default;
 
                     DaySelections.Breakfast = WeekSelections.TuesdayBreakfast;
                     DaySelections.FirstSnack = WeekSelections.TuesdayFirstSnack;
@@ -148,11 +148,11 @@ namespace Madplan.Views
                 }
                 else if (_day == Day.Wednesday)
                 {
-                    WeekSelections.WednesdayBreakfast = Meal.Default;
-                    WeekSelections.WednesdayFirstSnack = Meal.Default;
-                    WeekSelections.WednesdayLunch = Meal.Default;
-                    WeekSelections.WednesdaySecondSnack = Meal.Default;
-                    WeekSelections.WednesdayDinner = Meal.Default;
+                    WeekSelections.WednesdayBreakfast = Recipe.Default;
+                    WeekSelections.WednesdayFirstSnack = Recipe.Default;
+                    WeekSelections.WednesdayLunch = Recipe.Default;
+                    WeekSelections.WednesdaySecondSnack = Recipe.Default;
+                    WeekSelections.WednesdayDinner = Recipe.Default;
 
                     DaySelections.Breakfast = WeekSelections.WednesdayBreakfast;
                     DaySelections.FirstSnack = WeekSelections.WednesdayFirstSnack;
@@ -162,11 +162,11 @@ namespace Madplan.Views
                 }
                 else if (_day == Day.Thursday)
                 {
-                    WeekSelections.ThursdayBreakfast = Meal.Default;
-                    WeekSelections.ThursdayFirstSnack = Meal.Default;
-                    WeekSelections.ThursdayLunch = Meal.Default;
-                    WeekSelections.ThursdaySecondSnack = Meal.Default;
-                    WeekSelections.ThursdayDinner = Meal.Default;
+                    WeekSelections.ThursdayBreakfast = Recipe.Default;
+                    WeekSelections.ThursdayFirstSnack = Recipe.Default;
+                    WeekSelections.ThursdayLunch = Recipe.Default;
+                    WeekSelections.ThursdaySecondSnack = Recipe.Default;
+                    WeekSelections.ThursdayDinner = Recipe.Default;
 
                     DaySelections.Breakfast = WeekSelections.ThursdayBreakfast;
                     DaySelections.FirstSnack = WeekSelections.ThursdayFirstSnack;
@@ -176,11 +176,11 @@ namespace Madplan.Views
                 }
                 else if (_day == Day.Friday)
                 {
-                    WeekSelections.FridayBreakfast = Meal.Default;
-                    WeekSelections.FridayFirstSnack = Meal.Default;
-                    WeekSelections.FridayLunch = Meal.Default;
-                    WeekSelections.FridaySecondSnack = Meal.Default;
-                    WeekSelections.FridayDinner = Meal.Default;
+                    WeekSelections.FridayBreakfast = Recipe.Default;
+                    WeekSelections.FridayFirstSnack = Recipe.Default;
+                    WeekSelections.FridayLunch = Recipe.Default;
+                    WeekSelections.FridaySecondSnack = Recipe.Default;
+                    WeekSelections.FridayDinner = Recipe.Default;
 
                     DaySelections.Breakfast = WeekSelections.FridayBreakfast;
                     DaySelections.FirstSnack = WeekSelections.FridayFirstSnack;
@@ -190,11 +190,11 @@ namespace Madplan.Views
                 }
                 else if (_day == Day.Saturday)
                 {
-                    WeekSelections.SaturdayBreakfast = Meal.Default;
-                    WeekSelections.SaturdayFirstSnack = Meal.Default;
-                    WeekSelections.SaturdayLunch = Meal.Default;
-                    WeekSelections.SaturdaySecondSnack = Meal.Default;
-                    WeekSelections.SaturdayDinner = Meal.Default;
+                    WeekSelections.SaturdayBreakfast = Recipe.Default;
+                    WeekSelections.SaturdayFirstSnack = Recipe.Default;
+                    WeekSelections.SaturdayLunch = Recipe.Default;
+                    WeekSelections.SaturdaySecondSnack = Recipe.Default;
+                    WeekSelections.SaturdayDinner = Recipe.Default;
 
                     DaySelections.Breakfast = WeekSelections.SaturdayBreakfast;
                     DaySelections.FirstSnack = WeekSelections.SaturdayFirstSnack;
@@ -204,11 +204,11 @@ namespace Madplan.Views
                 }
                 else if (_day == Day.Sunday)
                 {
-                    WeekSelections.SundayBreakfast = Meal.Default;
-                    WeekSelections.SundayFirstSnack = Meal.Default;
-                    WeekSelections.SundayLunch = Meal.Default;
-                    WeekSelections.SundaySecondSnack = Meal.Default;
-                    WeekSelections.SundayDinner = Meal.Default;
+                    WeekSelections.SundayBreakfast = Recipe.Default;
+                    WeekSelections.SundayFirstSnack = Recipe.Default;
+                    WeekSelections.SundayLunch = Recipe.Default;
+                    WeekSelections.SundaySecondSnack = Recipe.Default;
+                    WeekSelections.SundayDinner = Recipe.Default;
 
                     DaySelections.Breakfast = WeekSelections.SundayBreakfast;
                     DaySelections.FirstSnack = WeekSelections.SundayFirstSnack;

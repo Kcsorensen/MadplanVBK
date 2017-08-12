@@ -27,7 +27,7 @@ namespace Madplan.Views
         {
             _listOfFood = DataModel.Current.ListOfFood;
 
-            listview.ItemsSource = filterListOfFood();
+            listView.ItemsSource = filterListOfFood();
 
             base.OnAppearing();
         }
@@ -37,12 +37,12 @@ namespace Madplan.Views
             if (string.IsNullOrWhiteSpace(searchText))
                 return _listOfFood;
       
-            return _listOfFood.Where(a => a.Navn.ToLowerInvariant().Contains(searchText.ToLowerInvariant())).ToList();
+            return _listOfFood.Where(a => a.Name.ToLowerInvariant().Contains(searchText.ToLowerInvariant())).ToList();
         }
 
         private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
-            listview.ItemsSource = filterListOfFood(e.NewTextValue);
+            listView.ItemsSource = filterListOfFood(e.NewTextValue);
         }
 
         private void ListViewItem_Tapped(object sender, EventArgs e)

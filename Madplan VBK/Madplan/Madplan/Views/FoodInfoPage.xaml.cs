@@ -22,8 +22,8 @@ namespace Madplan.Views
         {
             _foodName = foodName;
 
-            if (DataModel.Current.ListOfFood.Any(a => a.Navn == _foodName))
-                _food = DataModel.Current.ListOfFood.Where(a => a.Navn == _foodName).First();
+            if (DataModel.Current.ListOfFood.Any(a => a.Name == _foodName))
+                _food = DataModel.Current.ListOfFood.Where(a => a.Name == _foodName).First();
             else
                 _food = new Food();
 

@@ -39,6 +39,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Extensions\BaseModel.cs" />
+    <Compile Include="Extensions\CustomPicker.xaml.cs">
+      <DependentUpon>CustomPicker.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\DataEntryCell.xaml.cs">
       <DependentUpon>DataEntryCell.xaml</DependentUpon>
     </Compile>
@@ -57,12 +60,12 @@
     <Compile Include="Models\Day.cs" />
     <Compile Include="Models\DaySelections.cs" />
     <Compile Include="Models\Food.cs" />
-    <Compile Include="Models\FoodDb.cs" />
-    <Compile Include="Models\Meal.cs" />
+    <Compile Include="Models\Recipe.cs" />
     <Compile Include="Models\MealType.cs" />
     <Compile Include="Extensions\ExtensionMethods.cs" />
     <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\QuantityType.cs" />
+    <Compile Include="Models\RecipeGroup.cs" />
     <Compile Include="Models\WeekSelections.cs" />
     <Compile Include="Persistance\ISQLiteDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,6 +83,15 @@
     </Compile>
     <Compile Include="Views\FoodListPage.xaml.cs">
       <DependentUpon>FoodListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FoodSelectPage.xaml.cs">
+      <DependentUpon>FoodSelectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FoodSubmitPage.xaml.cs">
+      <DependentUpon>FoodSubmitPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RecipeCreatePage.xaml.cs">
+      <DependentUpon>RecipeCreatePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RecipeListPage.xaml.cs">
       <DependentUpon>RecipeListPage.xaml</DependentUpon>
@@ -209,6 +221,30 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\FoodCreatePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\RecipeCreatePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Extensions\CustomPicker.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\FoodSelectPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\FoodSubmitPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
