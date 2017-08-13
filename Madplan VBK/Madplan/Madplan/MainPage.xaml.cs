@@ -1,8 +1,7 @@
 ﻿using Madplan.Extensions;
-using Madplan.Models;
-using Madplan.Persistance;
-using Madplan.Views;
-using SQLite;
+using Madplan.Views.FoodTools;
+using Madplan.Views.RecipeTools;
+using Madplan.Views.WeekPlaner;
 using System;
 using Xamarin.Forms;
 

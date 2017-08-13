@@ -14,6 +14,8 @@ namespace Madplan.Models
         #region private fields
 
         private string _name;
+        private double _quantity;
+        private string _quantityType;
         private double _energiKj;
         private double _energiKcal;
         private double _proteinTotal;
@@ -52,6 +54,16 @@ namespace Madplan.Models
         {
             get { return _name; }
             set { SetValue(ref _name, value); }
+        }
+        public double Quantity
+        {
+            get { return _quantity; }
+            set { SetValue(ref _quantity, value); }
+        }
+        public string QuantityType
+        {
+            get { return _quantityType; }
+            set { SetValue(ref _quantityType, value); }
         }
         public double EnergiKj
         {
@@ -94,13 +106,9 @@ namespace Madplan.Models
             set { SetValue(ref _fedtTotal, value); }
         }
 
-        public double Quantity { get; set; }
-        public string QuantityType { get; set; }
         public bool QuantityVisible { get; set; }
         public bool BasicRecipe { get; set; }
         public bool ShoppingListChecked { get; set; }
-
-
 
         public double Avitamin
         {
@@ -346,6 +354,7 @@ namespace Madplan.Models
 
         public Food()
         {
+            QuantityType = Madplan.Models.QuantityType.gram;
             QuantityVisible = true;
             BasicRecipe = false;
             ShoppingListChecked = false;

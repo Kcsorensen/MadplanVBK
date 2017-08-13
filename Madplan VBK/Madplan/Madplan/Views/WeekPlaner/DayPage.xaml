@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extension="clr-namespace:Madplan.Extensions"
+             xmlns:local="clr-namespace:Madplan.Models"
+             x:Class="Madplan.Views.WeekPlaner.DayPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Text="Ryd" Clicked="Clear_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <TableView>
+        <TableRoot>
+            <TableSection Title="Morgenmad">
+                <extension:NavigateNextCell Label="{Binding Breakfast}" Tapped="SelectMeal_Tapped" ClassId="{x:Static local:MealType.Breakfast}"/>
+            </TableSection>
+            <TableSection Title="Mellemmåltid">
+                <extension:NavigateNextCell Label="{Binding FirstSnack}" Tapped="SelectMeal_Tapped" ClassId="{x:Static local:MealType.FirstSnack}"/>
+            </TableSection>
+            <TableSection Title="Frokost">
+                <extension:NavigateNextCell Label="{Binding Lunch}" Tapped="SelectMeal_Tapped" ClassId="{x:Static local:MealType.Lunch}"/>
+            </TableSection>
+            <TableSection Title="Mellemmåltid">
+                <extension:NavigateNextCell Label="{Binding SecondSnack}" Tapped="SelectMeal_Tapped" ClassId="{x:Static local:MealType.SecondSnack}"/>
+            </TableSection>
+            <TableSection Title="Aftensmad">
+                <extension:NavigateNextCell Label="{Binding Dinner}" Tapped="SelectMeal_Tapped" ClassId="{x:Static local:MealType.Dinner}"/>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+    
+</ContentPage>

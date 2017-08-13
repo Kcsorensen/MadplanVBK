@@ -8,6 +8,9 @@ namespace Madplan.Models
 {
     public class QuantityType
     {
+        // Singleton
+        public static QuantityType Current = new QuantityType();
+
         public const string spsk = "spsk.";
         public const string stk = "stk.";
         public const string Ingen = "Ingen";
@@ -21,5 +24,27 @@ namespace Madplan.Models
         public const string pakke = "pakke(r)";
         public const string plade = "plade(r)";
         public const string pose = "pose(r)";
+
+        public List<string> ListOfQuantityTypes { get; set; }
+
+        public QuantityType()
+        {
+            ListOfQuantityTypes = new List<string>()
+            {
+                spsk,
+                stk,
+                Ingen,
+                skive,
+                tsk,
+                dl,
+                knsp,
+                gram,
+                dåse,
+                dråbe,
+                pakke,
+                plade,
+                pose
+            };
+        }
     }
 }

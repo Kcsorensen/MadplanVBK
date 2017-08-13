@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extension="clr-namespace:Madplan.Extensions"
+             xmlns:local="clr-namespace:Madplan.Models"
+             x:Class="Madplan.Views.RecipeTools.RecipeCreatePage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Text="Tilføj madvare" Clicked="Create_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="202"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TableView Grid.Row="0" HasUnevenRows="True">
+            <TableRoot>
+                <TableSection Title="Generelt">
+                    <EntryCell x:Name="recipeName" Label="Navn" Placeholder="Indtast navn" Text="{Binding Name}"/>
+                    <ViewCell Tapped="MealPicker_Tapped">
+                        <StackLayout Orientation="Horizontal" Style="{StaticResource layoutInAView}">
+                            <Label Text="Måltid" VerticalOptions="Center"/>
+                            <Label x:Name="mealPicker"
+                               Text="{Binding QuantityType}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand"
+                               TextColor="Gray"/>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="Madvarer"/>
+            </TableRoot>
+        </TableView>
+        <ListView Grid.Row="1" x:Name="listView" ItemsSource="{Binding Ingredients}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Slet" IsDestructive="True" Clicked="Delete_Clicked" CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
+                        <StackLayout Orientation="Horizontal" Style="{StaticResource layoutInAView}">
+                            <Label Text="{Binding Quantity}" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding QuantityType}" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding Name}" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Grid.Row="2" Text="Gem opskrift" Clicked="SaveRecipe_Clicked" TextColor="Red"/>
+    </Grid>
+
+    
+</ContentPage>

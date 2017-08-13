@@ -33,9 +33,6 @@ namespace Madplan.Extensions
 		public new static readonly BindableProperty IsEnabledProperty =
 			BindableProperty.Create("IsEnabled", typeof(bool), typeof(ViewCell), true);
 
-		public static readonly BindableProperty IsVisibleProperty =
-			BindableProperty.Create("IsVisible", typeof(bool), typeof(ViewCell), true);
-
 		public static readonly BindableProperty KeyboardProperty =
 			BindableProperty.Create("Keyboard", typeof(Keyboard), typeof(ViewCell), Keyboard.Numeric);
 
@@ -67,12 +64,6 @@ namespace Madplan.Extensions
 		{
 			get { return (bool)GetValue(IsEnabledProperty); }
 			set { SetValue(IsEnabledProperty, value); }
-		}
-
-		public bool IsVisible
-		{
-			get { return (bool)GetValue(IsVisibleProperty); }
-			set { SetValue(IsVisibleProperty, value); }
 		}
 
 		public Keyboard Keyboard

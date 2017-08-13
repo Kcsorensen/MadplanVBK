@@ -1,4 +1,5 @@
 ﻿using Madplan.Models;
+using Madplan.Models.WeekPlaner;
 using Madplan.Persistance;
 using SQLite;
 using System;

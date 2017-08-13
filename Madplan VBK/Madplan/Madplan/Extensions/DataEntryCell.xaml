@@ -4,10 +4,18 @@
              x:Class="Madplan.Extensions.DataEntryCell"
              x:Name="dataEntryCell">
 
-    <StackLayout BindingContext="{x:Reference dataEntryCell}" x:Name="stackLayout" Orientation="Horizontal" Padding="15, 5, 10, 5" IsVisible="{Binding IsVisible}">
+    <StackLayout Orientation="Horizontal" 
+                 BindingContext="{x:Reference dataEntryCell}"
+                 Style="{StaticResource layoutInAView}">
         <Label Text="{Binding Label}" VerticalOptions="Center"/>
-        <Entry Keyboard="{Binding Keyboard}" Text="{Binding Value}" Placeholder="{Binding Placeholder}" IsEnabled="{Binding IsEnabled}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" />
-        <Label Text="{Binding Unit}" VerticalOptions="Center"/>
+        <Entry Keyboard="{Binding Keyboard}" 
+               Text="{Binding Value}" 
+               Placeholder="{Binding Placeholder}" 
+               IsEnabled="{Binding IsEnabled}" 
+               HorizontalOptions="FillAndExpand" 
+               HorizontalTextAlignment="End" 
+               BackgroundColor="Blue"/>
+        <Label Text="{Binding Unit}" VerticalOptions="Center" BackgroundColor="Green"/>
     </StackLayout>
 
 </ViewCell>

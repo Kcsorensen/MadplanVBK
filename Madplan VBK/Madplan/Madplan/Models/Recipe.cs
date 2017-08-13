@@ -17,7 +17,6 @@ namespace Madplan.Models
         public double Persons { get; set; }
         public int Page { get; set; }
         public ObservableCollection<Food> Ingredients { get; set; }
-        //public List<Ingredient> Ingredients { get; set; }
 
         public Recipe()
         {
