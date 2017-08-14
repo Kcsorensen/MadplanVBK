@@ -18,7 +18,7 @@
             <ListView.GroupHeaderTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Style="{StaticResource layoutInAView}">
+                        <StackLayout Style="{StaticResource layoutInAViewDefault}">
                             <Label Text="{Binding GroupTitle}" TextColor="Blue" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </ViewCell>

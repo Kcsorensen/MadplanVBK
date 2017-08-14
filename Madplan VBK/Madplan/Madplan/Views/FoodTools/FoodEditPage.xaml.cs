@@ -30,5 +30,10 @@ namespace Madplan.Views.FoodTools
 
             await Navigation.PopAsync();
         }
+
+        private void QuantityConverter_Tapped(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new QuantityConverterPage(_food));
+        }
     }
 }

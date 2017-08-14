@@ -16,7 +16,7 @@ namespace Madplan.Models
         public const string Ingen = "Ingen";
         public const string skive = "skive(r)";
         public const string tsk = "tsk.";
-        public const string dl = "dl";
+        public const string dl = "dl.";
         public const string knsp = "knsp.";
         public const string gram = "gram";
         public const string dåse = "dåse(r)";
@@ -25,11 +25,12 @@ namespace Madplan.Models
         public const string plade = "plade(r)";
         public const string pose = "pose(r)";
 
-        public List<string> ListOfQuantityTypes { get; set; }
+        public List<string> CompleteListOfQuantityTypes { get; set; }
+        public List<string> ListForQuantityConverter { get; set; }
 
         public QuantityType()
         {
-            ListOfQuantityTypes = new List<string>()
+            CompleteListOfQuantityTypes = new List<string>()
             {
                 spsk,
                 stk,
@@ -39,6 +40,21 @@ namespace Madplan.Models
                 dl,
                 knsp,
                 gram,
+                dåse,
+                dråbe,
+                pakke,
+                plade,
+                pose
+            };
+
+            CompleteListOfQuantityTypes = new List<string>()
+            {
+                spsk,
+                stk,
+                skive,
+                tsk,
+                dl,
+                knsp,
                 dåse,
                 dråbe,
                 pakke,

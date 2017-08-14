@@ -16,6 +16,7 @@ namespace Madplan.Models
     {
         public ObservableCollection<Recipe> ListOfRecipes { get; set; }
         public ObservableCollection<Food> ListOfFood { get; set; }
+        public ObservableCollection<QuantityConverter> ListOfQuantityConverters { get; set; }
 
         public static DataModel Current = new DataModel();
 
@@ -23,6 +24,7 @@ namespace Madplan.Models
         {
             ListOfRecipes = new ObservableCollection<Recipe>();
             ListOfFood = new ObservableCollection<Food>();
+            ListOfQuantityConverters = new ObservableCollection<QuantityConverter>();
         }
 
         public async Task PopulateListOfRecipesAsync()
@@ -41,31 +43,38 @@ namespace Madplan.Models
                     Page = 96,
                     Ingredients = new ObservableCollection<Food>()
                 {
-                    new Food()
-                    {
-                        Name = IngredientHelper.Friskæggehvide.GetDescription(),
-                        Quantity = 2,
-                        QuantityType = QuantityType.stk
-                    },
-                    new Food()
-                    {
-                        Name = IngredientHelper.Havregryn.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.spsk
-                    },
-                    new Food()
-                    {
-                        Name = IngredientHelper.Olivenolie.GetDescription(),
-                        Quantity = 0,
-                        QuantityType = QuantityType.Ingen,
-                        QuantityVisible = false
-                    },
-                    new Food()
-                    {
-                        Name = IngredientHelper.Peberfrugt.GetDescription(),
-                        Quantity = 0.5,
-                        QuantityType = QuantityType.stk
-                    },
+                    //addFoodToRecipe(IngredientHelper.Friskæggehvide.GetDescription(), 2, QuantityType.stk),
+                    //addFoodToRecipe(IngredientHelper.Havregryn.GetDescription(), 1, QuantityType.spsk),
+                    //addFoodToRecipe(IngredientHelper.Olivenolie.GetDescription(), 0, QuantityType.Ingen),
+                    //addFoodToRecipe(IngredientHelper.Peberfrugt.GetDescription(), 0.5, QuantityType.stk),
+
+                    //// Peberfrugt
+                    //addFoodToRecipe(711, 0.5, QuantityType.stk),
+                    //new Food()
+                    //{
+                    //    Name = IngredientHelper.Friskæggehvide.GetDescription(),
+                    //    Quantity = 2,
+                    //    QuantityType = QuantityType.stk
+                    //},
+                    //new Food()
+                    //{
+                    //    Name = IngredientHelper.Havregryn.GetDescription(),
+                    //    Quantity = 1,
+                    //    QuantityType = QuantityType.spsk
+                    //},
+                    //new Food()
+                    //{
+                    //    Name = IngredientHelper.Olivenolie.GetDescription(),
+                    //    Quantity = 0,
+                    //    QuantityType = QuantityType.Ingen,
+                    //    QuantityVisible = false
+                    //},
+                    //new Food()
+                    //{
+                    //    Name = IngredientHelper.Peberfrugt.GetDescription(),
+                    //    Quantity = 0.5,
+                    //    QuantityType = QuantityType.stk
+                    //},
                     new Food()
                     {
                         Name = IngredientHelper.RevetOst.GetDescription(),
@@ -3595,6 +3604,11 @@ namespace Madplan.Models
 
         }
 
+        public void PopulateListOfQuantityConverters()
+        {
+            // TODO: PopulateListOfQuantityConverters mangler koder
+        }
+
         public async Task UpdateFoodAsync(Food food)
         {
             if (food == null)
@@ -3655,6 +3669,23 @@ namespace Madplan.Models
             ListOfFood.Add(newFood);
         }
 
+        public int GetNewQuantityConverterId()
+        {
+            if (ListOfQuantityConverters == null)
+                throw new ArgumentNullException("ListOfQuantityConverters er null, imens GetNewQuantityConverterId i DataModel bruges");
+
+            int id = ListOfQuantityConverters.Count;
+
+            ListOfQuantityConverters.Add(new QuantityConverter() { Id = id });
+
+            return id;
+        }
+
+        public void DeleteQuantityConverter()
+        {
+            // TODO: DeleteQuantityConverter mangler koder
+        }
+
         public void DeleteFood(Food food)
         {
             if (food == null)
@@ -3665,6 +3696,36 @@ namespace Madplan.Models
             ListOfFood.RemoveAt(ListOfFood.IndexOf(ListOfFood.Where(a => a.FoodId == foodId).First()));
         }
 
+        public void AddFoodToRecipe()
+        {
+
+        }
+
+        private Food addFoodToRecipe(string foodId, double quantity, string quantityType)
+        {
+            if (int.TryParse(foodId, out int result))
+            {
+                if (!ListOfFood.Any(a => a.FoodId == result))
+                    throw new IndexOutOfRangeException("addFoodToRecipe, foodId: " + foodId.ToString() + " indgår ikke i ListOfFood");
+
+                if (!QuantityType.Current.CompleteListOfQuantityTypes.Any(a => a == quantityType))
+                    throw new Exception("addFoodToRecipe, quantityType: " + quantityType + " indgår ikke i QuantityType.Current.CompleteListOfQuantityTypes");
+
+                var food = ListOfFood.Where(a => a.FoodId == result).First();
+                food.Quantity = quantity;
+                food.QuantityType = quantityType;
+
+                if (quantityType == QuantityType.Ingen)
+                    food.QuantityVisible = false;
+
+                return food;
+            }
+            else
+            {
+                throw new Exception("addFoodToRecipe, foodId: " + foodId + " er ikke en int");
+            }
+        }
+
         private int getNewFoodId()
         {
             // Læg +1 til det højeste FoodId
@@ -3672,5 +3733,7 @@ namespace Madplan.Models
 
             return foodId;
         }
+
+        
     }
 }

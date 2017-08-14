@@ -10,17 +10,16 @@ namespace Madplan.Models
     public class QuantityConverter
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string DefaultQuantity { get; set; }
-        public List<Tuple<string,double>> Conversions { get; set; }
+
+        public List<Quantity> Conversions { get; set; }
 
         public QuantityConverter()
         {
-            Conversions = new List<Tuple<string, double>>();
+            Conversions = new List<Quantity>();
 
-            foreach (var quantityType in QuantityType.Current.ListOfQuantityTypes)
+            foreach (var quantityType in QuantityType.Current.CompleteListOfQuantityTypes)
             {
-                Conversions.Add(new Tuple<string, double>(quantityType, 0.0));
+                Conversions.Add(new Quantity() { Name = quantityType, Value = 0.0 });
             }
         }
     }

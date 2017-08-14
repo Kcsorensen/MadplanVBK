@@ -60,6 +60,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\DataModel.cs" />
+    <Compile Include="Models\Quantity.cs" />
     <Compile Include="Models\WeekPlaner\Day.cs" />
     <Compile Include="Models\WeekPlaner\DaySelections.cs" />
     <Compile Include="Models\Food.cs" />
@@ -71,6 +72,9 @@
     <Compile Include="Models\WeekPlaner\WeekSelections.cs" />
     <Compile Include="Persistance\ISQLiteDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\FoodTools\QuantityConverterPage.xaml.cs">
+      <DependentUpon>QuantityConverterPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RecipeTools\MealTypePickerPage.xaml.cs">
       <DependentUpon>MealTypePickerPage.xaml</DependentUpon>
     </Compile>
@@ -272,6 +276,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Extensions\CustomEntryCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\FoodTools\QuantityConverterPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

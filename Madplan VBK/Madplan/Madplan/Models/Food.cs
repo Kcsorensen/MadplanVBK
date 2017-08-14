@@ -65,6 +65,9 @@ namespace Madplan.Models
             get { return _quantityType; }
             set { SetValue(ref _quantityType, value); }
         }
+
+        public int QuantityConververId { get; set; }
+
         public double EnergiKj
         {
             get { return _energiKj; }
@@ -358,6 +361,12 @@ namespace Madplan.Models
             QuantityVisible = true;
             BasicRecipe = false;
             ShoppingListChecked = false;
+
+            // Lav en ny QuantityConverter til denne madvare
+            if (DataModel.Current.ListOfQuantityConverters == null)
+                throw new ArgumentNullException("ListOfQuantityConverters er null, imens construkter af Food køres");
+
+            QuantityConververId = DataModel.Current.GetNewQuantityConverterId();
         }
     }
 }

@@ -12,7 +12,7 @@
         <TableRoot>
             <TableSection Title="Generelt">
                 <ViewCell>
-                    <StackLayout Orientation="Horizontal" Style="{StaticResource layoutInAView}">
+                    <StackLayout Orientation="Horizontal" Style="{StaticResource layoutInAViewDefault}">
                         <Label Text="Navn" VerticalOptions="Center"/>
                         <Label Text="{Binding Name}" 
                                TextColor="Black"
@@ -23,7 +23,7 @@
             </TableSection>
             <TableSection Title="Kvantitet">
                 <ViewCell Tapped="UnitPicker_Tapped">
-                    <StackLayout Orientation="Horizontal" Style="{StaticResource layoutInAView}">
+                    <StackLayout Orientation="Horizontal" Style="{StaticResource layoutInAViewDefault}">
                         <Label Text="Enhed" VerticalOptions="Center"/>
                         <Label x:Name="unitPicker"
                                Text="{Binding QuantityType}"

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:extension="clr-namespace:Madplan.Extensions"
+             xmlns:extension="clr-namespace:Madplan.Extensions"
              x:Class="Madplan.Views.FoodTools.FoodEditPage">
 
     <ContentPage.ToolbarItems>
@@ -13,12 +13,8 @@
         <TableView HasUnevenRows="True">
             <TableRoot>
                 <TableSection Title="Generelt">
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal" Padding="15, 5, 10, 5">
-                            <Label Text="Navn" MinimumWidthRequest="150" VerticalOptions="Center"/>
-                            <Entry Text="{Binding Name}" Placeholder="Indtast navn" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End"/>
-                        </StackLayout>
-                    </ViewCell>
+                    <extension:CustomEntryCell Label="Navn" Value="{Binding Name}" Placeholder="Indtast navn" />
+                    <extension:NavigateNextCell Label="Enhedskonverteringer" Tapped="QuantityConverter_Tapped"/>
                 </TableSection>
                 <TableSection Title="Energiindhold">
                     <extension:DataEntryCell Label="Energi (kJ)" Value="{Binding EnergiKj}" Unit="kJ" Placeholder="Indtast værdi"/>

@@ -20,7 +20,7 @@ namespace Madplan.Views.RecipeTools
 
             InitializeComponent();
 
-            listView.ItemsSource = QuantityType.Current.ListOfQuantityTypes;
+            listView.ItemsSource = QuantityType.Current.ListForQuantityConverter;
         }
     }
 }

@@ -13,6 +13,7 @@ namespace Madplan.Models
 
         public string Name { get; set; }
         public string Type { get; set; }
+        public string DefaultQuantityType { get; set; }
         public double Ratio { get; set; }
         public double Persons { get; set; }
         public int Page { get; set; }
@@ -20,6 +21,8 @@ namespace Madplan.Models
 
         public Recipe()
         {
+            Type = "Vælg";
+            DefaultQuantityType = QuantityType.gram;
             Ingredients = new ObservableCollection<Food>();
         }
     }

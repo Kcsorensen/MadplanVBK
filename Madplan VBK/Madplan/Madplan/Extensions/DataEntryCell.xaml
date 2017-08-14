@@ -6,16 +6,15 @@
 
     <StackLayout Orientation="Horizontal" 
                  BindingContext="{x:Reference dataEntryCell}"
-                 Style="{StaticResource layoutInAView}">
+                 Style="{StaticResource layoutInViewWithEntry}">
         <Label Text="{Binding Label}" VerticalOptions="Center"/>
         <Entry Keyboard="{Binding Keyboard}" 
                Text="{Binding Value}" 
                Placeholder="{Binding Placeholder}" 
                IsEnabled="{Binding IsEnabled}" 
                HorizontalOptions="FillAndExpand" 
-               HorizontalTextAlignment="End" 
-               BackgroundColor="Blue"/>
-        <Label Text="{Binding Unit}" VerticalOptions="Center" BackgroundColor="Green"/>
+               HorizontalTextAlignment="End"/>
+        <Label Text="{Binding Unit}" VerticalOptions="Center"/>
     </StackLayout>
 
 </ViewCell>

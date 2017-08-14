@@ -2,15 +2,17 @@
 
 public enum IngredientHelper
 {
-    [MyDescription(Text = "Frisk æggehvide")]
+    //[MyDescription(Text = "Frisk æggehvide")]
+    //Friskæggehvide,
+    [MyDescription(Text = "1159")]
     Friskæggehvide,
-    [MyDescription(Text = "Grovvalsede havregryn")]
+    [MyDescription(Text = "281")]
     Havregryn,
-    [MyDescription(Text = "Peberfrugt")]
+    [MyDescription(Text = "711")]
     Peberfrugt,
     [MyDescription(Text = "Revet ost")]
     RevetOst,
-    [MyDescription(Text = "Olivenolie")]
+    [MyDescription(Text = "685")]
     Olivenolie,
     [MyDescription(Text = "Rapsolie")]
     Rapsolie,

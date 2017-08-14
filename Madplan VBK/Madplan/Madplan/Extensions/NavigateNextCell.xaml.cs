@@ -31,8 +31,6 @@ namespace Madplan.Extensions
         public NavigateNextCell()
         {
             InitializeComponent();
-
-            stackLayout.BindingContext = this;
         }
     }
 }

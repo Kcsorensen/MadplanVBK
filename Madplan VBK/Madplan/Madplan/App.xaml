@@ -6,11 +6,17 @@
 
         <ResourceDictionary>
 
-            <Style x:Key="layoutInAView" TargetType="Layout">
+            <Style x:Key="layoutInAViewDefault" TargetType="Layout">
                 <Setter Property="Padding" Value="15, 0"/>
                 <Setter Property="HeightRequest" Value="45"/>
             </Style>
             
+            <Style x:Key="layoutInViewWithEntry" TargetType="Layout">
+                <Setter Property="Padding" Value="15, 0, 12, 0"/>
+                <Setter Property="HeightRequest" Value="45"/>
+            </Style>
+
+
             <Style x:Key="listViewHeaderLayoutStyle" TargetType="Layout">
                 <Setter Property="Padding" Value="0, 12"/>
                 <Setter Property="BackgroundColor" Value="SeaGreen"/>

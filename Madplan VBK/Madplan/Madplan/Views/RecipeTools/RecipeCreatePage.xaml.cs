@@ -6,7 +6,7 @@ using Xamarin.Forms.Xaml;
 namespace Madplan.Views.RecipeTools
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RecipeCreatePage : ContentPage
+    public partial class RecipeCreatePage : TabbedPage
     {
         private Recipe _recipe; 
 
@@ -30,13 +30,13 @@ namespace Madplan.Views.RecipeTools
 
         private void SaveRecipe_Clicked(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(recipeName.Text))
+            if (string.IsNullOrEmpty(recipeName.Value))
             {
                 DisplayAlert("Fejl", "Opskriften skal have et navn", "OK");
                 return;
             }
 
-            if (string.IsNullOrEmpty(mealPicker.Text))
+            if (string.IsNullOrEmpty(mealPicker.Text) || mealPicker.Text == "Vælg")
             {
                 DisplayAlert("Fejl", "Opskriften skal tildeles et måltid", "OK");
                 return;
@@ -59,6 +59,18 @@ namespace Madplan.Views.RecipeTools
             page.MealTypePicker.ItemSelected += (source, args) =>
             {
                 mealPicker.Text = args.SelectedItem.ToString();
+                Navigation.PopAsync();
+            };
+
+            Navigation.PushAsync(page);
+        }
+
+        private void DefaultQuantityTypePicker_Tapped(object sender, EventArgs e)
+        {
+            var page = new QuantityTypePickerPage();
+            page.QuantityTypePicker.ItemSelected += (source, args) =>
+            {
+                defaultQuantityTypePicker.Text = args.SelectedItem.ToString();
                 Navigation.PopAsync();
             };
 
