@@ -10,25 +10,25 @@ public enum IngredientHelper
     Havregryn,
     [MyDescription(Text = "711")]
     Peberfrugt,
-    [MyDescription(Text = "Revet ost")]
+    [MyDescription(Text = "1186")]
     RevetOst,
     [MyDescription(Text = "685")]
     Olivenolie,
     [MyDescription(Text = "Rapsolie")]
     Rapsolie,
-    [MyDescription(Text = "Æg")]
+    [MyDescription(Text = "1143")]
     Æg,
-    [MyDescription(Text = "Skinke")]
-    Skinke,
-    [MyDescription(Text = "Tomat")]
+    [MyDescription(Text = "905")]
+    SkinkePålæg,
+    [MyDescription(Text = "1036")]
     Tomat,
-    [MyDescription(Text = "Pitabrød")]
+    [MyDescription(Text = "1178")]
     Pitabrød,
-    [MyDescription(Text = "Dijonsennep")]
-    Dijonsennep,
-    [MyDescription(Text = "Gulerod")]
+    [MyDescription(Text = "882")]
+    Sennep,
+    [MyDescription(Text = "259")]
     Gulerod,
-    [MyDescription(Text = "Hytteost")]
+    [MyDescription(Text = "362")]
     Hytteost,
     [MyDescription(Text = "Rugflager")]
     Rugflager,
@@ -40,11 +40,11 @@ public enum IngredientHelper
     Hasselnødder,
     [MyDescription(Text = "Honning")]
     Honning,
-    [MyDescription(Text = "Skyr")]
+    [MyDescription(Text = "921")]
     Skyr,
-    [MyDescription(Text = "Hjemmelavet granola")]
+    [MyDescription(Text = "1177")]
     Granola,
-    [MyDescription(Text = "Rugbrød")]
+    [MyDescription(Text = "801")]
     Rugbrød,
     [MyDescription(Text = "Nøddepread")]
     Nøddepread,
@@ -56,7 +56,7 @@ public enum IngredientHelper
     Solbærsaft,
     [MyDescription(Text = "Rosiner")]
     Rosiner,
-    [MyDescription(Text = "Mandler")]
+    [MyDescription(Text = "588")]
     Mandler,
     [MyDescription(Text = "Chiafrø")]
     Chiafrø,
@@ -126,8 +126,8 @@ public enum IngredientHelper
     Persille,
     [MyDescription(Text = "Sesamfrø")]
     Sesamfrø,
-    [MyDescription(Text = "Fuldkornspitabrød")]
-    Fuldkornspitabrød,
+    //[MyDescription(Text = "Fuldkornspitabrød")]
+    //Fuldkornspitabrød,
     [MyDescription(Text = "Kakaonibs")]
     Kakaonibs,
     [MyDescription(Text = "Pære")]

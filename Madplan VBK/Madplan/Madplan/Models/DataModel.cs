@@ -15,6 +15,7 @@ namespace Madplan.Models
     public class DataModel
     {
         public ObservableCollection<Recipe> ListOfRecipes { get; set; }
+        // TODO: Lav en liste med basicRecipes, hvor Recipes ligges i hvis de checkes af som "basic recipe" under creation.
         public ObservableCollection<Food> ListOfFood { get; set; }
         public ObservableCollection<QuantityConverter> ListOfQuantityConverters { get; set; }
 
@@ -22,8 +23,8 @@ namespace Madplan.Models
 
         public DataModel()
         {
-            ListOfRecipes = new ObservableCollection<Recipe>();
             ListOfFood = new ObservableCollection<Food>();
+            ListOfRecipes = new ObservableCollection<Recipe>();
             ListOfQuantityConverters = new ObservableCollection<QuantityConverter>();
         }
 
@@ -43,44 +44,11 @@ namespace Madplan.Models
                     Page = 96,
                     Ingredients = new ObservableCollection<Food>()
                 {
-                    //addFoodToRecipe(IngredientHelper.Friskæggehvide.GetDescription(), 2, QuantityType.stk),
-                    //addFoodToRecipe(IngredientHelper.Havregryn.GetDescription(), 1, QuantityType.spsk),
-                    //addFoodToRecipe(IngredientHelper.Olivenolie.GetDescription(), 0, QuantityType.Ingen),
-                    //addFoodToRecipe(IngredientHelper.Peberfrugt.GetDescription(), 0.5, QuantityType.stk),
-
-                    //// Peberfrugt
-                    //addFoodToRecipe(711, 0.5, QuantityType.stk),
-                    //new Food()
-                    //{
-                    //    Name = IngredientHelper.Friskæggehvide.GetDescription(),
-                    //    Quantity = 2,
-                    //    QuantityType = QuantityType.stk
-                    //},
-                    //new Food()
-                    //{
-                    //    Name = IngredientHelper.Havregryn.GetDescription(),
-                    //    Quantity = 1,
-                    //    QuantityType = QuantityType.spsk
-                    //},
-                    //new Food()
-                    //{
-                    //    Name = IngredientHelper.Olivenolie.GetDescription(),
-                    //    Quantity = 0,
-                    //    QuantityType = QuantityType.Ingen,
-                    //    QuantityVisible = false
-                    //},
-                    //new Food()
-                    //{
-                    //    Name = IngredientHelper.Peberfrugt.GetDescription(),
-                    //    Quantity = 0.5,
-                    //    QuantityType = QuantityType.stk
-                    //},
-                    new Food()
-                    {
-                        Name = IngredientHelper.RevetOst.GetDescription(),
-                        Quantity = 2,
-                        QuantityType = QuantityType.spsk
-                    },
+                    addFoodToRecipe(IngredientHelper.Friskæggehvide.GetDescription(), 2, QuantityType.stk),
+                    addFoodToRecipe(IngredientHelper.Havregryn.GetDescription(), 1, QuantityType.spsk),
+                    addFoodToRecipe(IngredientHelper.Olivenolie.GetDescription(), 0, QuantityType.Ingen),
+                    addFoodToRecipe(IngredientHelper.Peberfrugt.GetDescription(), 0.5, QuantityType.stk),
+                    addFoodToRecipe(IngredientHelper.RevetOst.GetDescription(), 2, QuantityType.spsk),
                 }
                 });
 
@@ -94,43 +62,12 @@ namespace Madplan.Models
                     Page = 98,
                     Ingredients = new ObservableCollection<Food>()
                 {
-                    new Food()
-                    {
-                        Name = IngredientHelper.Æg.GetDescription(),
-                        Quantity = 2,
-                        QuantityType = QuantityType.stk
-                    },
-                    new Food()
-                    {
-                        Name = IngredientHelper.Havregryn.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.spsk
-                    },
-                    new Food()
-                    {
-                        Name = IngredientHelper.Olivenolie.GetDescription(),
-                        Quantity = 0,
-                        QuantityType = QuantityType.Ingen,
-                        QuantityVisible = false
-                    },
-                    new Food()
-                    {
-                        Name = IngredientHelper.RevetOst.GetDescription(),
-                        Quantity = 2,
-                        QuantityType = QuantityType.spsk
-                    },
-                    new Food()
-                    {
-                        Name = IngredientHelper.Skinke.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.skive
-                    },
-                    new Food()
-                    {
-                        Name = IngredientHelper.Tomat.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.stk
-                    },
+                    addFoodToRecipe(IngredientHelper.Æg.GetDescription(), 2, QuantityType.stk),
+                    addFoodToRecipe(IngredientHelper.Havregryn.GetDescription(), 1, QuantityType.spsk),
+                    addFoodToRecipe(IngredientHelper.Olivenolie.GetDescription(), 0, QuantityType.Ingen),
+                    addFoodToRecipe(IngredientHelper.SkinkePålæg.GetDescription(), 1, QuantityType.skive),
+                    addFoodToRecipe(IngredientHelper.Tomat.GetDescription(), 1, QuantityType.stk),
+                    addFoodToRecipe(IngredientHelper.RevetOst.GetDescription(), 2, QuantityType.spsk),
                 }
                 });
 
@@ -144,19 +81,8 @@ namespace Madplan.Models
                     Page = 100,
                     Ingredients = new ObservableCollection<Food>()
                 {
-                    new Food()
-                    {
-                        Name = IngredientHelper.Skyr.GetDescription(),
-                        Quantity = 1.5,
-                        QuantityType = QuantityType.dl
-                    },
-                    new Food()
-                    {
-                        Name = IngredientHelper.Granola.GetDescription(),
-                        Quantity = 3,
-                        QuantityType = QuantityType.spsk,
-                        BasicRecipe = true
-                    },
+                    addFoodToRecipe(IngredientHelper.Skyr.GetDescription(), 1.5, QuantityType.dl),
+                    addFoodToRecipe(IngredientHelper.Granola.GetDescription(), 3, QuantityType.spsk),
                 }
                 });
 
@@ -170,24 +96,15 @@ namespace Madplan.Models
                     Page = 101,
                     Ingredients = new ObservableCollection<Food>()
                 {
-                    new Food()
-                    {
-                        Name = IngredientHelper.Rugbrød.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.skive
-                    },
+                    addFoodToRecipe(IngredientHelper.Rugbrød.GetDescription(), 1, QuantityType.skive),
+                    addFoodToRecipe(IngredientHelper.Æg.GetDescription(), 1, QuantityType.stk),
+
                     new Food()
                     {
                         Name = IngredientHelper.Nøddepread.GetDescription(),
                         Quantity = 1,
                         QuantityType = QuantityType.spsk,
                         BasicRecipe = true
-                    },
-                    new Food()
-                    {
-                        Name = IngredientHelper.Æg.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.stk,
                     },
                 }
                 });
@@ -202,36 +119,11 @@ namespace Madplan.Models
                     Page = 102,
                     Ingredients = new ObservableCollection<Food>()
                 {
-                    new Food()
-                    {
-                        Name = IngredientHelper.Pitabrød.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.stk
-                    },
-                    new Food()
-                    {
-                        Name = IngredientHelper.Dijonsennep.GetDescription(),
-                        Quantity = 1,
-                        QuantityType = QuantityType.tsk
-                    },
-                    new Food()
-                    {
-                        Name = IngredientHelper.Skinke.GetDescription(),
-                        Quantity = 2,
-                        QuantityType = QuantityType.skive
-                    },
-                    new Food()
-                    {
-                        Name = IngredientHelper.Gulerod.GetDescription(),
-                        Quantity = 0.5,
-                        QuantityType = QuantityType.stk
-                    },
-                    new Food()
-                    {
-                        Name = IngredientHelper.Hytteost.GetDescription(),
-                        Quantity = 3,
-                        QuantityType = QuantityType.spsk
-                    },
+                    addFoodToRecipe(IngredientHelper.Pitabrød.GetDescription(), 1, QuantityType.skive),
+                    addFoodToRecipe(IngredientHelper.Sennep.GetDescription(), 1, QuantityType.tsk),
+                    addFoodToRecipe(IngredientHelper.SkinkePålæg.GetDescription(), 2, QuantityType.skive),
+                    addFoodToRecipe(IngredientHelper.Gulerod.GetDescription(), 0.5, QuantityType.stk),
+                    addFoodToRecipe(IngredientHelper.Hytteost.GetDescription(), 3, QuantityType.spsk),
                 }
                 });
 
@@ -524,7 +416,7 @@ namespace Madplan.Models
                     },
                     new Food()
                     {
-                        Name = IngredientHelper.Skinke.GetDescription(),
+                        Name = IngredientHelper.SkinkePålæg.GetDescription(),
                         Quantity = 1,
                         QuantityType = QuantityType.skive
                     },
@@ -724,7 +616,7 @@ namespace Madplan.Models
                     },
                     new Food()
                     {
-                        Name = IngredientHelper.Dijonsennep.GetDescription(),
+                        Name = IngredientHelper.Sennep.GetDescription(),
                         Quantity = 1,
                         QuantityType = QuantityType.tsk,
                     },
@@ -780,7 +672,7 @@ namespace Madplan.Models
                     },
                     new Food()
                     {
-                        Name = IngredientHelper.Fuldkornspitabrød.GetDescription(),
+                        Name = IngredientHelper.Pitabrød.GetDescription(),
                         Quantity = 1,
                         QuantityType = QuantityType.spsk,
                     },
@@ -1066,7 +958,7 @@ namespace Madplan.Models
                     },
                     new Food()
                     {
-                        Name = IngredientHelper.Dijonsennep.GetDescription(),
+                        Name = IngredientHelper.Sennep.GetDescription(),
                         Quantity = 1,
                         QuantityType = QuantityType.spsk
                     },
@@ -1179,7 +1071,7 @@ namespace Madplan.Models
                     },
                     new Food()
                     {
-                        Name = IngredientHelper.Dijonsennep.GetDescription(),
+                        Name = IngredientHelper.Sennep.GetDescription(),
                         Quantity = 1,
                         QuantityType = QuantityType.tsk
                     },
@@ -1460,7 +1352,7 @@ namespace Madplan.Models
                     },
                     new Food()
                     {
-                        Name = IngredientHelper.Dijonsennep.GetDescription(),
+                        Name = IngredientHelper.Sennep.GetDescription(),
                         Quantity = 1,
                         QuantityType = QuantityType.tsk
                     },
@@ -1510,7 +1402,7 @@ namespace Madplan.Models
                     },
                     new Food()
                     {
-                        Name = IngredientHelper.Dijonsennep.GetDescription(),
+                        Name = IngredientHelper.Sennep.GetDescription(),
                         Quantity = 1,
                         QuantityType = QuantityType.spsk
                     },
@@ -1703,7 +1595,7 @@ namespace Madplan.Models
                     },
                     new Food()
                     {
-                        Name = IngredientHelper.Dijonsennep.GetDescription(),
+                        Name = IngredientHelper.Sennep.GetDescription(),
                         Quantity = 1,
                         QuantityType = QuantityType.spsk
                     },
@@ -2229,7 +2121,7 @@ namespace Madplan.Models
                     },
                     new Food()
                     {
-                        Name = IngredientHelper.Dijonsennep.GetDescription(),
+                        Name = IngredientHelper.Sennep.GetDescription(),
                         Quantity = 1,
                         QuantityType = QuantityType.spsk
                     },
@@ -2423,7 +2315,7 @@ namespace Madplan.Models
                         },
                         new Food()
                         {
-                            Name = IngredientHelper.Dijonsennep.GetDescription(),
+                            Name = IngredientHelper.Sennep.GetDescription(),
                             Quantity = 1,
                             QuantityType = QuantityType.tsk
                         },
@@ -2659,7 +2551,7 @@ namespace Madplan.Models
                         },
                         new Food()
                         {
-                            Name = IngredientHelper.Dijonsennep.GetDescription(),
+                            Name = IngredientHelper.Sennep.GetDescription(),
                             Quantity = 1,
                             QuantityType = QuantityType.spsk
                         },
@@ -3215,7 +3107,7 @@ namespace Madplan.Models
                         },
                         new Food()
                         {
-                            Name = IngredientHelper.Dijonsennep.GetDescription(),
+                            Name = IngredientHelper.Sennep.GetDescription(),
                             Quantity = 1,
                             QuantityType = QuantityType.tsk,
                         },
@@ -3524,6 +3416,7 @@ namespace Madplan.Models
         {
             var assembly = typeof(DataModel).GetTypeInfo().Assembly;
 
+            // Overfører alle madvarer fra FoodDatabase.csv til ListOfFood (enhedskonvertering er alle nul)
             await Task.Run(() =>
             {
                 Stream stream = assembly.GetManifestResourceStream("Madplan.Resources.FoodDatabase.csv");
@@ -3600,6 +3493,15 @@ namespace Madplan.Models
                     counter++;
                 }
             });
+
+            // TODO: Tilføjer enhedskonvertering til alle udvalgte madvare
+
+            //applyQuantityValuesToFood(
+            //    getFood(IngredientHelper.Mandler.GetDescription()),
+            //    QuantityConverter.GetNewListOfQuantityValues());
+
+            //var mandler = getFood(IngredientHelper.Mandler.GetDescription());
+            
 
 
         }
@@ -3701,6 +3603,7 @@ namespace Madplan.Models
 
         }
 
+        // Denne metode skal kun anvendes i denne class, da den implicit out'er Food, som selv placeres i de enkelte Recipes.
         private Food addFoodToRecipe(string foodId, double quantity, string quantityType)
         {
             if (int.TryParse(foodId, out int result))
@@ -3734,6 +3637,26 @@ namespace Madplan.Models
             return foodId;
         }
 
+        private void applyQuantityValuesToFood(Food food, List<Quantity> listOfNewQuantityValues)
+        {
+            
+        }
         
+        private Food getFood(string foodId)
+        {
+            if (int.TryParse(foodId, out int result))
+            {
+                if (!ListOfFood.Any(a => a.FoodId == result))
+                    throw new IndexOutOfRangeException("getFood, foodId: " + foodId.ToString() + " indgår ikke i ListOfFood");
+
+                var food = ListOfFood.Where(a => a.FoodId == result).First();
+
+                return food;
+            }
+            else
+            {
+                throw new Exception("getFood, foodId: " + foodId + " er ikke en int");
+            }
+        }
     }
 }

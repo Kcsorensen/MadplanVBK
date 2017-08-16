@@ -85,10 +85,12 @@ namespace Madplan
                 });
             }
 
-            // Load PopulateListOfMealsAsync i en singleton, så det kun skal gøres en gang.
-            await DataModel.Current.PopulateListOfRecipesAsync();
-
+            // Load PopulateListOfFoodAsync i en singleton, så det kun skal gøres en gang.
+            // Skal gøres inden at PopulateListOfRecipesAsync loades
             await DataModel.Current.PopulateListOfFoodAsync();
+
+            // Load PopulateListOfRecipesAsync i en singleton, så det kun skal gøres en gang.
+            await DataModel.Current.PopulateListOfRecipesAsync();
         }
 
         protected override void OnSleep()

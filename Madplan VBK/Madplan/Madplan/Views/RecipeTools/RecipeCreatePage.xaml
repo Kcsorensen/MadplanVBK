@@ -67,7 +67,17 @@
         </RelativeLayout>
     </ContentPage>
 
-    <ContentPage Title="Næringsindhold"></ContentPage>
+    <ContentPage Title="Næringsindhold">
+
+        <StackLayout>
+            <StackLayout Style="{StaticResource listViewHeaderLayoutStyle}">
+                <Label Text="Næringsindhold for opskriften" Style="{StaticResource listViewHeaderLabelStyle}"/>
+            </StackLayout>
+            
+            
+        </StackLayout>
+
+    </ContentPage>
     
 
     <!--<Grid>

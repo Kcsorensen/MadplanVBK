@@ -47,7 +47,7 @@ namespace Madplan.Models
                 pose
             };
 
-            CompleteListOfQuantityTypes = new List<string>()
+            ListForQuantityConverter = new List<string>()
             {
                 spsk,
                 stk,

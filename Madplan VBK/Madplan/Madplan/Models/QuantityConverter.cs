@@ -15,12 +15,26 @@ namespace Madplan.Models
 
         public QuantityConverter()
         {
-            Conversions = new List<Quantity>();
+            Conversions = GetNewListOfQuantityValues();
+
+            //Conversions = new List<Quantity>();
+
+            //foreach (var quantityType in QuantityType.Current.CompleteListOfQuantityTypes)
+            //{
+            //    Conversions.Add(new Quantity() { Name = quantityType, Value = 0.0 });
+            //}
+        }
+
+        public static List<Quantity> GetNewListOfQuantityValues()
+        {
+            var list = new List<Quantity>();
 
             foreach (var quantityType in QuantityType.Current.CompleteListOfQuantityTypes)
             {
-                Conversions.Add(new Quantity() { Name = quantityType, Value = 0.0 });
+                list.Add(new Quantity() { Name = quantityType, Value = 0.0 });
             }
+
+            return list;
         }
     }
 }
