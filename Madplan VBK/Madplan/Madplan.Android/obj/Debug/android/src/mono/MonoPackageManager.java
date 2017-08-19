@@ -105,6 +105,7 @@ class MonoPackageManager_Resources {
 		"FormsViewGroup.dll",
 		"Messier16.Forms.Android.Controls.dll",
 		"Messier16.Forms.Controls.dll",
+		"Newtonsoft.Json.dll",
 		"PCLStorage.Abstractions.dll",
 		"PCLStorage.dll",
 		"SQLite-net.dll",

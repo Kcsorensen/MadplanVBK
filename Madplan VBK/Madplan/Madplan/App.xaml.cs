@@ -1,11 +1,10 @@
 ﻿using Madplan.Models;
 using Madplan.Models.WeekPlaner;
 using Madplan.Persistance;
+using Newtonsoft.Json;
 using SQLite;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Net.Http;
 
 using Xamarin.Forms;
 
@@ -14,6 +13,8 @@ namespace Madplan
     public partial class App : Application
     {
         private SQLiteAsyncConnection _connection;
+        private const string Url = "http://madplanvbk.azurewebsites.net/api/food/";
+        private HttpClient _client = new HttpClient();
 
         public App()
         {
@@ -28,8 +29,13 @@ namespace Madplan
         {
             // TODO: Lav en oversigt på Mainpage med gennemsnitlig Ratio for hver dag, og senere kan der laves en samlede energitilskud i kcal.
 
-            await _connection.CreateTableAsync<WeekSelections>();
+            // Forbind til RESTful API server
+            // TODO: Implementer hvad der skal der ske hvis den ikke kan forbinde.
+            var content = await _client.GetStringAsync(Url);
+            //JsonConvert.DeserializeObject<List<FoodTest>>(content);
 
+            // Opret en table WeekSelections i SQLite, hvis der ikke er en i forvejen.
+            await _connection.CreateTableAsync<WeekSelections>();
             if (await _connection.Table<WeekSelections>().CountAsync() == 0)
             {
                 await _connection.InsertAsync(new WeekSelections()
@@ -84,6 +90,20 @@ namespace Madplan
                     SundayDinner = Recipe.Default
                 });
             }
+
+            // Opret en table med ListOfFood i SQLite, hvis der ikke er en i forvejn.
+            await _connection.CreateTableAsync<FoodTest>();
+            if (await _connection.Table<FoodTest>().CountAsync() == 0)
+            {
+                List<FoodTest> list = JsonConvert.DeserializeObject<List<FoodTest>>(content);
+
+                await _connection.InsertAllAsync(list);
+
+
+            }
+
+            var foodlist = await _connection.Table<FoodTest>().ToListAsync();
+
 
             // Load PopulateListOfFoodAsync i en singleton, så det kun skal gøres en gang.
             // Skal gøres inden at PopulateListOfRecipesAsync loades
