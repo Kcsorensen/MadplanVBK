@@ -1,29 +1,24 @@
-﻿using Madplan.Extensions;
+﻿using Common.Extensions;
 using SQLite;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Madplan.Models
 {
     public class Food : BaseModel
     {
-        // TODO: Der mangler en property. Der burde være 181 og der er kun 180.
         #region private fields
 
-        private string _name;
+        //private string _name;
         private double _quantity;
         private string _quantityType;
-        private double _energiKj;
-        private double _energiKcal;
-        private double _proteinTotal;
-        private double _kulhydratDifferens;
-        private double _kulhydratTilgaengelig;
-        private double _tilsatSukker;
-        private double _kostfiber;
-        private double _fedtTotal;
+        //private double _energiKj;
+        //private double _energiKcal;
+        //private double _proteinTotal;
+        //private double _kulhydratDifferens;
+        //private double _kulhydratTilgaengelig;
+        //private double _tilsatSukker;
+        //private double _kostfiber;
+        //private double _fedtTotal;
         private double _avitamin;
         private double _dvitamin;
         private double _evitamin;

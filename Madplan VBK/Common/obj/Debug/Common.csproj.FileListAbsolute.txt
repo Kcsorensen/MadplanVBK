@@ -1,0 +1,8 @@
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Common\bin\Debug\Common.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Common\bin\Debug\Common.pdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Common\obj\Debug\Common.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Common\obj\Debug\Common.pdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Common\bin\Debug\Portable.DataAnnotations.pdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\Common\bin\Debug\Portable.DataAnnotations.dll

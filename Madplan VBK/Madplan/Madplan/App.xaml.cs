@@ -31,8 +31,7 @@ namespace Madplan
 
             // Forbind til RESTful API server
             // TODO: Implementer hvad der skal der ske hvis den ikke kan forbinde.
-            var content = await _client.GetStringAsync(Url);
-            //JsonConvert.DeserializeObject<List<FoodTest>>(content);
+            //var content = await _client.GetStringAsync(Url);
 
             // Opret en table WeekSelections i SQLite, hvis der ikke er en i forvejen.
             await _connection.CreateTableAsync<WeekSelections>();
@@ -92,17 +91,17 @@ namespace Madplan
             }
 
             // Opret en table med ListOfFood i SQLite, hvis der ikke er en i forvejn.
-            await _connection.CreateTableAsync<FoodTest>();
-            if (await _connection.Table<FoodTest>().CountAsync() == 0)
+            await _connection.CreateTableAsync<Food>();
+            if (await _connection.Table<Food>().CountAsync() == 0)
             {
-                List<FoodTest> list = JsonConvert.DeserializeObject<List<FoodTest>>(content);
+                //List<FoodTest> list = JsonConvert.DeserializeObject<List<FoodTest>>(content);
 
-                await _connection.InsertAllAsync(list);
+                //await _connection.InsertAllAsync(list);
 
 
             }
 
-            var foodlist = await _connection.Table<FoodTest>().ToListAsync();
+            var foodlist = await _connection.Table<Food>().ToListAsync();
 
 
             // Load PopulateListOfFoodAsync i en singleton, så det kun skal gøres en gang.
