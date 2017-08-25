@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using SharedLib.Models;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Madplan.Models
 {
@@ -17,13 +13,13 @@ namespace Madplan.Models
         public double Ratio { get; set; }
         public double Persons { get; set; }
         public int Page { get; set; }
-        public ObservableCollection<Food> Ingredients { get; set; }
+        public ObservableCollection<Ingredient> Ingredients { get; set; }
 
         public Recipe()
         {
             Type = "Vælg";
             DefaultQuantityType = QuantityType.gram;
-            Ingredients = new ObservableCollection<Food>();
+            Ingredients = new ObservableCollection<Ingredient>();
         }
     }
 

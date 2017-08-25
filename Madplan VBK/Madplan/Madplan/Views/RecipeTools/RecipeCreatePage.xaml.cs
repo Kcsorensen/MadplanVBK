@@ -16,9 +16,9 @@ namespace Madplan.Views.RecipeTools
 
             _recipe = new Recipe();
 
-            _recipe.Ingredients.Add(DataModel.Current.ListOfFood[4]);
-            _recipe.Ingredients.Add(DataModel.Current.ListOfFood[20]);
-            _recipe.Ingredients.Add(DataModel.Current.ListOfFood[44]);
+            //_recipe.Ingredients.Add(DataModel.Current.ListOfFood[4]);
+            //_recipe.Ingredients.Add(DataModel.Current.ListOfFood[20]);
+            //_recipe.Ingredients.Add(DataModel.Current.ListOfFood[44]);
 
             BindingContext = _recipe;
         }
@@ -47,10 +47,10 @@ namespace Madplan.Views.RecipeTools
 
         private void Delete_Clicked(object sender, EventArgs e)
         {
-            var menuItem = sender as MenuItem;
-            var food = menuItem.CommandParameter as Food;
+            //var menuItem = sender as MenuItem;
+            //var food = menuItem.CommandParameter as Food;
 
-            _recipe.Ingredients.Remove(food);
+            //_recipe.Ingredients.Remove(food);
         }
 
         private void MealPicker_Tapped(object sender, EventArgs e)

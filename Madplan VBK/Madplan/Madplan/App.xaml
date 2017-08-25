@@ -1,43 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Madplan.App">
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="Madplan.App">
 	<Application.Resources>
 
-        <ResourceDictionary>
+		<ResourceDictionary>
 
-            <Style x:Key="layoutInAViewDefault" TargetType="Layout">
-                <Setter Property="Padding" Value="15, 0"/>
-                <Setter Property="HeightRequest" Value="45"/>
-            </Style>
-            
-            <Style x:Key="layoutInViewWithEntry" TargetType="Layout">
-                <Setter Property="Padding" Value="15, 0, 12, 0"/>
-                <Setter Property="HeightRequest" Value="45"/>
-            </Style>
+			<Style x:Key="layoutInAViewDefault" TargetType="Layout">
+				<Setter Property="Padding" Value="15, 0"/>
+				<Setter Property="HeightRequest" Value="45"/>
+			</Style>
+			
+			<Style x:Key="layoutInViewWithEntry" TargetType="Layout">
+				<Setter Property="Padding" Value="15, 0, 12, 0"/>
+				<Setter Property="HeightRequest" Value="45"/>
+			</Style>
 
 
-            <Style x:Key="listViewHeaderLayoutStyle" TargetType="Layout">
-                <Setter Property="Padding" Value="0, 12"/>
-                <Setter Property="BackgroundColor" Value="SeaGreen"/>
-            </Style>
+			<Style x:Key="listViewHeaderLayoutStyle" TargetType="Layout">
+				<Setter Property="Padding" Value="0, 12"/>
+				<Setter Property="BackgroundColor" Value="SeaGreen"/>
+			</Style>
 
-            <Style x:Key="listViewHeaderLabelStyle" TargetType="Label">
-                <Setter Property="Margin" Value="15, 0, 10, 0"/>
-                <Setter Property="FontAttributes" Value="Bold"/>
-                <Setter Property="VerticalTextAlignment" Value="Center"/>
-            </Style>
+			<Style x:Key="listViewHeaderLabelStyle" TargetType="Label">
+				<Setter Property="Margin" Value="15, 0, 10, 0"/>
+				<Setter Property="FontAttributes" Value="Bold"/>
+				<Setter Property="VerticalTextAlignment" Value="Center"/>
+			</Style>
 
-            <Style x:Key="lastItemListView" TargetType="Layout">
-                <Setter Property="Margin" Value="0, 0, 0, 10"/>
-            </Style>
+			<Style x:Key="lastItemListView" TargetType="Layout">
+				<Setter Property="Margin" Value="0, 0, 0, 10"/>
+			</Style>
 
-            <!--<Style x:Key="listViewItemLayoutStyle" TargetType="Layout">
-                <Setter Property="Padding" Value="15, 0, 10, 0"/>
-                <Setter Property="VerticalAlignment" Value="Center"/>
-            </Style>-->
+			<!--<Style x:Key="listViewItemLayoutStyle" TargetType="Layout">
+				<Setter Property="Padding" Value="15, 0, 10, 0"/>
+				<Setter Property="VerticalAlignment" Value="Center"/>
+			</Style>-->
 
-        </ResourceDictionary>
+		</ResourceDictionary>
 
 	</Application.Resources>
 </Application>

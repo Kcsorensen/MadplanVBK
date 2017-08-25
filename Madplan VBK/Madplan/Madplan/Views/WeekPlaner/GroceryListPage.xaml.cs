@@ -1,13 +1,10 @@
 ﻿using Madplan.Models;
 using Madplan.Models.WeekPlaner;
 using Madplan.Persistance;
+using SharedLib.Models;
 using SQLite;
-using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -37,7 +34,7 @@ namespace Madplan.Views.WeekPlaner
 
             var listOfWeekSelections = weekSelections.GetListOfSelectedMeals();
 
-            List<Food> completeListOfIngredients = new List<Food>();
+            List<Ingredient> completeListOfIngredients = new List<Ingredient>();
 
             foreach (var item in listOfWeekSelections)
             {
@@ -47,7 +44,7 @@ namespace Madplan.Views.WeekPlaner
             // Find alle ingridients som indgår mere end en gang i completeListOfIngredients
             var listofDuplicates = completeListOfIngredients.GroupBy(a => a.Name).Where(b => b.Count() > 1).Select(c => c).ToList();
 
-            List<Food> sortedListOfIngredients = new List<Food>();
+            List<Ingredient> sortedListOfIngredients = new List<Ingredient>();
 
             foreach (var ingredient in completeListOfIngredients)
             {
@@ -67,12 +64,12 @@ namespace Madplan.Views.WeekPlaner
                     else
                     {
                         // Bliver kasseret hvis QuantityType = Ingen.
-                        if (ingredient.QuantityType != QuantityType.Ingen)
+                        if (ingredient.DefaultQuantityType != QuantityType.Ingen)
                         {
                             // QuantityType for den betragtede ingridient er den samme som den allerede added ingridient med samme navn. Quantity forsøges med den value den betragtede ingridient har.
-                            if (sortedListOfIngredients.Any(a => a.Name == ingredient.Name && a.QuantityType == ingredient.QuantityType))
+                            if (sortedListOfIngredients.Any(a => a.Name == ingredient.Name && a.DefaultQuantityType == ingredient.DefaultQuantityType))
                             {
-                                sortedListOfIngredients.Where(b => b.Name == ingredient.Name && b.QuantityType == ingredient.QuantityType).First().Quantity += ingredient.Quantity;
+                                sortedListOfIngredients.Where(b => b.Name == ingredient.Name && b.DefaultQuantityType == ingredient.DefaultQuantityType).First().Quantity += ingredient.Quantity;
                             }
                             // QuantityType for den betragtede ingridient er ikke den samme som den allerede added ingridient med samme navn. Den betragtede ingridient addes til sortedListOfIngredients
                             else

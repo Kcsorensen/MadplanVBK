@@ -1,10 +1,8 @@
-﻿using Madplan.Models;
+﻿using ExpressMapper;
+using Madplan.Models;
+using SharedLib.Models;
 using Xamarin.Forms;
-using System.Linq;
 using Xamarin.Forms.Xaml;
-using Madplan.Extensions;
-using System.Threading.Tasks;
-using ExpressMapper;
 
 namespace Madplan.Views.FoodTools
 {
