@@ -1,0 +1,27 @@
+C:\Users\kcsorensen\documents\visual studio 2017\Projects\Madplan\Main\bin\Debug\netstandard1.4\Main.deps.json
+C:\Users\kcsorensen\documents\visual studio 2017\Projects\Madplan\Main\bin\Debug\netstandard1.4\Main.dll
+C:\Users\kcsorensen\documents\visual studio 2017\Projects\Madplan\Main\bin\Debug\netstandard1.4\Main.pdb
+C:\Users\kcsorensen\documents\visual studio 2017\Projects\Madplan\Main\obj\Debug\netstandard1.4\Main.csprojResolveAssemblyReference.cache
+C:\Users\kcsorensen\documents\visual studio 2017\Projects\Madplan\Main\obj\Debug\netstandard1.4\Main.csproj.CoreCompileInputs.cache
+C:\Users\kcsorensen\documents\visual studio 2017\Projects\Madplan\Main\obj\Debug\netstandard1.4\Main.AssemblyInfoInputs.cache
+C:\Users\kcsorensen\documents\visual studio 2017\Projects\Madplan\Main\obj\Debug\netstandard1.4\Main.AssemblyInfo.cs
+C:\Users\kcsorensen\documents\visual studio 2017\Projects\Madplan\Main\obj\Debug\netstandard1.4\Main.dll
+C:\Users\kcsorensen\documents\visual studio 2017\Projects\Madplan\Main\obj\Debug\netstandard1.4\Main.pdb
+C:\Users\kcsorensen\documents\visual studio 2017\Projects\Madplan\Main\obj\Debug\netstandard1.4\Main.App.xaml.g.cs
+C:\Users\kcsorensen\documents\visual studio 2017\Projects\Madplan\Main\obj\Debug\netstandard1.4\Main.MainPage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\Madplan\Main\obj\Debug\netstandard1.4\Main.csprojResolveAssemblyReference.cache
+C:\Users\kcsorensen\Documents\GitHub\Madplan\Main\obj\Debug\netstandard1.4\Main.csproj.CoreCompileInputs.cache
+C:\Users\kcsorensen\Documents\GitHub\Madplan\Main\obj\Debug\netstandard1.4\Main.App.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\Madplan\Main\obj\Debug\netstandard1.4\Main.ExtensionViews.NavigateNextCell.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\Madplan\Main\obj\Debug\netstandard1.4\Main.MainPage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\Madplan\Main\obj\Debug\netstandard1.4\Main.dll
+C:\Users\kcsorensen\Documents\GitHub\Madplan\Main\obj\Debug\netstandard1.4\Main.pdb
+C:\Users\kcsorensen\Documents\GitHub\Madplan\Main\obj\Debug\netstandard1.4\Main.AssemblyInfoInputs.cache
+C:\Users\kcsorensen\Documents\GitHub\Madplan\Main\obj\Debug\netstandard1.4\Main.AssemblyInfo.cs
+C:\Users\kcsorensen\Documents\GitHub\Madplan\Main\bin\Debug\netstandard1.4\Main.deps.json
+C:\Users\kcsorensen\Documents\GitHub\Madplan\Main\bin\Debug\netstandard1.4\Main.dll
+C:\Users\kcsorensen\Documents\GitHub\Madplan\Main\bin\Debug\netstandard1.4\Main.pdb
+C:\Users\kcsorensen\Documents\GitHub\Madplan\Main\bin\Debug\netstandard1.4\SharedLib.dll
+C:\Users\kcsorensen\Documents\GitHub\Madplan\Main\bin\Debug\netstandard1.4\SharedLib.pdb
+C:\Users\kcsorensen\Documents\GitHub\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.WeekPlaner.DayPage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.WeekPlaner.SelectMealPage.xaml.g.cs

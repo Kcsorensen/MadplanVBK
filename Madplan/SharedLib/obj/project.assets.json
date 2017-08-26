@@ -1,0 +1,44 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETPortable,Version=v4.5,Profile=Profile259": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETPortable,Version=v4.5,Profile=Profile259": []
+  },
+  "packageFolders": {
+    "C:\\Users\\kcsorensen\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\kcsorensen\\Documents\\GitHub\\Madplan\\SharedLib\\SharedLib.csproj",
+      "projectName": "SharedLib",
+      "projectPath": "C:\\Users\\kcsorensen\\Documents\\GitHub\\Madplan\\SharedLib\\SharedLib.csproj",
+      "packagesPath": "C:\\Users\\kcsorensen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kcsorensen\\Documents\\GitHub\\Madplan\\SharedLib\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\kcsorensen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "portable45-net45+win8+wp8+wpa81"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "portable45-net45+win8+wp8+wpa81": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "portable45-net45+win8+wp8+wpa81": {}
+    }
+  }
+}

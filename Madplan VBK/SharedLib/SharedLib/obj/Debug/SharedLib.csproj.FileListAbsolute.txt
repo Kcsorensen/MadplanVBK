@@ -1,6 +1,0 @@
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\obj\Debug\SharedLib.csprojResolveAssemblyReference.cache
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\obj\Debug\SharedLib.csproj.CoreCompileInputs.cache
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\bin\Debug\SharedLib.dll
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\bin\Debug\SharedLib.pdb
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\obj\Debug\SharedLib.dll
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\obj\Debug\SharedLib.pdb

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extension="clr-namespace:Main.ExtensionViews"
+             xmlns:local="clr-namespace:Main.Models.WeekPlaner"
+             x:Class="Main.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Text="Indkøbsliste" Clicked="GroceryList_Clicked"/>
+        <ToolbarItem Order="Secondary" Text="Fødevarer" Clicked="Food_Clicked"/>
+        <ToolbarItem Order="Secondary" Text="Opskrifer" Clicked="Recipe_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <TableView Intent="Menu" HasUnevenRows="False">
+        <TableRoot>
+            <TableSection Title="Ugedage">
+                <extension:NavigateNextCell Label="Mandag" Tapped="Day_Tapped" ClassId="{x:Static local:Day.Monday}"/>
+                <extension:NavigateNextCell Label="Tirsdag" Tapped="Day_Tapped" ClassId="{x:Static local:Day.Tuesday}"/>
+                <extension:NavigateNextCell Label="Onsdag" Tapped="Day_Tapped" ClassId="{x:Static local:Day.Wednesday}"/>
+                <extension:NavigateNextCell Label="Torsdag" Tapped="Day_Tapped" ClassId="{x:Static local:Day.Thursday}"/>
+                <extension:NavigateNextCell Label="Fredag" Tapped="Day_Tapped" ClassId="{x:Static local:Day.Friday}"/>
+                <extension:NavigateNextCell Label="Lørdag" Tapped="Day_Tapped" ClassId="{x:Static local:Day.Saturday}"/>
+                <extension:NavigateNextCell Label="Søndag" Tapped="Day_Tapped" ClassId="{x:Static local:Day.Sunday}"/>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+
+</ContentPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Main.Views.WeekPlaner.SelectMealPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TableView Grid.Row="0" Intent="Menu" HasUnevenRows="False" HeightRequest="138">
+            <TableRoot>
+                <TableSection Title="Filter">
+                    <SwitchCell x:Name="sortSwitch" On="True" OnChanged="sortSwitch_OnChanged"/>
+                    <!--<SwitchCell Text="Vis søgefelt" On="False"/>
+                <ViewCell>
+                    <SearchBar Placeholder="Enter text" TextChanged="SearchBar_TextChanged" IsVisible="True"/>
+                </ViewCell>-->
+                </TableSection>
+                <TableSection x:Name="tableSectionListOfMeals"/>
+            </TableRoot>
+        </TableView>
+
+        <ListView Grid.Row="1" ItemsSource="{Binding}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Tapped="Meal_Tapped">
+                        <Grid VerticalOptions="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" Spacing="0" Margin="15, 0, 0, 0">
+                                <Label Text="{Binding Name}" />
+                                <Label Text="{Binding Page, StringFormat='(side: {0})'}" FontSize="Micro"/>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Spacing="0" Margin="0, 0, 10, 0">
+                                <Label Text="{Binding Ratio, StringFormat='Ratio: {0}'}" FontSize="Micro" />
+                                <Label Text="{Binding Persons, StringFormat='Personer: {0}'}" FontSize="Micro" Margin="0, 0, 10, 0"/>
+                            </StackLayout >
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+
+</ContentPage>

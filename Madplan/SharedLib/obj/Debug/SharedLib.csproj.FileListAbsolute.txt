@@ -1,0 +1,20 @@
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\obj\Debug\SharedLib.csprojResolveAssemblyReference.cache
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\obj\Debug\SharedLib.csproj.CoreCompileInputs.cache
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\bin\Debug\SharedLib.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\bin\Debug\SharedLib.pdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\obj\Debug\SharedLib.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\obj\Debug\SharedLib.pdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\bin\Debug\Portable.DataAnnotations.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\bin\Debug\Portable.DataAnnotations.pdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\bin\Debug\SQLite-net.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\bin\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\bin\Debug\SQLite-net.pdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\bin\Debug\SQLite-net.xml
+C:\Users\kcsorensen\Documents\GitHub\Madplan\SharedLib\bin\Debug\SharedLib.dll
+C:\Users\kcsorensen\Documents\GitHub\Madplan\SharedLib\bin\Debug\SharedLib.pdb
+C:\Users\kcsorensen\Documents\GitHub\Madplan\SharedLib\obj\Debug\SharedLib.csprojResolveAssemblyReference.cache
+C:\Users\kcsorensen\Documents\GitHub\Madplan\SharedLib\obj\Debug\SharedLib.csproj.CoreCompileInputs.cache
+C:\Users\kcsorensen\Documents\GitHub\Madplan\SharedLib\obj\Debug\SharedLib.dll
+C:\Users\kcsorensen\Documents\GitHub\Madplan\SharedLib\obj\Debug\SharedLib.pdb
