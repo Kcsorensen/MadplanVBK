@@ -2,9 +2,9 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>C:\Users\kcsorensen\Documents\GitHub\Madplan\Madplan\Madplan.Android\obj\Debug\__library_projects__\Messier16.Forms.Android.Controls\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\kcsorensen\Documents\GitHub\Madplan\Madplan\Madplan.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\kcsorensen\Documents\GitHub\Madplan\Madplan\Madplan.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\__library_projects__\Messier16.Forms.Android.Controls\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Messier16.Forms.Android.Controls\library_project_imports\assets</ResolvedAssetDirectory>
@@ -13,8 +13,8 @@
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>C:\Users\kcsorensen\Documents\GitHub\Madplan\Madplan\Madplan.Android\obj\Debug\__library_projects__\Messier16.Forms.Android.Controls.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\kcsorensen\Documents\GitHub\Madplan\Madplan\Madplan.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\kcsorensen\Documents\GitHub\Madplan\Madplan\Madplan.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\__library_projects__\Messier16.Forms.Android.Controls.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>
