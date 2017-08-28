@@ -341,7 +341,7 @@ namespace SharedLib.Models
 
         public Food()
         {
-            Id = new Guid();
+            Id = Guid.NewGuid();
             QuantityConverver = new QuantityConverter();
             DefaultQuantityType = QuantityType.gram;
         }

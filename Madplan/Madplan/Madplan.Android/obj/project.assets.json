@@ -6570,11 +6570,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kcsorensen\\Documents\\GitHub\\Madplan\\Madplan\\Madplan.Android\\Madplan.Android.csproj",
+      "projectUniqueName": "C:\\Users\\kcsorensen\\Documents\\GitHub\\MadplanVBK\\Madplan\\Madplan\\Madplan.Android\\Madplan.Android.csproj",
       "projectName": "Madplan.Android",
-      "projectPath": "C:\\Users\\kcsorensen\\Documents\\GitHub\\Madplan\\Madplan\\Madplan.Android\\Madplan.Android.csproj",
+      "projectPath": "C:\\Users\\kcsorensen\\Documents\\GitHub\\MadplanVBK\\Madplan\\Madplan\\Madplan.Android\\Madplan.Android.csproj",
       "packagesPath": "C:\\Users\\kcsorensen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kcsorensen\\Documents\\GitHub\\Madplan\\Madplan\\Madplan.Android\\obj\\",
+      "outputPath": "C:\\Users\\kcsorensen\\Documents\\GitHub\\MadplanVBK\\Madplan\\Madplan\\Madplan.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -6591,8 +6591,8 @@
       "frameworks": {
         "monoandroid71": {
           "projectReferences": {
-            "C:\\Users\\kcsorensen\\Documents\\GitHub\\Madplan\\Main\\Main.csproj": {
-              "projectPath": "C:\\Users\\kcsorensen\\Documents\\GitHub\\Madplan\\Main\\Main.csproj"
+            "C:\\Users\\kcsorensen\\Documents\\GitHub\\MadplanVBK\\Madplan\\Main\\Main.csproj": {
+              "projectPath": "C:\\Users\\kcsorensen\\Documents\\GitHub\\MadplanVBK\\Madplan\\Main\\Main.csproj"
             }
           }
         }

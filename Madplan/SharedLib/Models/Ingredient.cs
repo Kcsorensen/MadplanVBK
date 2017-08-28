@@ -8,10 +8,8 @@ namespace SharedLib.Models
 {
     public class Ingredient
     {
-        public Guid FoodId { get; set; }
-
-        public string Name { get; set; }
-
+        public Guid Id { get; set; }
+        public Food Food { get; set; }
         public double Quantity { get; set; }
         public string QuantityType { get; set; }
         public string DefaultQuantityType { get; set; }
@@ -22,6 +20,7 @@ namespace SharedLib.Models
 
         public Ingredient()
         {
+            Id = Guid.NewGuid();
             QuantityVisible = true;
             BasicRecipe = false;
             ShoppingListChecked = false;

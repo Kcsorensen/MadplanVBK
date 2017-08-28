@@ -12,7 +12,6 @@ namespace SharedLib.Models
         public const string Default = "Vælg måltid";
 
         public Guid Id { get; set; }
-
         public string Name { get; set; }
         public string Type { get; set; }
         public string DefaultQuantityType { get; set; }
@@ -20,12 +19,11 @@ namespace SharedLib.Models
         public double Persons { get; set; }
         public int Page { get; set; }
 
-        [BsonRef("customers")]
         public ObservableCollection<Ingredient> Ingredients { get; set; }
 
         public Recipe()
         {
-            Id = new Guid();
+            Id = Guid.NewGuid();
             Type = "Vælg";
             DefaultQuantityType = QuantityType.gram;
             Ingredients = new ObservableCollection<Ingredient>();

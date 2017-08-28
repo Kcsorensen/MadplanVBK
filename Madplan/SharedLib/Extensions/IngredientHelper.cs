@@ -8,11 +8,11 @@ public enum IngredientHelper
     Havregryn,
     [MyDescription(Text = "711")]
     Peberfrugt,
-    [MyDescription(Text = "1186")]
+    [MyDescription(Text = "1185")]
     RevetOst,
     [MyDescription(Text = "685")]
     Olivenolie,
-    [MyDescription(Text = "Rapsolie")]
+    [MyDescription(Text = "764")]
     Rapsolie,
     [MyDescription(Text = "1143")]
     Æg,
@@ -28,15 +28,15 @@ public enum IngredientHelper
     Gulerod,
     [MyDescription(Text = "362")]
     Hytteost,
-    [MyDescription(Text = "Rugflager")]
+    [MyDescription(Text = "1188")]
     Rugflager,
-    [MyDescription(Text = "Æblemost")]
+    [MyDescription(Text = "1142")]
     Æblemost,
-    [MyDescription(Text = "Æble")]
+    [MyDescription(Text = "1137")]
     Æble,
-    [MyDescription(Text = "Hasselnødder")]
+    [MyDescription(Text = "274")]
     Hasselnødder,
-    [MyDescription(Text = "Honning")]
+    [MyDescription(Text = "303")]
     Honning,
     [MyDescription(Text = "921")]
     Skyr,
@@ -44,241 +44,237 @@ public enum IngredientHelper
     Granola,
     [MyDescription(Text = "801")]
     Rugbrød,
-    [MyDescription(Text = "1188")]
+    [MyDescription(Text = "1187")]
     Nøddepread,
-    [MyDescription(Text = "Fuldkornsknækbrød")]
+    [MyDescription(Text = "463")]
     Fuldkornsknækbrød,
-    [MyDescription(Text = "Agurk")]
+    [MyDescription(Text = "9")]
     Agurk,
-    [MyDescription(Text = "Koncentreret solbærsaft")]
+    [MyDescription(Text = "961")]
     Solbærsaft,
-    [MyDescription(Text = "Rosiner")]
+    [MyDescription(Text = "796")]
     Rosiner,
     [MyDescription(Text = "588")]
     Mandler,
-    [MyDescription(Text = "Chiafrø")]
+    [MyDescription(Text = "1176")]
     Chiafrø,
-    [MyDescription(Text = "Kanel")]
+    [MyDescription(Text = "1189")]
     Kanel,
-    [MyDescription(Text = "Fintrevet citronskal")]
+    [MyDescription(Text = "134")]
     Citronskal,
-    [MyDescription(Text = "Mælk")]
+    [MyDescription(Text = "915")]
     Mælk,
-    [MyDescription(Text = "Friske Bær")]
+    [MyDescription(Text = "293")]
     Bær,
-    [MyDescription(Text = "Hummus")]
+    [MyDescription(Text = "1227")]
     Hummus,
-    [MyDescription(Text = "Tørrende grønne ærter")]
+    [MyDescription(Text = "255")]
     TørrendeGrønneÆrter,
-    [MyDescription(Text = "Fed hvidløg")]
+    [MyDescription(Text = "345")]
     Hvidløg,
-    [MyDescription(Text = "Spidskommen")]
+    [MyDescription(Text = "1192")]
     Spidskommen,
-    [MyDescription(Text = "Græskarkerner")]
+    [MyDescription(Text = "1175")]
     Græskarkerner,
-    [MyDescription(Text = "Citron")]
+    [MyDescription(Text = "132")]
     Citron,
-    [MyDescription(Text = "AC-spread")]
+    [MyDescription(Text = "1193")]
     ACspread,
-    [MyDescription(Text = "Fennikel")]
+    [MyDescription(Text = "177")]
     Fennikel,
-    [MyDescription(Text = "Parmaskinke")]
+    [MyDescription(Text = "1194")]
     Parmaskinke,
-    [MyDescription(Text = "Frisk dild")]
+    [MyDescription(Text = "150")]
     Dild,
-    [MyDescription(Text = "Rugkerner")]
+    [MyDescription(Text = "814")]
     Rugkerner,
-    [MyDescription(Text = "Fishsauce")]
+    [MyDescription(Text = "1195")]
     Fishsauce,
-    [MyDescription(Text = "Frisk basilikum")]
+    [MyDescription(Text = "1196")]
     Basilikum,
-    [MyDescription(Text = "Skæreost")]
+    [MyDescription(Text = "688")]
     Skæreost,
-    [MyDescription(Text = "Æbleeddike")]
+    [MyDescription(Text = "1179")]
     Æbleeddike,
-    [MyDescription(Text = "Fuldkornswrap")]
+    [MyDescription(Text = "1184")]
     Fuldkornswrap,
-    [MyDescription(Text = "Spidskål")]
+    [MyDescription(Text = "970")]
     Spidskål,
-    [MyDescription(Text = "Kyllingbryst")]
+    [MyDescription(Text = "497")]
     Kyllingbryst,
-    [MyDescription(Text = "Karry")]
+    [MyDescription(Text = "417")]
     Karry,
-    [MyDescription(Text = "Tabasco")]
+    [MyDescription(Text = "1184")]
     Tabasco,
-    [MyDescription(Text = "Kyllingelår")]
+    [MyDescription(Text = "498")]
     Kyllingelår,
-    [MyDescription(Text = "Lakridspulver")]
+    [MyDescription(Text = "1197")]
     Lakridspulver,
-    [MyDescription(Text = "Grønne linser")]
+    [MyDescription(Text = "559")]
     GrønneLinser,
-    [MyDescription(Text = "Lime")]
+    [MyDescription(Text = "558")]
     Lime,
-    [MyDescription(Text = "Frisk Timian")]
+    [MyDescription(Text = "1198")]
     Timian,
-    [MyDescription(Text = "Persillerod")]
+    [MyDescription(Text = "719")]
     Persillerod,
-    [MyDescription(Text = "Solsikkekerner")]
+    [MyDescription(Text = "1199")]
     Solsikkekerner,
-    [MyDescription(Text = "Frisk persille")]
+    [MyDescription(Text = "1200")]
     Persille,
-    [MyDescription(Text = "Sesamfrø")]
+    [MyDescription(Text = "885")]
     Sesamfrø,
-    //[MyDescription(Text = "Fuldkornspitabrød")]
-    //Fuldkornspitabrød,
-    [MyDescription(Text = "Kakaonibs")]
+    [MyDescription(Text = "1201")]
     Kakaonibs,
-    [MyDescription(Text = "Pære")]
+    [MyDescription(Text = "751")]
     Pære,
-    [MyDescription(Text = "Mozzarella")]
+    [MyDescription(Text = "1185")]
     Mozzarella,
-    [MyDescription(Text = "Kiwi")]
+    [MyDescription(Text = "454")]
     Kiwi,
-    [MyDescription(Text = "Mango")]
+    [MyDescription(Text = "590")]
     Mango,
-    [MyDescription(Text = "Frisk mynte")]
+    [MyDescription(Text = "1202")]
     Mynte,
-    [MyDescription(Text = "Emmentaler")]
+    [MyDescription(Text = "171")]
     Emmentaler,
-    [MyDescription(Text = "Tun i vand")]
+    [MyDescription(Text = "1065")]
     Tun,
-    [MyDescription(Text = "Radicchio")]
+    [MyDescription(Text = "853")]
     Radicchio,
-    [MyDescription(Text = "Kartofler")]
+    [MyDescription(Text = "426")]
     Kartofler,
-    [MyDescription(Text = "Drueagurker")]
+    [MyDescription(Text = "164")]
     Drueagurker,
-    [MyDescription(Text = "Makrel i tomat")]
+    [MyDescription(Text = "581")]
     Makrel,
-    [MyDescription(Text = "Oliven")]
+    [MyDescription(Text = "684")]
     Oliven,
-    [MyDescription(Text = "Cornichoner")]
+    [MyDescription(Text = "1203")]
     Cornichoner,
-    [MyDescription(Text = "Majs")]
+    [MyDescription(Text = "575")]
     Majs,
-    [MyDescription(Text = "Hakkede tomater")]
+    [MyDescription(Text = "1204")]
     HakkedeTomater,
-    [MyDescription(Text = "Frisk chili")]
+    [MyDescription(Text = "708")]
     Chili,
-    [MyDescription(Text = "Wontondej (el. folidej)")]
+    [MyDescription(Text = "1205")]
     Wontondej,
-    [MyDescription(Text = "Torskerogn")]
+    [MyDescription(Text = "1206")]
     Torskerogn,
-    [MyDescription(Text = "Radiser")]
+    [MyDescription(Text = "763")]
     Radiser,
-    [MyDescription(Text = "Karse")]
+    [MyDescription(Text = "418")]
     Karse,
-    [MyDescription(Text = "Fuldkornsbrød")]
+    [MyDescription(Text = "1207")]
     Fuldkornsbrød,
-    [MyDescription(Text = "Blomkålsbuketter")]
+    [MyDescription(Text = "53")]
     Blomkålsbuketter,
-    [MyDescription(Text = "Rødløg")]
+    [MyDescription(Text = "1191")]
     Rødløg,
-    [MyDescription(Text = "Hel dansk kylling")]
+    [MyDescription(Text = "1191")]
     HelKylling,
-    [MyDescription(Text = "Nelliker")]
+    [MyDescription(Text = "1208")]
     Nelliker,
-    [MyDescription(Text = "Aubergine")]
+    [MyDescription(Text = "29")]
     Aubergine,
-    [MyDescription(Text = "Pecorinoost")]
+    [MyDescription(Text = "1209")]
     Pecorinoost,
-    [MyDescription(Text = "Bruse ris")]
+    [MyDescription(Text = "779")]
     BruneRis,
-    [MyDescription(Text = "Blå druer")]
-    BlåDruer,
-    [MyDescription(Text = "Laurbærblade")]
+    [MyDescription(Text = "1100")]
+    Druer,
+    [MyDescription(Text = "1210")]
     Laurbærblade,
-    [MyDescription(Text = "Hvidkål")]
+    [MyDescription(Text = "344")]
     Hvidkål,
-    [MyDescription(Text = "Laksefilet")]
+    [MyDescription(Text = "520")]
     Laksefilet,
-    [MyDescription(Text = "Avokado")]
+    [MyDescription(Text = "1211")]
     Avokado,
-    [MyDescription(Text = "Frosne ærter")]
+    [MyDescription(Text = "253")]
     FrosneÆrter,
-    [MyDescription(Text = "Frisk ingegær")]
-    Ingegær,
-    [MyDescription(Text = "Kikærter")]
+    [MyDescription(Text = "1212")]
+    Ingefær,
+    [MyDescription(Text = "445")]
     Kikærter,
-    [MyDescription(Text = "Wasabi")]
+    [MyDescription(Text = "1228")]
     Wasabi,
-    [MyDescription(Text = "Sojasovs")]
+    [MyDescription(Text = "951")]
     Sojasovs,
-    [MyDescription(Text = "Syltede asier")]
+    [MyDescription(Text = "24")]
     SyltedeAsier,
-    [MyDescription(Text = "Rødkål")]
+    [MyDescription(Text = "834")]
     Rødkål,
-    [MyDescription(Text = "Rejer")]
+    [MyDescription(Text = "768")]
     Rejer,
-    [MyDescription(Text = "Grapefrugt")]
+    [MyDescription(Text = "240")]
     Grapefrugt,
-    [MyDescription(Text = "Torsk")]
+    [MyDescription(Text = "1050")]
     Torsk,
-    [MyDescription(Text = "Knoldselleri")]
+    [MyDescription(Text = "1213")]
     Knoldselleri,
-    [MyDescription(Text = "Jordskok")]
+    [MyDescription(Text = "1214")]
     Jordskok,
-    [MyDescription(Text = "Vindruekerneolie")]
+    [MyDescription(Text = "1099")]
     Vindruekerneolie,
-    [MyDescription(Text = "Vineddike")]
+    [MyDescription(Text = "1215")]
     Vineddike,
-    [MyDescription(Text = "Purløg")]
+    [MyDescription(Text = "749")]
     Purløg,
-    [MyDescription(Text = "Hakket oksekød")]
+    [MyDescription(Text = "654")]
     HakketOksekød,
-    [MyDescription(Text = "Flåede tomater")]
+    [MyDescription(Text = "1037")]
     FlåedeTomater,
-    [MyDescription(Text = "Grov paste")]
+    [MyDescription(Text = "1180")]
     GrovPasta,
-    [MyDescription(Text = "Parmesanost")]
+    [MyDescription(Text = "697")]
     Parmesanost,
-    [MyDescription(Text = "Bønner i tomat")]
+    [MyDescription(Text = "1216")]
     Bønner,
-    [MyDescription(Text = "Mørk øl")]
+    [MyDescription(Text = "1217")]
     Øl,
-    [MyDescription(Text = "Mørk chokolade")]
+    [MyDescription(Text = "131")]
     Chokolade,
-    [MyDescription(Text = "Selleri")]
+    [MyDescription(Text = "880")]
     Selleri,
-    [MyDescription(Text = "Rødbeder")]
+    [MyDescription(Text = "828")]
     Rødbeder,
-    [MyDescription(Text = "Forårsløg")]
+    [MyDescription(Text = "216")]
     Forårsløg,
-    [MyDescription(Text = "Rispapir")]
+    [MyDescription(Text = "1218")]
     Rispapir,
-    [MyDescription(Text = "Saltede peanuts")]
+    [MyDescription(Text = "706")]
     SaltedePeanuts,
-    [MyDescription(Text = "Jordnøddeolie")]
+    [MyDescription(Text = "386")]
     Jordnøddeolie,
-    [MyDescription(Text = "Hakket kalv og okse")]
-    HakketKalvOgOkse,
-    [MyDescription(Text = "Frosne edamamebønner")]
+    [MyDescription(Text = "1183")]
     Edamamebønner,
-    [MyDescription(Text = "Frossen tomatpizza")]
+    [MyDescription(Text = "735")]
     Pizza,
-    [MyDescription(Text = "Forårsrulledej")]
+    [MyDescription(Text = "1219")]
     Forårsrulledej,
-    [MyDescription(Text = "Små chorizopølser")]
+    [MyDescription(Text = "1220")]
     Chorizopølser,
-    [MyDescription(Text = "Broccoli")]
+    [MyDescription(Text = "83")]
     Broccoli,
-    [MyDescription(Text = "Kalvekotelet med ben")]
+    [MyDescription(Text = "1221")]
     Kalvekotelet,
-    [MyDescription(Text = "Hjertesalat")]
+    [MyDescription(Text = "1222")]
     Hjertesalat,
-    [MyDescription(Text = "Rød appelsin")]
+    [MyDescription(Text = "1223")]
     RødAppelsin,
-    [MyDescription(Text = "Svinekotelet")]
+    [MyDescription(Text = "1224")]
     Svinekotelet,
-    [MyDescription(Text = "Oksebøf")]
+    [MyDescription(Text = "1225")]
     Oksebøf,
-    [MyDescription(Text = "Eddike")]
+    [MyDescription(Text = "169")]
     Eddike,
-    [MyDescription(Text = "Rosmarin")]
+    [MyDescription(Text = "1226")]
     Rosmarin,
-    [MyDescription(Text = "Fiskefilet")]
+    [MyDescription(Text = "837")]
     Fiskefilet,
-    [MyDescription(Text = "Mysli")]
-    Mysli,
+    [MyDescription(Text = "635")]
+    Musli,
 
 }

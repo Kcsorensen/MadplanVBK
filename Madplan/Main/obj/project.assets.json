@@ -5068,11 +5068,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\kcsorensen\\Documents\\GitHub\\Madplan\\Main\\Main.csproj",
+      "projectUniqueName": "C:\\Users\\kcsorensen\\Documents\\GitHub\\MadplanVBK\\Madplan\\Main\\Main.csproj",
       "projectName": "Main",
-      "projectPath": "C:\\Users\\kcsorensen\\Documents\\GitHub\\Madplan\\Main\\Main.csproj",
+      "projectPath": "C:\\Users\\kcsorensen\\Documents\\GitHub\\MadplanVBK\\Madplan\\Main\\Main.csproj",
       "packagesPath": "C:\\Users\\kcsorensen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kcsorensen\\Documents\\GitHub\\Madplan\\Main\\obj\\",
+      "outputPath": "C:\\Users\\kcsorensen\\Documents\\GitHub\\MadplanVBK\\Madplan\\Main\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5091,8 +5091,8 @@
       "frameworks": {
         "netstandard1.4": {
           "projectReferences": {
-            "C:\\Users\\kcsorensen\\Documents\\GitHub\\Madplan\\SharedLib\\SharedLib.csproj": {
-              "projectPath": "C:\\Users\\kcsorensen\\Documents\\GitHub\\Madplan\\SharedLib\\SharedLib.csproj"
+            "C:\\Users\\kcsorensen\\Documents\\GitHub\\MadplanVBK\\Madplan\\SharedLib\\SharedLib.csproj": {
+              "projectPath": "C:\\Users\\kcsorensen\\Documents\\GitHub\\MadplanVBK\\Madplan\\SharedLib\\SharedLib.csproj"
             }
           }
         }
