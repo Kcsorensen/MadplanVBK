@@ -4,3 +4,9 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\obj\Release\SharedLib.csproj.CoreCompileInputs.cache
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\obj\Release\SharedLib.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan VBK\SharedLib\SharedLib\obj\Release\SharedLib.pdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\SharedLib\bin\Release\SharedLib.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\SharedLib\bin\Release\SharedLib.pdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\SharedLib\obj\Release\SharedLib.csprojResolveAssemblyReference.cache
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\SharedLib\obj\Release\SharedLib.csproj.CoreCompileInputs.cache
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\SharedLib\obj\Release\SharedLib.dll
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\SharedLib\obj\Release\SharedLib.pdb

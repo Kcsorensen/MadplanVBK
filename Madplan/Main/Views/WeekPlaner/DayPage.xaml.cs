@@ -1,11 +1,7 @@
 ﻿using Main.ExtensionViews;
 using Main.Models;
 using Main.Models.WeekPlaner;
-using SharedLib.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -13,7 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace Main.Views.WeekPlaner
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DayPage : ContentPage
 	{
 		private string _day;
@@ -28,14 +24,13 @@ namespace Main.Views.WeekPlaner
 
 			_day = day;
 
-            int firstId = DataModel.Database.GetCollection<WeekSelections>().Min();
-            _weekSelections = DataModel.Database.GetCollection<WeekSelections>().FindOne(a => a.Id == firstId);
-
             DaySelections = new DaySelections();
 		}
 
 		protected override void OnAppearing()
 		{
+            _weekSelections = DataModel.Database.GetCollection<WeekSelections>().FindOne(a => true);
+
             DaySelections = _weekSelections.GetDaySelections(_day);
 
             BindingContext = DaySelections;
