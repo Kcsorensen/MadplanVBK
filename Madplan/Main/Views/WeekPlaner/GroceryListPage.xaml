@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Main.Views.WeekPlaner.GroceryListPage"
+             xmlns:m16="clr-namespace:Messier16.Forms.Controls;assembly=Messier16.Forms.Controls">
+
+    <ListView ItemsSource="{Binding}" ItemTapped="ListViewItem_Tapped">
+        <ListView.Header>
+            <StackLayout Style="{StaticResource listViewHeaderLayoutStyle}">
+                <Label Text="Indkøbsliste" Style="{StaticResource listViewHeaderLabelStyle}" />
+            </StackLayout>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="10, 0, 10, 0">
+                        <m16:Checkbox Checked="{Binding ShoppingListChecked}"/>
+                        <Label Text="{Binding Quantity}" VerticalOptions="Center" IsVisible="{Binding QuantityVisible}"/>
+                        <Label Text="{Binding QuantityType}" VerticalOptions="Center" IsVisible="{Binding QuantityVisible}"/>
+                        <Label Text="{Binding Food.Name}" VerticalOptions="Center"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>

@@ -1224,7 +1224,7 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
-      "Xamarin.Forms/2.3.4.267": {
+      "Xamarin.Forms/2.3.4.270": {
         "type": "package",
         "compile": {
           "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.Core.dll": {},
@@ -4877,10 +4877,10 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
-    "Xamarin.Forms/2.3.4.267": {
-      "sha512": "omf8FJHxEogCP80W1zfhAwMd4P81TasKOOdVXDJYH4cQ/huhKY5N1YioQ75BP4E75y6VE3aJtAglfeImIQoB5A==",
+    "Xamarin.Forms/2.3.4.270": {
+      "sha512": "D4QNulRsghAnjGefCuxvHaH9xLdk9gmSrqSoyIH9YqRa/+HNil7nLCt3Dwb7np1eNlKD6AoW+Kgv9Umur/yoUQ==",
       "type": "package",
-      "path": "xamarin.forms/2.3.4.267",
+      "path": "xamarin.forms/2.3.4.270",
       "files": [
         "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Mono.Cecil.Mdb.dll",
         "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Mono.Cecil.Pdb.dll",
@@ -4893,18 +4893,14 @@
         "lib/MonoAndroid10/Design/Xamarin.Forms.Core.Design.dll",
         "lib/MonoAndroid10/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/MonoAndroid10/FormsViewGroup.dll",
-        "lib/MonoAndroid10/FormsViewGroup.dll.mdb",
         "lib/MonoAndroid10/FormsViewGroup.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Core.dll",
-        "lib/MonoAndroid10/Xamarin.Forms.Core.dll.mdb",
         "lib/MonoAndroid10/Xamarin.Forms.Core.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Core.xml",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll",
-        "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll.mdb",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.dll",
         "lib/MonoAndroid10/Xamarin.Forms.Xaml.dll",
-        "lib/MonoAndroid10/Xamarin.Forms.Xaml.dll.mdb",
         "lib/MonoAndroid10/Xamarin.Forms.Xaml.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Xaml.xml",
         "lib/WP80/Design/Xamarin.Forms.Core.Design.dll",
@@ -5035,7 +5031,7 @@
         "lib/wpa81/Xamarin.Forms.Platform.dll",
         "lib/wpa81/Xamarin.Forms.Xaml.dll",
         "lib/wpa81/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.2.3.4.267.nupkg.sha512",
+        "xamarin.forms.2.3.4.270.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -5055,7 +5051,7 @@
       "NETStandard.Library >= 1.6.1",
       "Newtonsoft.Json >= 10.0.3",
       "SharedLib >= 1.0.0",
-      "Xamarin.Forms >= 2.3.4.267"
+      "Xamarin.Forms >= 2.3.4.270"
     ]
   },
   "packageFolders": {
@@ -5108,7 +5104,7 @@
         "dependencies": {
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "2.3.4.267"
+            "version": "2.3.4.270"
           },
           "LiteDB": {
             "target": "Package",

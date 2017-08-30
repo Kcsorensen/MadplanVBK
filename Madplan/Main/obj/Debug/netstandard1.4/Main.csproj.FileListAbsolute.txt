@@ -36,8 +36,10 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstanda
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.ExtensionViews.NavigateNextCell.xaml.g.cs
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.MainPage.xaml.g.cs
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.WeekPlaner.DayPage.xaml.g.cs
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.WeekPlaner.SelectMealPage.xaml.g.cs
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.AssemblyInfoInputs.cache
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.AssemblyInfo.cs
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.pdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.WeekPlaner.SelectRecipePage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.WeekPlaner.GroceryListPage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.FoodTools.FoodListPage.xaml.g.cs

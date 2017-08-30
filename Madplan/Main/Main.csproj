@@ -13,7 +13,7 @@
     <PackageReference Include="Messier16.Forms.Controls" Version="0.5.1" />
     <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="Xamarin.Forms" Version="2.3.4.267" />
+    <PackageReference Include="Xamarin.Forms" Version="2.3.4.270" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,11 +38,18 @@
     <Compile Update="MainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\FoodTools\FoodListPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\WeekPlaner\DayPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\WeekPlaner\SelectMealPage.xaml.cs">
+    <Compile Update="Views\WeekPlaner\GroceryListPage.xaml.cs">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WeekPlaner\SelectRecipePage.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectRecipePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 

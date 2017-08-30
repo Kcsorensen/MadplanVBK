@@ -263,7 +263,7 @@ namespace Main.Models.WeekPlaner
         #endregion
 
         // Få en complet liste over alle dage, hvor der er valgt et måltid
-        public List<string> GetListOfSelectedMeals()
+        public List<string> GetListOfPickedRecipes()
         {
             var list = new List<string>();
 

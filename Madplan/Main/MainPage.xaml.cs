@@ -1,4 +1,5 @@
 ﻿using Main.ExtensionViews;
+using Main.Views.FoodTools;
 using Main.Views.WeekPlaner;
 using System;
 using Xamarin.Forms;
@@ -23,13 +24,13 @@ namespace Main
 
 		private void GroceryList_Clicked(object sender, EventArgs e)
 		{
-			//Navigation.PushAsync(new GroceryListPage());
-		}
+            Navigation.PushAsync(new GroceryListPage());
+        }
 
 		private void Food_Clicked(object sender, EventArgs e)
 		{
-			//Navigation.PushAsync(new FoodListPage());
-		}
+            Navigation.PushAsync(new FoodListPage());
+        }
 
 		private void Recipe_Clicked(object sender, EventArgs e)
 		{
