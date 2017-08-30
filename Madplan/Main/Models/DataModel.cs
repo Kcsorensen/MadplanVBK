@@ -13,9 +13,7 @@ namespace Main.Models
 {
     public class DataModel
     {
-        private string UrlFood = "http://nuttynas.dsmynas.com:7500/api/food";
-        private string UrlRecipe = "http://nuttynas.dsmynas.com:7500/api/recipe";
-
+        private string Url = "http://nuttynas.dsmynas.com:7500/api/food";
         private HttpClient _client = new HttpClient();
 
         // Singleton
@@ -25,13 +23,11 @@ namespace Main.Models
         public static LiteDatabase Database { get; private set; }
 
         public ObservableCollection<Food> ListOfFood { get; set; }
-        public ObservableCollection<Recipe> ListOfRecipes { get; set; }
 
 
         public DataModel()
         {
             ListOfFood = new ObservableCollection<Food>();
-            ListOfRecipes = new ObservableCollection<Recipe>();
         }
 
         public async Task InitiateDataTablesAsync()
@@ -44,9 +40,6 @@ namespace Main.Models
 
             // Food Table
             await initiateFoodTableAsync();
-
-            // Recipe Table
-            await initiateRecipeTableAsync();
         }
 
         private async Task initiateWeekSelectionsTableAsync()
@@ -122,43 +115,11 @@ namespace Main.Models
             if (!foodTable.Find(a => true).ToList().Any())
             {
                 // Hent data fra API
-                var content = await _client.GetStringAsync(UrlFood);
+                var content = await _client.GetStringAsync(Url);
 
                 List<Food> list = await Task.Run(() => JsonConvert.DeserializeObject<List<Food>>(content));
 
                 await Task.Run(() => foodTable.InsertBulk(list));
-            }
-
-            if (foodTable.Find(a => true).ToList().Any())
-            {
-                foreach (var food in foodTable.Find(a => true))
-                {
-                    ListOfFood.Add(food);
-                }
-            }
-        }
-
-        private async Task initiateRecipeTableAsync()
-        {
-            // Get a collection (or create, if doesn't exist)
-            var recipeTable = Database.GetCollection<Recipe>();
-
-            if (!recipeTable.Find(a => true).ToList().Any())
-            {
-                // Hent data fra API
-                var content = await _client.GetStringAsync(UrlRecipe);
-
-                List<Recipe> list = await Task.Run(() => JsonConvert.DeserializeObject<List<Recipe>>(content));
-
-                await Task.Run(() => recipeTable.InsertBulk(list));
-            }
-
-            if (recipeTable.Find(a => true).ToList().Any())
-            {
-                foreach (var recipe in recipeTable.Find(a => true))
-                {
-                    ListOfRecipes.Add(recipe);
-                }
             }
         }
     }
