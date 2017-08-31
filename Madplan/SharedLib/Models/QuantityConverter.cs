@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace SharedLib.Models
 {
@@ -8,12 +9,15 @@ namespace SharedLib.Models
 
         public QuantityConverter()
         {
-            Quantities = new List<Quantity>();
+            //if (Quantities == null)
+            //{
+            //    Quantities = new List<Quantity>();
 
-            foreach (var quantityType in QuantityType.Current.ListForQuantityConverter)
-            {
-                Quantities.Add(new Quantity() { Name = quantityType, Value = 0.0 });
-            }
+            //    foreach (var quantityType in QuantityType.Current.ListForQuantityConverter)
+            //    {
+            //        Quantities.Add(new Quantity() { Name = quantityType, Value = 0.0 });
+            //    }
+            //}
         }
     }
 }

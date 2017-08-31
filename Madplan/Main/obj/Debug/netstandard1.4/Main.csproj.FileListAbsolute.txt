@@ -43,3 +43,9 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstanda
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.WeekPlaner.SelectRecipePage.xaml.g.cs
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.WeekPlaner.GroceryListPage.xaml.g.cs
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.FoodTools.FoodListPage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.FoodTools.FoodInfoPage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.ExtensionViews.FoodInfoLabel.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.ExtensionViews.CustomEntryCell.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.ExtensionViews.DataEntryCell.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.FoodTools.FoodEditPage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.FoodTools.QuantityConverterPage.xaml.g.cs

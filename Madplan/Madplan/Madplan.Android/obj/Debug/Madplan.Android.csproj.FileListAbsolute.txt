@@ -219,3 +219,15 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\res\drawable-mdpi\vitaminer.png
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\res\drawable-mdpi\makro.png
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\res\drawable-mdpi\mineraler.png
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\res\drawable-hdpi\vitaminer.png
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\res\drawable-hdpi\makro.png
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\res\drawable-hdpi\mineraler.png
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\res\drawable-xhdpi\vitaminer.png
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\res\drawable-xhdpi\makro.png
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\res\drawable-xhdpi\mineraler.png
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\res\drawable-xxhdpi\vitaminer.png
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\res\drawable-xxhdpi\makro.png
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\res\drawable-xxhdpi\mineraler.png

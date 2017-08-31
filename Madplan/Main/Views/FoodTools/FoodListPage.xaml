@@ -17,11 +17,6 @@
             </ListView.Header>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <!--<ViewCell>
-                        <StackLayout Orientation="Horizontal" Style="{StaticResource layoutInAViewDefault}">
-                            <Label Text="{Binding Name}" VerticalOptions="Center"/>
-                        </StackLayout>
-                    </ViewCell>-->
                     <TextCell Text="{Binding Name}" Tapped="Food_Tapped">
                         <TextCell.ContextActions>
                             <MenuItem Text="Rediger" Clicked="Edit_Clicked" CommandParameter="{Binding .}"/>

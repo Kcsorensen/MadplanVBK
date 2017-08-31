@@ -48,9 +48,9 @@ namespace Main.Views.FoodTools
 
         private void Food_Tapped(object sender, EventArgs e)
         {
-            //var foodName = (sender as TextCell).Text;
+            var foodName = (sender as TextCell).Text;
 
-            //Navigation.PushAsync(new FoodInfoPage(foodName));
+            Navigation.PushAsync(new FoodInfoPage(foodName));
         }
 
         private void Create_Clicked(object sender, EventArgs e)

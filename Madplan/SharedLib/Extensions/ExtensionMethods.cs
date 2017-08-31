@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -55,5 +56,25 @@ namespace SharedLib.Extensions
         }
 
         #endregion
+
+        #region Clone
+
+        public static T Clone<T>(T source)
+        {
+            var serialized = JsonConvert.SerializeObject(source);
+            return JsonConvert.DeserializeObject<T>(serialized);
+        }
+
+        public async static Task<T> CloneAsync<T>(T source)
+        {
+            return await Task.Run(() =>
+            {
+                var serialized = JsonConvert.SerializeObject(source);
+                return JsonConvert.DeserializeObject<T>(serialized);
+            });
+        }
+        #endregion
+
+
     }
 }

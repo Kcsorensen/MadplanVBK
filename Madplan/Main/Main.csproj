@@ -32,13 +32,31 @@
     <Compile Update="App.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ExtensionViews\CustomEntryCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ExtensionViews\DataEntryCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ExtensionViews\FoodInfoLabel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ExtensionViews\NavigateNextCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\FoodTools\FoodEditPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\FoodTools\FoodInfoPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\FoodTools\FoodListPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\FoodTools\QuantityConverterPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\WeekPlaner\DayPage.xaml.cs">

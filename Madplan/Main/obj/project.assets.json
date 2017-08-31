@@ -1242,6 +1242,10 @@
       },
       "SharedLib/1.0.0": {
         "type": "project",
+        "framework": ".NETPortable,Version=v4.5,Profile=Profile259",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3"
+        },
         "compile": {
           "bin/placeholder/SharedLib.dll": {}
         },
