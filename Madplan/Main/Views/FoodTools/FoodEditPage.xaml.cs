@@ -1,4 +1,5 @@
-﻿using SharedLib.Extensions;
+﻿using Main.Models;
+using SharedLib.Extensions;
 using SharedLib.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -8,37 +9,34 @@ namespace Main.Views.FoodTools
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FoodEditPage : TabbedPage
     {
-        private Food _foodNoneClone;
-        private Food _foodClone;
+        private Food _food;
 
         public FoodEditPage(Food food)
         {
             InitializeComponent();
 
-            _foodNoneClone = food;
+            _food = food;
         }
 
-        protected async override void OnAppearing()
+        protected override void OnAppearing()
         {
-            // Laves en deep copy af food for at fjerne referencen imellem de to classes
-            // TODO: Deep copy af food er ikke lavet som Async. Gør det hvis det føles langsom.
-            //_foodClone = await ExtensionMethods.CloneAsync<Food>(_foodNoneClone);
-
-            BindingContext = _foodNoneClone;
+            BindingContext = _food;
 
             base.OnAppearing();
         }
 
-        private async void Save_Clicked(object sender, System.EventArgs e)
+        protected override void OnDisappearing()
         {
-            //await DataModel.Current.UpdateFoodAsync(_food);
+            var foodDb = DataModel.Database.GetCollection<Food>();
 
-            //await Navigation.PopAsync();
+            foodDb.Update(_food);
+
+            base.OnDisappearing();
         }
 
         private void QuantityConverter_Tapped(object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new QuantityConverterPage(_foodNoneClone));
+            Navigation.PushAsync(new QuantityConverterPage(_food));
         }
     }
 }

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v1.4/",
-    "signature": "70489c88b7331a3db5f28f9be0f4514052314099"
+    "signature": "743e45c7679582fad60b44c53438c2fb2a991a2b"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,12 +10,10 @@
       "Main/1.0.0": {
         "dependencies": {
           "CsvHelper": "2.16.3",
-          "Expressmapper": "1.9.1",
           "LiteDB": "3.1.4",
           "Messier16.Forms.Controls": "0.5.1",
           "Microsoft.Net.Http": "2.2.29",
           "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "10.0.3",
           "SharedLib": "1.0.0",
           "Xamarin.Forms": "2.3.4.270"
         },
@@ -31,11 +29,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/CsvHelper.dll": {}
-        }
-      },
-      "Expressmapper/1.9.1": {
-        "runtime": {
-          "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/ExpressMapper.dll": {}
         }
       },
       "LiteDB/3.1.4": {
@@ -782,6 +775,7 @@
       },
       "SharedLib/1.0.0": {
         "dependencies": {
+          "NETStandard.Library": "1.6.1",
           "Newtonsoft.Json": "10.0.3"
         },
         "runtime": {
@@ -802,13 +796,6 @@
       "sha512": "sha512-RTxNM9Q6MDg3WpGorrK7E9eXsjGhtDLYx5dBuHol5kHDpu7kND2NveHDVCFQgGxowuDB57ettaOEn3EJqiJ1oQ==",
       "path": "csvhelper/2.16.3",
       "hashPath": "csvhelper.2.16.3.nupkg.sha512"
-    },
-    "Expressmapper/1.9.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-FhtVjpMeLHoivk+qaYmOPGAKYJ44kYB1O3tG4mZXYFaPeHO26RuHpRUllhBm6L3vD0Edcd5iGiZhz+LJd3k5WQ==",
-      "path": "expressmapper/1.9.1",
-      "hashPath": "expressmapper.1.9.1.nupkg.sha512"
     },
     "LiteDB/3.1.4": {
       "type": "package",

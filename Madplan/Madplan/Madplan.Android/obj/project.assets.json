@@ -21,15 +21,6 @@
           "lib/netstandard1.3/CsvHelper.dll": {}
         }
       },
-      "Expressmapper/1.9.1": {
-        "type": "package",
-        "compile": {
-          "lib/dotnet/ExpressMapper.dll": {}
-        },
-        "runtime": {
-          "lib/dotnet/ExpressMapper.dll": {}
-        }
-      },
       "LiteDB/3.1.4": {
         "type": "package",
         "compile": {
@@ -806,12 +797,10 @@
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
           "CsvHelper": "2.16.3",
-          "Expressmapper": "1.9.1",
           "LiteDB": "3.1.4",
           "Messier16.Forms.Controls": "0.5.1",
           "Microsoft.Net.Http": "2.2.29",
           "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "10.0.3",
           "SharedLib": "1.0.0",
           "Xamarin.Forms": "2.3.4.270"
         },
@@ -824,8 +813,9 @@
       },
       "SharedLib/1.0.0": {
         "type": "project",
-        "framework": ".NETPortable,Version=v4.5,Profile=Profile259",
+        "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "NETStandard.Library": "1.6.1",
           "Newtonsoft.Json": "10.0.3"
         },
         "compile": {
@@ -856,15 +846,6 @@
           "lib/netstandard1.3/CsvHelper.dll": {}
         }
       },
-      "Expressmapper/1.9.1": {
-        "type": "package",
-        "compile": {
-          "lib/dotnet/ExpressMapper.dll": {}
-        },
-        "runtime": {
-          "lib/dotnet/ExpressMapper.dll": {}
-        }
-      },
       "LiteDB/3.1.4": {
         "type": "package",
         "compile": {
@@ -1577,12 +1558,10 @@
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
           "CsvHelper": "2.16.3",
-          "Expressmapper": "1.9.1",
           "LiteDB": "3.1.4",
           "Messier16.Forms.Controls": "0.5.1",
           "Microsoft.Net.Http": "2.2.29",
           "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "10.0.3",
           "SharedLib": "1.0.0",
           "Xamarin.Forms": "2.3.4.270"
         },
@@ -1595,8 +1574,9 @@
       },
       "SharedLib/1.0.0": {
         "type": "project",
-        "framework": ".NETPortable,Version=v4.5,Profile=Profile259",
+        "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "NETStandard.Library": "1.6.1",
           "Newtonsoft.Json": "10.0.3"
         },
         "compile": {
@@ -1627,15 +1607,6 @@
           "lib/netstandard1.3/CsvHelper.dll": {}
         }
       },
-      "Expressmapper/1.9.1": {
-        "type": "package",
-        "compile": {
-          "lib/dotnet/ExpressMapper.dll": {}
-        },
-        "runtime": {
-          "lib/dotnet/ExpressMapper.dll": {}
-        }
-      },
       "LiteDB/3.1.4": {
         "type": "package",
         "compile": {
@@ -2348,12 +2319,10 @@
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
           "CsvHelper": "2.16.3",
-          "Expressmapper": "1.9.1",
           "LiteDB": "3.1.4",
           "Messier16.Forms.Controls": "0.5.1",
           "Microsoft.Net.Http": "2.2.29",
           "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "10.0.3",
           "SharedLib": "1.0.0",
           "Xamarin.Forms": "2.3.4.270"
         },
@@ -2366,8 +2335,9 @@
       },
       "SharedLib/1.0.0": {
         "type": "project",
-        "framework": ".NETPortable,Version=v4.5,Profile=Profile259",
+        "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "NETStandard.Library": "1.6.1",
           "Newtonsoft.Json": "10.0.3"
         },
         "compile": {
@@ -2398,15 +2368,6 @@
           "lib/netstandard1.3/CsvHelper.dll": {}
         }
       },
-      "Expressmapper/1.9.1": {
-        "type": "package",
-        "compile": {
-          "lib/dotnet/ExpressMapper.dll": {}
-        },
-        "runtime": {
-          "lib/dotnet/ExpressMapper.dll": {}
-        }
-      },
       "LiteDB/3.1.4": {
         "type": "package",
         "compile": {
@@ -3119,12 +3080,10 @@
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
           "CsvHelper": "2.16.3",
-          "Expressmapper": "1.9.1",
           "LiteDB": "3.1.4",
           "Messier16.Forms.Controls": "0.5.1",
           "Microsoft.Net.Http": "2.2.29",
           "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "10.0.3",
           "SharedLib": "1.0.0",
           "Xamarin.Forms": "2.3.4.270"
         },
@@ -3137,8 +3096,9 @@
       },
       "SharedLib/1.0.0": {
         "type": "project",
-        "framework": ".NETPortable,Version=v4.5,Profile=Profile259",
+        "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "NETStandard.Library": "1.6.1",
           "Newtonsoft.Json": "10.0.3"
         },
         "compile": {
@@ -3170,32 +3130,6 @@
         "lib/netstandard1.3/CsvHelper.xml",
         "lib/portable40-net40+sl5+win8+wp8+wpa81/CsvHelper.dll",
         "lib/portable40-net40+sl5+win8+wp8+wpa81/CsvHelper.xml"
-      ]
-    },
-    "Expressmapper/1.9.1": {
-      "sha512": "FhtVjpMeLHoivk+qaYmOPGAKYJ44kYB1O3tG4mZXYFaPeHO26RuHpRUllhBm6L3vD0Edcd5iGiZhz+LJd3k5WQ==",
-      "type": "package",
-      "path": "expressmapper/1.9.1",
-      "files": [
-        "expressmapper.1.9.1.nupkg.sha512",
-        "expressmapper.nuspec",
-        "lib/dotnet/ExpressMapper.deps.json",
-        "lib/dotnet/ExpressMapper.dll",
-        "lib/dotnet/ExpressMapper.dll.mdb",
-        "lib/dotnet/ExpressMapper.pdb",
-        "lib/dotnet/ExpressMapper.xml",
-        "lib/net40/ExpressMapper.dll",
-        "lib/net40/ExpressMapper.pdb",
-        "lib/net40/ExpressMapper.xml",
-        "lib/net45/ExpressMapper.dll",
-        "lib/net45/ExpressMapper.pdb",
-        "lib/net45/ExpressMapper.xml",
-        "lib/net46/ExpressMapper.XML",
-        "lib/net46/ExpressMapper.dll",
-        "lib/net46/ExpressMapper.pdb",
-        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/ExpressMapper.XML",
-        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/ExpressMapper.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/ExpressMapper.pdb"
       ]
     },
     "LiteDB/3.1.4": {
@@ -6567,8 +6501,8 @@
     },
     "SharedLib/1.0.0": {
       "type": "project",
-      "path": "../../SharedLib/SharedLib.csproj",
-      "msbuildProject": "../../SharedLib/SharedLib.csproj"
+      "path": "../../../../MadplanVbk-Asp.net/SharedLib/SharedLib.csproj",
+      "msbuildProject": "../../../../MadplanVbk-Asp.net/SharedLib/SharedLib.csproj"
     }
   },
   "projectFileDependencyGroups": {

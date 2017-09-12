@@ -17,7 +17,11 @@
                 <Setter Property="HeightRequest" Value="45"/>
             </Style>
 
-
+            <Style x:Key="layoutInIngredientFoodListStyle" TargetType="Layout">
+                <Setter Property="Padding" Value="15, 0"/>
+                <Setter Property="HeightRequest" Value="35"/>
+            </Style>
+            
             <Style x:Key="listViewHeaderLayoutStyle" TargetType="Layout">
                 <Setter Property="Padding" Value="0, 12"/>
                 <Setter Property="BackgroundColor" Value="SeaGreen"/>

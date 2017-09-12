@@ -49,3 +49,9 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstanda
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.ExtensionViews.DataEntryCell.xaml.g.cs
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.FoodTools.FoodEditPage.xaml.g.cs
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.FoodTools.QuantityConverterPage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.FoodTools.FoodCreatePage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.RecipeTools.RecipeListPage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.RecipeTools.RecipeCreatePage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.RecipeTools.SelectFoodPage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.RecipeTools.IngredientCreatePage.xaml.g.cs
+C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Main\obj\Debug\netstandard1.4\Main.Views.QuantityTypePickerPage.xaml.g.cs

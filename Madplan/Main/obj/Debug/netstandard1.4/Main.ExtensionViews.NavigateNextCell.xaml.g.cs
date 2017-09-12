@@ -11,8 +11,8 @@
 namespace Main.ExtensionViews {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\kcsorensen\\Documents\\GitHub\\Madplan\\Main\\ExtensionViews\\NavigateNextCell" +
-        ".xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\kcsorensen\\Documents\\GitHub\\MadplanVBK\\Madplan\\Main\\ExtensionViews\\Navig" +
+        "ateNextCell.xaml")]
     public partial class NavigateNextCell : global::Xamarin.Forms.ViewCell {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

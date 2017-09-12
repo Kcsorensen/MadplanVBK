@@ -15,19 +15,13 @@ namespace Main.Views.FoodTools
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class FoodListPage : ContentPage
 	{
-        private ObservableCollection<Food> _listOfFood;
-
         public FoodListPage()
         {
             InitializeComponent();
-
-            _listOfFood = new ObservableCollection<Food>();
         }
 
         protected override void OnAppearing()
         {
-            _listOfFood = DataModel.Current.ListOfFood;
-
             listView.ItemsSource = filterListOfFood();
 
             base.OnAppearing();
@@ -36,9 +30,9 @@ namespace Main.Views.FoodTools
         private IEnumerable<Food> filterListOfFood(string searchText = null)
         {
             if (string.IsNullOrWhiteSpace(searchText))
-                return _listOfFood.OrderBy(a => a.Name);
+                return DataModel.Current.ListOfFood.OrderBy(a => a.Name);
 
-            return _listOfFood.Where(a => a.Name.ToLowerInvariant().Contains(searchText.ToLowerInvariant())).OrderBy(b => b.Name);
+            return DataModel.Current.ListOfFood.Where(a => a.Name.ToLowerInvariant().Contains(searchText.ToLowerInvariant())).OrderBy(b => b.Name);
         }
 
         private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
@@ -55,23 +49,25 @@ namespace Main.Views.FoodTools
 
         private void Create_Clicked(object sender, EventArgs e)
         {
-            //Navigation.PushAsync(new FoodCreatePage());
+            Navigation.PushAsync(new FoodCreatePage());
         }
 
         private void Edit_Clicked(object sender, EventArgs e)
         {
-            //var menuItem = sender as MenuItem;
-            //var food = menuItem.CommandParameter as Food;
+            var menuItem = sender as MenuItem;
+            var food = menuItem.CommandParameter as Food;
 
-            //Navigation.PushAsync(new FoodEditPage(food));
+            Navigation.PushAsync(new FoodEditPage(food));
         }
 
         private void Delete_Clicked(object sender, EventArgs e)
         {
-            //var menuItem = sender as MenuItem;
-            //var food = menuItem.CommandParameter as Food;
+            var menuItem = sender as MenuItem;
+            var food = menuItem.CommandParameter as Food;
 
-            //DataModel.Current.DeleteFood(food);
+            DataModel.Current.RemoveFood(food);
+
+            listView.ItemsSource = filterListOfFood();
         }
     }
 }

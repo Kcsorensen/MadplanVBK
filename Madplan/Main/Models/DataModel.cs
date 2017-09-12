@@ -15,7 +15,6 @@ namespace Main.Models
     {
         private string UrlFood = "http://nuttynas.dsmynas.com:7500/api/food";
         private string UrlRecipe = "http://nuttynas.dsmynas.com:7500/api/recipe";
-
         private HttpClient _client = new HttpClient();
 
         // Singleton
@@ -47,6 +46,32 @@ namespace Main.Models
 
             // Recipe Table
             await initiateRecipeTableAsync();
+        }
+
+        public void AddFood(Food food)
+        {
+            // Tilføj til ObservableCollection
+            ListOfFood.Add(food);
+
+            // Tilføj til den lokale db (LiteDb)
+            var foodDb = Database.GetCollection<Food>();
+            foodDb.Insert(food);
+
+            // Tilføj til den globale db (MongoDb)
+            // TODO: Tilføj Food til FoodAPI (hjemmeside)
+        }
+
+        public void RemoveFood(Food food)
+        {
+            // Fjern fra ObservableCollection
+            ListOfFood.Remove(food);
+
+            // Fjern fra den lokale db (LiteDb)
+            var foodDb = Database.GetCollection<Food>();
+            foodDb.Delete(a => a.Id == food.Id);
+
+            // Fjern fra den globale db (MongoDb)
+            // TODO: Fjern Food til FoodAPI (hjemmeside)
         }
 
         private async Task initiateWeekSelectionsTableAsync()

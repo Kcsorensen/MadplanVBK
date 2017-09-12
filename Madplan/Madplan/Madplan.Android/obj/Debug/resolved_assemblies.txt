@@ -1,6 +1,5 @@
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\Madplan.Android.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\CsvHelper.dll
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\ExpressMapper.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\FormsViewGroup.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\LiteDB.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\Messier16.Forms.Android.Controls.dll
@@ -48,8 +47,6 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\System.Reflection.Extensions.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\System.Threading.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\System.Runtime.Extensions.dll
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\System.Linq.Queryable.dll
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\System.Globalization.Extensions.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\System.Resources.ResourceManager.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\System.Security.Cryptography.Algorithms.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\obj\Debug\android\assets\System.Security.Cryptography.Primitives.dll

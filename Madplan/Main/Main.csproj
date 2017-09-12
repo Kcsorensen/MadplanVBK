@@ -8,11 +8,9 @@
 
   <ItemGroup>
     <PackageReference Include="CsvHelper" Version="2.16.3" />
-    <PackageReference Include="Expressmapper" Version="1.9.1" />
     <PackageReference Include="LiteDB" Version="3.1.4" />
     <PackageReference Include="Messier16.Forms.Controls" Version="0.5.1" />
     <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="Xamarin.Forms" Version="2.3.4.270" />
   </ItemGroup>
 
@@ -25,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SharedLib\SharedLib.csproj" />
+    <ProjectReference Include="..\..\..\MadplanVbk-Asp.net\SharedLib\SharedLib.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -47,6 +45,9 @@
     <Compile Update="MainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\FoodTools\FoodCreatePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\FoodTools\FoodEditPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -57,6 +58,21 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\FoodTools\QuantityConverterPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\QuantityTypePickerPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RecipeTools\IngredientCreatePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RecipeTools\RecipeCreatePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RecipeTools\RecipeListPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RecipeTools\SelectFoodPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\WeekPlaner\DayPage.xaml.cs">

@@ -4,10 +4,6 @@
              xmlns:extension="clr-namespace:Main.ExtensionViews"
              x:Class="Main.Views.FoodTools.FoodEditPage">
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Order="Primary" Text="Gem" Clicked="Save_Clicked"/>
-    </ContentPage.ToolbarItems>
-
     <ContentPage Title="Makro m.m.">
 
         <TableView HasUnevenRows="True">
@@ -28,7 +24,7 @@
                     <extension:DataEntryCell Label="Mættet" Value="{Binding SumMaettedeFedtsyrer}" Unit="g" Placeholder="Indtast værdi"/>
                     <extension:DataEntryCell Label="Enkeltumættet" Value="{Binding SumMonoumaettedeFedtsyrer}" Unit="g" Placeholder="Indtast værdi"/>
                     <extension:DataEntryCell Label="Flerumættet" Value="{Binding SumPolymaettedeFedtsyrer}" Unit="g" Placeholder="Indtast værdi"/>
-                    <extension:DataEntryCell Label="Transfedt" Value="{Binding TransFedtsyrer}" Unit="g" Placeholder="Indtast værdi"/>
+                    <extension:DataEntryCell Label="TransFedtsyrer" Value="{Binding TransFedtsyrerTotal}" Unit="g" Placeholder="Indtast værdi"/>
                     <extension:DataEntryCell Label="Cholesterol" Value="{Binding Cholesterol}" Unit="g" Placeholder="Indtast værdi"/>
                 </TableSection>
                 <TableSection Title="Kulhydrater">

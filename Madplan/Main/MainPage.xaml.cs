@@ -1,5 +1,6 @@
 ﻿using Main.ExtensionViews;
 using Main.Views.FoodTools;
+using Main.Views.RecipeTools;
 using Main.Views.WeekPlaner;
 using System;
 using Xamarin.Forms;
@@ -34,7 +35,7 @@ namespace Main
 
 		private void Recipe_Clicked(object sender, EventArgs e)
 		{
-			//Navigation.PushAsync(new RecipeListPage());
-		}
+            Navigation.PushAsync(new RecipeListPage());
+        }
 	}
 }

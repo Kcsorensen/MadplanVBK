@@ -11,7 +11,8 @@
 namespace Main.Views.WeekPlaner {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\kcsorensen\\Documents\\GitHub\\Madplan\\Main\\Views\\WeekPlaner\\DayPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\kcsorensen\\Documents\\GitHub\\MadplanVBK\\Madplan\\Main\\Views\\WeekPlaner\\Day" +
+        "Page.xaml")]
     public partial class DayPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

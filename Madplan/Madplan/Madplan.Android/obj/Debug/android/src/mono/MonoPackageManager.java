@@ -100,7 +100,6 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "Madplan.Android.dll" comes first in this list. */
 		"Madplan.Android.dll",
 		"CsvHelper.dll",
-		"ExpressMapper.dll",
 		"FormsViewGroup.dll",
 		"LiteDB.dll",
 		"Messier16.Forms.Android.Controls.dll",

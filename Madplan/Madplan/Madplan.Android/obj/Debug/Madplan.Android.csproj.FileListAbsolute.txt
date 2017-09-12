@@ -147,8 +147,6 @@ C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\bin\Debug\Madplan.Android.apk
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\bin\Debug\Madplan.Android-Signed.apk
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\bin\Debug\CsvHelper.dll
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\bin\Debug\ExpressMapper.dll
-C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\bin\Debug\ExpressMapper.pdb
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\bin\Debug\LiteDB.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\bin\Debug\Messier16.Forms.Android.Controls.dll
 C:\Users\kcsorensen\Documents\GitHub\MadplanVBK\Madplan\Madplan\Madplan.Android\bin\Debug\Messier16.Forms.Controls.dll
